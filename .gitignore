@@ -50,6 +50,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
 ### macOS template
 # General
 .DS_Store
@@ -80,4 +81,3 @@ Temporary Items
 
 .idea/
 StudentAchieve.iml
-src/
