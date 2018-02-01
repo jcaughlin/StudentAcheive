@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>c339e62e-bc56-4b64-a5ce-7fec35bf2e80.SCHEMA:student_manager</OriginalElement>
+  <nodes>
+    <node x="150.99999999999997" y="536.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.scores</node>
+    <node x="586.0" y="33.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user_roles</node>
+    <node x="347.0" y="33.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user_images</node>
+    <node x="19.0" y="301.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.assessments</node>
+    <node x="288.0" y="213.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user</node>
+    <node x="86.0" y="0.0">c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.contact_infomation</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user" target="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.contact_infomation">
+      <point x="-112.33333333333331" y="-136.5" />
+      <point x="344.16666666666663" y="188.0" />
+      <point x="206.5" y="188.0" />
+      <point x="0.0" y="81.5" />
+    </edge>
+    <edge source="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user" target="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user_roles">
+      <point x="112.33333333333337" y="-136.5" />
+      <point x="568.8333333333334" y="188.0" />
+      <point x="811.0" y="188.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user" target="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user_images">
+      <point x="0.0" y="-136.5" />
+      <point x="0.0" y="48.5" />
+    </edge>
+    <edge source="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.scores" target="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.user">
+      <point x="74.5" y="-103.5" />
+      <point x="374.5" y="511.0" />
+      <point x="456.5" y="511.0" />
+      <point x="0.0" y="136.5" />
+    </edge>
+    <edge source="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.scores" target="c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.assessments">
+      <point x="-74.5" y="-103.5" />
+      <point x="225.49999999999997" y="511.0" />
+      <point x="143.5" y="511.0" />
+      <point x="0.0" y="48.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5426136363636364" x="518.0" y="371.5" />
+  <SelectedNodes>
+    <node>c339e62e-bc56-4b64-a5ce-7fec35bf2e80.TABLE:student_manager.contact_infomation</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+
