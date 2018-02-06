@@ -87,6 +87,8 @@ Currently, the application is mobile friendly and application for the iPad is pe
 	* Code Quality Plugins
 	* Templates 	
 
+### VERSION 2.0
+
 ### Design
 
 * [Screen Design](DesignDocuments/WireFrames.bmpr)
