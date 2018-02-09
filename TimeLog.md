@@ -12,6 +12,7 @@
 |3|1/28/17| Work on JUNIT Excercise| 5| 
 |3|2/2/17| Wireframes & Screen Design|4|
 |4|2/4/17 | Project Plan Student Repository|2|
+|4|2/9/17|Individual Project Entities |3|
 
 
 

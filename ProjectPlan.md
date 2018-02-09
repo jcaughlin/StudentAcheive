@@ -81,7 +81,7 @@ more detail.
 ### Week 8
 * [ ] Weekly Journal Entry
 * [ ] Time Log
-
+* [ ] Password Encryption
 
 ### Week 9
 **Weekly Checkpoint 3**w
