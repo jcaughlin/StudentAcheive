@@ -44,12 +44,14 @@ more detail.
 * [ ] Hibernate-***Implement Hibernate Framework***
 * [ ] Research DAO template
 * [ ] Version 1.0 Servlet and .jsp's First Draft and Review
+* [ ] State List for forms stored as JSON server-side?
 
 
 ### Week 5
 
 * [ ] Weekly Journal Entry
 * [ ] Time Log
+* [ ] Test Modal
 * [ ] Deploy to AWS
 * [ ] Set up db/MySql on AWS
 * [ ] Custom Error Templates jsp for Servlet Exceptions and Http Status Codes-Existing Libraries?
