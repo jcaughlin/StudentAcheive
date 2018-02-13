@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="title"/>
-<c:set var="heading" scope="session" value="header"/>
+
+<c:set var="title" scope="session" value="Student Achieve User Login"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
@@ -10,13 +10,19 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="partials/head.jsp"/>
+<jsp:include page="head.jsp"/>
 
-<jsp:include page="partials/header.jsp"/>
+<div class="wrapper">
+    <form class="form-signin" method="post" action="j_security_check">
+        <h2 class="form-signin-heading">Please Login</h2>
+        <label for="username" class=""sr-only>Enter User Name</label>
+        <input type="text" class="form-control" name="j_username" id="username" placeholder="Enter User Name" required="">
+        <label for="password" class="sr-only">Enter Password</label>
+        <input type="password" class="form-control" name="j_password" id="password" placeholder="Password" required="">
+        <button role="button" class="btn-btn-lg btn-primary btn-block" type="submit">Login</button>
 
-<!-- Your Content Goes Here -->
+    </form>
+</div>
 
-<jsp:include page="1"/>
-
-<jsp:include page="partials/footer.jsp"/>
+<jsp:include page="footer.jsp"/>
 
