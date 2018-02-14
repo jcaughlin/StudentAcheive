@@ -2,6 +2,7 @@
 
 <c:set var="title" scope="session" value="Student Achieve User Login"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
+<c:set var="heading" scope="request" value="Existing User Login"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
@@ -12,6 +13,11 @@
 
 <jsp:include page="head.jsp"/>
 
+<div class="row">
+    <div class="col-lg-2">
+        <jsp:include page="sidebar-menu.jsp"/>
+    </div>
+<div class="col-lg-7">
 <div class="wrapper">
     <form class="form-signin" method="post" action="j_security_check">
         <h2 class="form-signin-heading">Please Login</h2>
@@ -19,9 +25,11 @@
         <input type="text" class="form-control" name="j_username" id="username" placeholder="Enter User Name" required="">
         <label for="password" class="sr-only">Enter Password</label>
         <input type="password" class="form-control" name="j_password" id="password" placeholder="Password" required="">
-        <button role="button" class="btn-btn-lg btn-primary btn-block" type="submit">Login</button>
-
+        <button role="button" class="btn-btn-lg btn-success btn-block" type="submit">Submit!!</button>
     </form>
+</div>
+</div>
+
 </div>
 
 <jsp:include page="footer.jsp"/>

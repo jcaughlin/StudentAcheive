@@ -1,11 +1,9 @@
 package edu.matc.entity;
 
 import lombok.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 
 /*
  * The User Entity.
