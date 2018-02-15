@@ -14,6 +14,10 @@
 <jsp:include page="head.jsp"/>
 
 <div class="row">
+    <h1>${message}</h1>
+</div>
+
+<div class="row">
     <div class="col-lg-2 test-green sideBar">
         <jsp:include page="sidebar-menu.jsp"/>
 
