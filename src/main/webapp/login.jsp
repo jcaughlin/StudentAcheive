@@ -14,21 +14,28 @@
 <jsp:include page="head.jsp"/>
 
 <div class="row">
+
     <div class="col-lg-2">
         <jsp:include page="sidebar-menu.jsp"/>
     </div>
 <div class="col-lg-7">
-<div class="wrapper">
     <form class="form-signin" method="post" action="j_security_check">
         <h2 class="form-signin-heading">Please Login</h2>
+
+        <div class="form-group">
         <label for="username" class=""sr-only>Enter User Name</label>
         <input type="text" class="form-control" name="j_username" id="username" placeholder="Enter User Name" required="">
+        </div>
+
+    <div class="form-group">
         <label for="password" class="sr-only">Enter Password</label>
         <input type="password" class="form-control" name="j_password" id="password" placeholder="Password" required="">
+    </div>
+
         <button role="button" class="btn-btn-lg btn-success btn-block" type="submit">Submit!!</button>
     </form>
 </div>
-</div>
+    <div class="col-lg-3"></div>
 
 </div>
 

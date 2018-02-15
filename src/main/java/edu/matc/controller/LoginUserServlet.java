@@ -22,10 +22,10 @@ public class LoginUserServlet extends HttpServlet {
 
    private final Logger logger = LogManager.getLogger(this.getClass());
 
-    String url = "login.jsp";
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String url="login.jsp";
 
         RequestDispatcher dispatcher = req.getRequestDispatcher(url);
         dispatcher.forward(req, resp);

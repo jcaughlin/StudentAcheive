@@ -8,12 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <ul class="list-group panel border">
-    <a href="link"><li class="list-group-item">Activities Module</li></a>
-    <a href="link"><li class="list-group-item">Academic Calendar</li></a>
-    <a href="link"><li class="list-group-item">Teacher's Homeroom</li></a>
-    <a href="link"><li class="list-group-item">What's for Lunch?</li></a>
-    <a href="link"><li class="list-group-item">School Contacts</li></a>
-    <a href="link"><li class="list-group-item">Newsletter</li></a>
-    <a href="link"><li class="list-group-item">General Information</li></a>
+    <a href="link" class="list-group-item list-group-item-action">Academic Calendar</a>
+    <a href="link" class="list-group-item list-group-item-action">Teacher's Homeroom</a>
+    <a href="link" class="list-group-item list-group-item-action">What's for Lunch?</a>
+    <a href="link" class="list-group-item list-group-item-action">School Contacts</a>
+    <a href="link" class="list-group-item list-group-item-action">Newsletter</a>
+    <a href="link" class="list-group-item list-group-item-action">General Information</a>
 </ul>
 
