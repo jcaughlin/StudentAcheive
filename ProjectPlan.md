@@ -54,7 +54,6 @@ more detail.
 * [ ] Test Modal
 * [ ] Deploy to AWS
 * [ ] Set up db/MySql on AWS
-* [ ] Custom Error Templates jsp for Servlet Exceptions and Http Status Codes-Existing Libraries?
 * [ ] Continued work on DAO's. Hibernate Prepared Statements?
 
 
@@ -69,7 +68,8 @@ more detail.
 * [ ] **Implement Google Image Validation API?**
 * [ ] **Implement Google reCaptcha API?**
 * [ ] *User Testing for Accessibility*
-
+* [ ] Custom Error Templates jsp for Servlet Exceptions and Http Status Codes-Existing Libraries?
+* [ ] Sessions an Cookies
 
 ### Week 7
 **Checkpoint 2**

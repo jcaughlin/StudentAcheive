@@ -13,7 +13,8 @@
 |3|2/2/17| Wireframes & Screen Design|4|
 |4|2/4/17 | Project Plan Student Repository|2|
 |4|2/9/17|Individual Project Entities |3|
-
+|4|2/10/17|3 & 4|3|
+|5|2/14/17|Individual Project Servlets|2|
 
 
 
