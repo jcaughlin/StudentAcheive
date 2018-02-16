@@ -13,6 +13,7 @@ import javax.servlet.http.*;
 
 
 @WebServlet(name = "WelcomeServlet", urlPatterns = "/welcome")
+
 public class WelcomeServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
