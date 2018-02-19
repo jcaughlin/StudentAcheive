@@ -3,7 +3,7 @@
 
 
 |Week| Date | Task | Hours |
-|------|------|------|-------|------|
+|------|------|------|-------|
 |1|1/14/17| Development Environment Set Up| 1| 
 |1|1/14/17| Development Environment Set Up| 1| 
 |2|1/19/17| Database Design|3|
@@ -15,6 +15,10 @@
 |4|2/9/17|Individual Project Entities |3|
 |4|2/10/17|3 & 4|3|
 |5|2/14/17|Individual Project Servlets|2|
+|5|2/17/17|Custom Tags Week 3|5|
+|6|2/18/18|Hibernate Week 4|6|
+|6|2/19/18|Hibernate Week 4|5|
+
 
 
 

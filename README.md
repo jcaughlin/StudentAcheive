@@ -32,7 +32,7 @@ Currently, the application is mobile friendly and application for the iPad is pe
 * **Database**
   * MySQL
   * Store users and roles
-  * Store learning module information and test scores
+  * Store learning module information and UserDao scores
   * Storing Student images and Learning Modules
   
 * **ORM Framework**
@@ -57,7 +57,7 @@ Currently, the application is mobile friendly and application for the iPad is pe
 * **Data Validation**
   * Front End: Bootstrap
   * Server: Java (Libraries Available?)
-  	 *How can I test Server-Side Validation if it is being caught by front End?*
+  	 *How can I UserDao Server-Side Validation if it is being caught by front End?*
   	 * Hibernate "Prepared Statements?"
 		
 * **Logging**

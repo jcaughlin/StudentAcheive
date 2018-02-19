@@ -25,12 +25,12 @@ more detail.
 * [ ] Weekly Journal Entry
 * [ ] Time Log
 * [ ] jsp templating
-* [ ] Work with instructor on unit test plans
+* [ ] Work with instructor on unit UserDao plans
 * [ ] Have Beans Built out
 * [ ] Project Directory set up and checklist
 -[ ] sql
 -[ ] main
--[ ] test
+-[ ] UserDao
 -[ ] resources
 -[ ] javascript
 -[ ] angular js?

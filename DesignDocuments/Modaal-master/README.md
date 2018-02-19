@@ -188,7 +188,7 @@ The Modaal video type has been tested thoroughly using both Vimeo and Youtube. F
 #### 5.1. Reporting an issue
 
 1. Please ensure the issue you're reporting is reproducible in a standalone environment, and not a result of something in your own build.
-2. Use [jsFiddle](http://jsfiddle.net) or [jsBin](http://jsbin.com) to provide a test page showing issue.
+2. Use [jsFiddle](http://jsfiddle.net) or [jsBin](http://jsbin.com) to provide a UserDao page showing issue.
 3. In your issue, please indicate which *browser*, *operating system* and *os version* you're using.
 4. Please also indicate plugin version.
 5. If you have made any alterations to the plugin files (JS or CSS), please also list and include code samples.

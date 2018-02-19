@@ -14,3 +14,9 @@
 ### _Today is February 14th
 <blockquote>My application.
 </blockquote>
+
+
+###  Today is February 19th
+* pair down user entity in project for review.
+* see above
+* Catching up with things though between class and internship I am sick to my stomach. I wonder if I will get a big high when I am caught up. It feels good to finish things even though it is as hard if not harder than the last time.

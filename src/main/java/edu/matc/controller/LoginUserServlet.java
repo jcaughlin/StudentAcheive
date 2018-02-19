@@ -13,12 +13,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptEngine;
+import javax.script.ScriptException;
 
 
 @WebServlet(name = "LoginUserServlet", urlPatterns = { "/login" } )
 
 
 public class LoginUserServlet extends HttpServlet {
+
+    ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
+    ScriptEngine nashorn = scriptEngineManager.getEngineByName("nashorn");
 
    private final Logger logger = LogManager.getLogger(this.getClass());
 
