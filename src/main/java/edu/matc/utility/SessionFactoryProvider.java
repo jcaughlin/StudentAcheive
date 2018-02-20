@@ -1,4 +1,4 @@
-package edu.matc.utility;
+package edu.matc.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
