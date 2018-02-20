@@ -13,20 +13,23 @@
 
 <jsp:include page="head.jsp"/>
 
-<div class="row">
-    <h1>${message}</h1>
-</div>
+<div class="container py=5">
 
 <div class="row">
+
+    <div class="jumbotron">
+        <h1>${heading}</h1>
+    </div>
+    <!--Sidebar Menu-->
     <div class="col-lg-2 test-green sideBar">
         <jsp:include page="sidebar-menu.jsp"/>
-
     </div>
-    <div class="col-lg-7 test-blue">
-        <form class="form form-signin border mx-auto" action="/newUser" method="post">
 
+    <div class="col-lg-7">
+        <form class="form form-signin mx-auto" action="/newUser" method="post">
             <h2 class="form-signin-heading">Please Join The Fun</h2>
 
+            <!--User Name-->
             <div class="form-group">
                 <label for="username" class="sr-only">Enter User Name</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Enter User Name"
@@ -40,42 +43,35 @@
                        required="">
             </div>
 
+            <!--Password Confirm-->
             <div class="form-group">
                 <label for="passwordConfirm" class="sr-only">Confirm Password</label>
                 <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
                        placeholder="Confirm Password" required="">
             </div>
 
+            <!--Remember Me-->
             <div class="form-check form-check-inline">
                 <label for="rememberLogin" class="form-check-label">
-                <input class="form-check-input" type="checkbox" id="rememberLogin" name="rememberLogin">
-                Keep Me Logged In!</label>
+                    <input class="form-check-input" type="checkbox" id="rememberLogin" name="rememberLogin">
+                    Keep Me Logged In!</label>
             </div>
 
+            <button type="button" class="btn btn-lg btn-primary" data-toggle="button" aria-pressed="false">Sign Up!</button>
 
-        <button type="button" class="btn btn-lg btn-primary" data-toggle="button" aria-pressed="false">Login</button>
-
-
-            <p><a href="login">Current User Sign In</a></p>
 
         </form>
-
-        <div id="modalform" style="display:none">
-        <h1>It Works</h1>
-        <label for="searchBox">Search</label>
-        <input type="search"id="searchBox"/>
-"
     </div>
 
-    </div>
-    <div class="col-lg-3">
+    <div class="footer">
 
     </div>
-</div>
-<!--End Row-->
 
 
+</div><!--End Row-->
 
-<jsp:include page="footer.jsp"/>
+</div><!--End Container-->
+</body>
+</html>
 
 

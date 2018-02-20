@@ -2,32 +2,16 @@ body {
     background: #eee !important;
 }
 
-.wrapper {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
+
 
 .form-signin {
-    max-width: 450px;
     margin: 1rem 0 1rem 0;
     padding: 20px;
     background-color: #fff;
-    text-align: center;
-
 }
 
 .border {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.test-pink {
-    background-color: hotpink;
-}
 
-.test-blue {
-    background-color: dodgerblue;
-}
-
-.test-green {
-    background-color: lawngreen;
-}

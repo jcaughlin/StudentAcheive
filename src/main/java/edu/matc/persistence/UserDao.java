@@ -102,10 +102,11 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         Expression<String> propertyPath = root.get("lastName");
         query.where(builder.like(propertyPath, "%" + lastName + "%"));
-        List<User> usersList = session.createQuery(query).getResultList();
+        List<User> userList = session.createQuery(query).getResultList();
 
         session.close();
 
+        return userList;
     }
 
     /**

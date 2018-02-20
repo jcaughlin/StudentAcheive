@@ -32,12 +32,7 @@
             crossorigin="anonymous"></script>
 <body>
 
-<!--Start of Container-->
-<div class="container">
 
-    <div class="jumbotron-fluid">
-        <h1 class="text-center test-bar">${heading}</h1>
-    </div>
 
 
 
