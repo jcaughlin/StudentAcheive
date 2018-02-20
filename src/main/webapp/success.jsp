@@ -11,7 +11,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <jsp:include page="head.jsp"/>
-
-
-
+<div class="container">
+    <h1>You are here!</h1>
+    <jsp:include page="footer.jsp"/>
+</div>
+</body>
+</html>
 

@@ -12,7 +12,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "SignUpNewUser", urlPatterns = "/newUser")
+@WebServlet(name = "SignUpNewUser", urlPatterns = "/signUpNewUser")
 public class SignUpNewUser extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -23,7 +23,7 @@ public class SignUpNewUser extends HttpServlet {
             throws ServletException, IOException {
 
 
-        String url = "success.jsp";
+        String url = "/user-signup.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

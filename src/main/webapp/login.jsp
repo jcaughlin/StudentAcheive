@@ -12,14 +12,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <jsp:include page="head.jsp"/>
+<div class="container">
 
 <div class="row">
-
     <div class="col-lg-2">
         <jsp:include page="sidebar-menu.jsp"/>
     </div>
 <div class="col-lg-7">
-    <form class="form-signin" method="post" action="j_security_check">
+    <form class="form mt-5" method="post" action="j_security_check">
         <h2 class="form-signin-heading">Please Login</h2>
 
         <div class="form-group">
@@ -31,8 +31,10 @@
         <label for="password" class="sr-only">Enter Password</label>
         <input type="password" class="form-control" name="j_password" id="password" placeholder="Password" required="">
     </div>
-
-        <button role="button" class="btn-btn-lg btn-success btn-block" type="submit">Submit!!</button>
+        <div class="btn-group">
+        <button role="button" class="btn btn-lg btn-success" type="submit">Submit!!</button>
+            <a href="/login" class="btn btn-lg btn-info">Existing User Login</a>
+        </div>
     </form>
 </div>
     <div class="col-lg-3"></div>
@@ -40,4 +42,7 @@
 </div>
 
 <jsp:include page="footer.jsp"/>
+</div>
+</body>
+</html>
 

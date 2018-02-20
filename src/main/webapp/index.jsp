@@ -13,20 +13,24 @@
 
 <jsp:include page="head.jsp"/>
 
-<div class="container py=5">
+<div class="container py-5">
 
 <div class="row">
-
-    <div class="jumbotron">
-        <h1>${heading}</h1>
+    <div class="jumbotron text-center">
+        <h1>Welcome ${heading}</h1>
     </div>
+</div>
+
+    <div class="row">
     <!--Sidebar Menu-->
     <div class="col-lg-2 test-green sideBar">
         <jsp:include page="sidebar-menu.jsp"/>
     </div>
 
+    <!--Center Column-->
     <div class="col-lg-7">
-        <form class="form form-signin mx-auto" action="/newUser" method="post">
+        <!--FORM-->
+        <form class="form form-signin mx-auto p5" action="signUpNewUser" method="post">
             <h2 class="form-signin-heading">Please Join The Fun</h2>
 
             <!--User Name-->
@@ -51,24 +55,21 @@
             </div>
 
             <!--Remember Me-->
-            <div class="form-check form-check-inline">
+            <div class="form-check">
                 <label for="rememberLogin" class="form-check-label">
                     <input class="form-check-input" type="checkbox" id="rememberLogin" name="rememberLogin">
                     Keep Me Logged In!</label>
             </div>
 
-            <button type="button" class="btn btn-lg btn-primary" data-toggle="button" aria-pressed="false">Sign Up!</button>
-
-
+            <div class="btn-group">
+            <button class="btn btn-lg btn-primary" aria-pressed="false">Sign Up!</button>
+                <a href="/login" class="btn btn-lg btn-info">Existing User Login</a>
+            </div>
         </form>
     </div>
+    </div> <!--End Row-->
 
-    <div class="footer">
-
-    </div>
-
-
-</div><!--End Row-->
+    <jsp:include page="footer.jsp"/>
 
 </div><!--End Container-->
 </body>
