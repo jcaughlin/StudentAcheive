@@ -10,19 +10,21 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="/head.jsp"/>
-<div class="container">
+<jsp:include page="head.jsp"/>
+<div class="container py-2">
+    <jsp:include page="jumbotron.jsp"/>
+    <hr>
 
 <div class="row">
     <div class="col-sm-2">
-        <jsp:include page="sidebar-menu.jsp"></jsp:include>
+        <jsp:include page="sidebar-menu.jsp"/>
     </div>
-<div class="col-md-10 offset-md-1">
+<div class="col-md-9 offset-md-1">
     <span class="anchor" id="formComplex"></span>
-    <hr class="my-5">
     <h3>Welcome ${username}! Let's Finish Getting You Registered</h3>
 
-    <form method="post" action="signup">
+    <!--Start of form-->
+    <form class="border" method="post" action="signup">
     <!-- form complex example -->
     <div class="row mt-4">
 
@@ -72,7 +74,7 @@
         <!--User Phone Area Code-->
         <div class="col-sm-2 pb-3">
             <label class="sr-only" for="areacode">Three Digit Area Code</label>
-            <input id="areacode" type="text" class="form-control" name = "areacode" placeholder="Enter Area Code">
+            <input id="areacode" type="text" class="form-control" name = "areacode" placeholder="(xxx)">
         </div>
 
         <!--User Phone-->
@@ -80,21 +82,24 @@
             <label class="sr-only" for="phone">Phone Number</label>
             <input id="phone" type="text" class="form-control" name = "phone" placeholder="Enter Phone Number">
         </div>
+
+        <div class="col-sm-4 pb-3">
+            <label for="userPhoto">Example file input</label>
+            <input type="file" class="form-control-file" id="userPhoto">
+            <small class="form-text text-muted">
+                Upload User Photo
+            </small>
+        </div>
         <button class="btn btn-success">Submit</button>
 
     </div>
     </form>
 </div>
 
-</div>
 
 </div>
 <!--/row-->
+<jsp:include page="footer.jsp"/>
+</div> <!--End Container-->
 
-<hr>
-
-
-
-</body>
-</html>
 

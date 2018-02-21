@@ -23,8 +23,6 @@ import javax.script.ScriptException;
 
 public class LoginUserServlet extends HttpServlet {
 
-    ScriptEngineManager scriptEngineManager = new ScriptEngineManager();
-    ScriptEngine nashorn = scriptEngineManager.getEngineByName("nashorn");
 
    private final Logger logger = LogManager.getLogger(this.getClass());
 

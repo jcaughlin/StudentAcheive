@@ -31,7 +31,8 @@ public class User {
     @Getter @Setter private String streetAddress;
     @Getter @Setter private String cityName;
     @Getter @Setter private String stateName;
-    @Getter @Setter private String userZipCode;
+    @Getter @Setter private int userZipCode;
+    @Getter @Setter private int areaCode;
     @Getter @Setter private int userPhoneNumber;
     @Getter @Setter private String userEmail;
     @Getter @Setter private LocalDate userCreatedDate;

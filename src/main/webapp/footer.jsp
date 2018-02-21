@@ -9,8 +9,9 @@
 
 
 <div class="row">
-    <div class="footer my-5">
-        <p class="text-center py-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias blanditiis consequuntur culpa, maiores minima nisi,
+    <hr>
+    <div class="footer my-2">
+        <p class="text-center py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias blanditiis consequuntur culpa, maiores minima nisi,
             possimus quasi repudiandae rerum sequi vel voluptates voluptatibus? Animi aspernatur commodi consequatur earum nostrum.</p>
     </div>
 </div><!--End Row-->
