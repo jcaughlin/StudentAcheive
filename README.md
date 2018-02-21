@@ -91,7 +91,7 @@ Currently, the application is mobile friendly and application for the iPad is pe
 
 ### Design
 
-* [Screen Design](DesignDocuments/WireFrames.bmpr)
+* [Screen Design](DesignDocuments/StudentAchieve!.pdf)
 * [Database Design](DesignDocuments/studentManager.svg)
 * **Application Flow- NEED HELP!!!**
 
