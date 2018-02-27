@@ -1,12 +1,16 @@
 package edu.matc.entity;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import javax.persistence.Entity;
+
+@Entity
 public class UserRoles {
 
-    private int userRoleId;
-    private RoleName roleName;
-    private User user;
-    private String userName;
+    @Getter @Setter private int userRoleId;
+    @Getter @Setter private RoleName roleName;
+    @Getter @Setter private User user;
+    @Getter @Setter private String userName;
 }

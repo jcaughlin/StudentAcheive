@@ -1,7 +1,7 @@
 package edu.matc.test.util;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import lombok.extern.log4j.Log4j2;
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,10 +19,9 @@ import java.util.Properties;
  *
  * @author pwaite
  */
-
+@Log4j2
 public class Database {
 
-    private final Logger logger = LogManager.getLogger(this.getClass());
     // create an object of the class Database
     private static Database instance = new Database();
 
@@ -78,7 +77,7 @@ public class Database {
             try {
                 connection.close();
             } catch (SQLException e) {
-                logger.error("Cannot close connection" + e);
+                log.error("Cannot close connection" + e);
             }
         }
 
@@ -111,9 +110,9 @@ public class Database {
             }
 
         } catch (SQLException se) {
-            logger.error("There was a sql exception" + se);
+            log.error("There was a sql exception" + se);
         } catch (Exception e) {
-            logger.error(e);
+            log.error(e);
         } finally {
             disconnect();
         }

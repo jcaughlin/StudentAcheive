@@ -1,7 +1,7 @@
 package edu.matc.controller;
 
 import java.io.IOException;
-import java.util.*;
+import java.time.LocalDate;
 
 import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
@@ -19,27 +19,63 @@ public class NewUser extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    UserDao dao;
+    UserDao userDao = new UserDao();
     User user;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        .
-        user.setUserName(request.getParameter("username"));
-        user.setUserPassword(request.getParameter("password"));
+        String firstName = request.getParameter("firstName");
+        logger.debug(firstName);
+        String lastName = request.getParameter("lastName");
+        logger.debug(lastName);
+        String userName = request.getParameter("username");
+        logger.debug(userName);
+        String password = request.getParameter("password");
+        logger.debug(password);
+        String address = request.getParameter("address");
+        logger.debug(address);
+        String cityName = request.getParameter("city");
+        logger.debug(cityName);
+        String state = request.getParameter("state");
+        logger.debug(state);
+        Integer zipcode = (Integer.parseInt(request.getParameter("zipCode")));
+        logger.debug(zipcode);
+        String email = request.getParameter("email");
+        logger.debug(email);
+        String areaCode = request.getParameter("areaCode");
+        logger.debug(areaCode);
+        String phone = request.getParameter("phone");
+        logger.debug(phone);
+        String userBirthday = request.getParameter("birthday");
+        logger.debug(userBirthday);
+        LocalDate birthday =  LocalDate.parse(userBirthday);
+        logger.debug(birthday);
+        Part userPhotoFilePart = request.getPart("userPhoto");
+        // String userPhotolink = processImageFile(userPhotoFilePart);
 
-        user.setFirstName(request.getParameter("firstName"));
-        user.setLastName(request.getParameter("lastName"));
-        user.setStreetAddress(request.getParameter("address"));
-        user.setCityName(request.getParameter("city"));
-        user.setStateName(request.getParameter("state"));
-        user.setUserZipCode(Integer.parseInt(request.getParameter("zipCode")));
-        user.setUserEmail(request.getParameter("email"));
-        user.setAreaCode(Integer.parseInt(request.getParameter("areaCode")));
-        user.setUserPhoneNumber(Integer.parseInt(request.getParameter("phone")));
 
+
+
+
+
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setUserName(userName);
+        user.setUserPassword(password);
+        user.setStreetAddress(address);
+        user.setCityName(cityName);
+        user.setStateName(state);
+        user.setZipCode(zipcode);
+        user.setUserEmail(email);
+        user.setAreaCode(areaCode);
+        user.setUserPhoneNumber(phone);
+        user.setUserBirthDate(birthday);
+        // user.setLinkToUserProfilePhoto(userPhotolink);
+
+        int userId = userDao.insert(user);
+        logger.debug("My new user has an ID of " + userId);
 
         String url = "/user-signup.jsp";
 
@@ -47,6 +83,31 @@ public class NewUser extends HttpServlet {
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
+
+   /* private String processImageFile(Part imageFilePart) {
+        //TODO Decide where images will be stored
+        //TODO Validate maximum image size
+        //TODO Use Google API
+        String userPhotoFilePath = "../Test";
+
+        String fileName = getFileName(imageFilePart);
+        String userPhotoLink = userPhotoFilePath + fileName;
+        return userPhotoLink;
+    }
+
+
+
+    private String getFileName(final Part part) {
+        final String partHeader = part.getHeader("content-disposition");
+        for (String content : part.getHeader("content-disposition").split(";")) {
+            if (content.trim().startsWith("filename")) {
+                return content.substring(
+                        content.indexOf('=') + 1).trim().replace("\"", "");
+            }
+        }
+        return null;
+    }*/
+
 }
     
     

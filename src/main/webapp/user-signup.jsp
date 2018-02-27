@@ -85,7 +85,7 @@
 
         <div class="col-sm-4 pb-3">
             <label for="userPhoto">Example file input</label>
-            <input type="file" class="form-control-file" id="userPhoto">
+            <input type="file" name="userPhoto" class="form-control-file" id="userPhoto">
             <small class="form-text text-muted">
                 Upload User Photo
             </small>
