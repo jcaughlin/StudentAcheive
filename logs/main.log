@@ -16,3 +16,61 @@
 [INFO ] 2018-02-20 19:32:59.607 [http-nio-8080-exec-5] SignUpNewUser - user
 [INFO ] 2018-02-20 19:32:59.639 [http-nio-8080-exec-5] SignUpNewUser - password
 [INFO ] 2018-02-20 19:32:59.640 [http-nio-8080-exec-5] SignUpNewUser - password
+[INFO ] 2018-02-27 20:56:50.670 [http-nio-8080-exec-9] SignUpNewUser - test
+[INFO ] 2018-02-27 20:56:50.714 [http-nio-8080-exec-9] SignUpNewUser - superpassword
+[INFO ] 2018-02-27 20:56:50.715 [http-nio-8080-exec-9] SignUpNewUser - superpassword
+[DEBUG] 2018-02-27 20:57:27.256 [http-nio-8080-exec-6] NewUser - Tom
+[DEBUG] 2018-02-27 20:57:27.257 [http-nio-8080-exec-6] NewUser - Fred
+[DEBUG] 2018-02-27 20:57:27.257 [http-nio-8080-exec-6] NewUser - null
+[DEBUG] 2018-02-27 20:57:27.257 [http-nio-8080-exec-6] NewUser - null
+[DEBUG] 2018-02-27 20:57:27.258 [http-nio-8080-exec-6] NewUser - 
+[DEBUG] 2018-02-27 20:57:27.258 [http-nio-8080-exec-6] NewUser - 
+[DEBUG] 2018-02-27 20:57:27.258 [http-nio-8080-exec-6] NewUser - Pick a state
+[INFO ] 2018-02-27 21:03:07.677 [http-nio-8080-exec-10] SignUpNewUser - newuser
+[INFO ] 2018-02-27 21:03:07.697 [http-nio-8080-exec-10] SignUpNewUser - superpassword
+[INFO ] 2018-02-27 21:03:07.698 [http-nio-8080-exec-10] SignUpNewUser - superpassword
+[DEBUG] 2018-02-27 21:03:41.857 [http-nio-8080-exec-8] NewUser - Fred
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - Stuff
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - null
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - null
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - 124 Main Street
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - 123 Main Street
+[DEBUG] 2018-02-27 21:03:41.858 [http-nio-8080-exec-8] NewUser - Pick a state
+[INFO ] 2018-02-27 21:06:15.561 [http-nio-8080-exec-5] SignUpNewUser - fernando
+[INFO ] 2018-02-27 21:06:15.580 [http-nio-8080-exec-5] SignUpNewUser - super
+[INFO ] 2018-02-27 21:06:15.581 [http-nio-8080-exec-5] SignUpNewUser - super
+[DEBUG] 2018-02-27 21:06:54.553 [http-nio-8080-exec-2] NewUser - Fernando
+[DEBUG] 2018-02-27 21:06:54.556 [http-nio-8080-exec-2] NewUser - Lamas
+[DEBUG] 2018-02-27 21:06:54.556 [http-nio-8080-exec-2] NewUser - null
+[DEBUG] 2018-02-27 21:06:54.563 [http-nio-8080-exec-2] NewUser - null
+[DEBUG] 2018-02-27 21:06:54.563 [http-nio-8080-exec-2] NewUser - 1009 WInston Way
+[DEBUG] 2018-02-27 21:06:54.563 [http-nio-8080-exec-2] NewUser - Waunakee
+[DEBUG] 2018-02-27 21:06:54.563 [http-nio-8080-exec-2] NewUser - Pick a state
+[DEBUG] 2018-02-27 21:06:54.564 [http-nio-8080-exec-2] NewUser - 53597
+[INFO ] 2018-02-27 21:12:15.125 [http-nio-8080-exec-4] SignUpNewUser - Banana
+[INFO ] 2018-02-27 21:12:15.146 [http-nio-8080-exec-4] SignUpNewUser - Jimbob
+[INFO ] 2018-02-27 21:12:15.147 [http-nio-8080-exec-4] SignUpNewUser - Jimbob
+[DEBUG] 2018-02-27 21:12:36.868 [http-nio-8080-exec-8] NewUser - Bob
+[DEBUG] 2018-02-27 21:12:36.869 [http-nio-8080-exec-8] NewUser - Banana
+[DEBUG] 2018-02-27 21:12:36.870 [http-nio-8080-exec-8] NewUser - null
+[DEBUG] 2018-02-27 21:12:36.870 [http-nio-8080-exec-8] NewUser - null
+[DEBUG] 2018-02-27 21:12:36.870 [http-nio-8080-exec-8] NewUser - 
+[DEBUG] 2018-02-27 21:12:36.870 [http-nio-8080-exec-8] NewUser - 
+[DEBUG] 2018-02-27 21:12:36.870 [http-nio-8080-exec-8] NewUser - Pick a state
+[INFO ] 2018-02-27 21:14:06.895 [http-nio-8080-exec-5] SignUpNewUser - Fred
+[INFO ] 2018-02-27 21:14:06.919 [http-nio-8080-exec-5] SignUpNewUser - password9
+[INFO ] 2018-02-27 21:14:06.920 [http-nio-8080-exec-5] SignUpNewUser - Password9
+[INFO ] 2018-02-27 21:43:00.240 [http-nio-8080-exec-3] SignUpNewUser - Banana
+[INFO ] 2018-02-27 21:43:00.274 [http-nio-8080-exec-3] SignUpNewUser - password
+[INFO ] 2018-02-27 21:43:00.274 [http-nio-8080-exec-3] SignUpNewUser - password
+[DEBUG] 2018-02-27 21:43:34.536 [http-nio-8080-exec-9] NewUser - Bob
+[DEBUG] 2018-02-27 21:43:34.537 [http-nio-8080-exec-9] NewUser - Bob
+[DEBUG] 2018-02-27 21:43:34.537 [http-nio-8080-exec-9] NewUser - null
+[DEBUG] 2018-02-27 21:43:34.537 [http-nio-8080-exec-9] NewUser - null
+[DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - 
+[DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - 
+[DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - Pick a state
+[DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - jcaughlin@gmail.com
+[DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - null
+[DEBUG] 2018-02-27 21:43:34.539 [http-nio-8080-exec-9] NewUser - 
+[DEBUG] 2018-02-27 21:43:34.539 [http-nio-8080-exec-9] NewUser - null

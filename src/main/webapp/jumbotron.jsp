@@ -9,6 +9,8 @@
 
 
     <div class="jumbotron">
-        <h1 class="text-center">Welcome ${heading}</h1>
+        <div class="col-lg-4"><img class="img-fluid" src="images/Chalkboard21224.jpg" alt="Image of Cartoon Pencil"></div>
+        <div class="col-lg-4"><h1 class="text-center">Welcome ${heading}</h1></div>
+        <div class="col-lg-4"><img class="img-fluid" src="images/pencil.png" alt="Image of Cartoon Pencil"></div>
     </div>
 

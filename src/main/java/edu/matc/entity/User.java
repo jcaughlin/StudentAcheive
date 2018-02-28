@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @ToString
 @Entity(name = "User")
 @Table(name = "user")
-public class User implements Serializable{
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -84,6 +84,7 @@ public class User implements Serializable{
         this.userPassword = userPassword;
         this.userEmail = userEmail;
     }
+
 
 
 }

@@ -62,7 +62,7 @@
         <!--User Zip-->
         <div class="col-sm-3 pb-3">
             <label class="sr-only" for="zipCode">Postal Code</label>
-            <input type="text" class="form-control" id="zipCode" placeholder="Zip Code">
+            <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Zip Code">
         </div>
 
         <!--User Email-->

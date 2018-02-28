@@ -40,8 +40,14 @@ public class NewUser extends HttpServlet {
         logger.debug(cityName);
         String state = request.getParameter("state");
         logger.debug(state);
-        Integer zipcode = (Integer.parseInt(request.getParameter("zipCode")));
-        logger.debug(zipcode);
+        String zipCodeHolder = request.getParameter("zipCode");
+
+        if(zipCodeHolder.equals(null)) {
+            Integer zipcode = Integer.parseInt(zipCodeHolder);
+            logger.debug(zipcode);
+            user.setZipCode(zipcode);
+        }
+
         String email = request.getParameter("email");
         logger.debug(email);
         String areaCode = request.getParameter("areaCode");
@@ -67,7 +73,7 @@ public class NewUser extends HttpServlet {
         user.setStreetAddress(address);
         user.setCityName(cityName);
         user.setStateName(state);
-        user.setZipCode(zipcode);
+
         user.setUserEmail(email);
         user.setAreaCode(areaCode);
         user.setUserPhoneNumber(phone);

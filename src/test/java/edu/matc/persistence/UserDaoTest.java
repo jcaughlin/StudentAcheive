@@ -35,10 +35,11 @@ public class UserDaoTest {
     void insertTest() {
         user = new User("Tom","Smith","tomsmith","password6","tomsmith@gmail.com");
         log.error(user);
-        userDao.insert(user);
-        User user2 = userDao.getById(0);
+        int id = userDao.insert(user);
+        assertNotEquals(0,id);
+        User user2 = userDao.getById(id);
         log.debug(user2);
-        log.debug(user2.getLastName());
+        log.debug("The retrieve Users last name: " + user2.getLastName());
         assertEquals(user2.getLastName(),"Smith");
 
 
@@ -56,6 +57,13 @@ public class UserDaoTest {
 
     @Test
     void saveOrUpdate() {
+        String newLastName = "Putin";
+        User updatedUser = userDao.getById(4);
+        updatedUser.setLastName(newLastName);
+        userDao.saveOrUpdate(updatedUser);
+        User retrievedUser = userDao.getById(4);
+        assertEquals(newLastName,retrievedUser.getLastName());
+
     }
 
     @Test
@@ -66,6 +74,8 @@ public class UserDaoTest {
 
     @Test
     void delete() {
+        userDao.delete(userDao.getById(2));
+        assertNull(userDao.getById(2));
     }
 
     @Test
