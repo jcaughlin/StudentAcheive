@@ -15,7 +15,9 @@
     <jsp:include page="jumbotron.jsp"/>
     <hr>
     <h1>You are here!</h1>
-    <h3>${username}</h3>
+    <h3>${username} Please Confirm Your Registration info</h3>
+
+    <h1>Would you like to Upload a photo?</h1>
     <jsp:include page="footer.jsp"/>
 </div>
 

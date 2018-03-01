@@ -28,3 +28,8 @@
 * I need to get more sleep.
 * Intership seems to be going okay.
 * I am behind, but I am way ahead of last semester although that makes me feel worse as there is no reason I should be behind and I am extremely frustrated that I am and the reasons why. Telling me that I do this to myself doesn't really help me not do this to myself.
+
+
+### Today is March 1st
+* Still struggling with AWS Lost my debugging notes.
+* jsp to add user is working.

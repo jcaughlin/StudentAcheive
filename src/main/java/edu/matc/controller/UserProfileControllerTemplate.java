@@ -34,27 +34,6 @@ public class UserProfileControllerTemplate extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-
-
-    /*private String routeUserType(String userType) {
-
-        switch(userType) {
-
-            case "student":
-                return url = "student-profile.jsp";
-                break;
-
-            case "teacher":
-                return url = "teacher-landing.jsp";
-                break;
-
-            case "admin":
-                return url = "admin-landing.jsp";
-                break;
-        }
-
-    }*/
-
 }
     
     

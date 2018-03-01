@@ -58,39 +58,41 @@ more detail.
 
 
 ### Week 6
-**Individual Project Reviews
+#####**Individual Project Reviews**
 * [ ] Weekly Journal Entry
 * [ ] Time Log
 * [ ] Deploy to AWS
 * [ ] Set up db/MySql on AWS
-* [ ] Custom Domain and SSL set up on AWS
-* [ ] AWS BLOB/Image Upload Storage
-* [ ] **Implement Google Image Validation API?**
-* [ ] **Implement Google reCaptcha API?**
-* [ ] *User Testing for Accessibility*
 * [ ] Custom Error Templates jsp for Servlet Exceptions and Http Status Codes-Existing Libraries?
-* [ ] Sessions an Cookies
 
 ### Week 7
-**Checkpoint 2**
+#####**Checkpoint 2**
 * [ ] Weekly Journal Entry
 * [ ] Time Log
 * [ ] tomcat authentication
 * [ ] Set up security contraints in web.xml
 * [ ] Ensure jsp directory structure supports security constraints
 * [ ] **Client-Side validation-Bootstrap Library**
+* [ ] **Implement Google Image Validation API?**
+* [ ] AWS BLOB/Image Upload Storage
+* [ ] **Implement Google reCaptcha API?**
 
 ### Week 8
 * [ ] Weekly Journal Entry
 * [ ] Time Log
-* [ ] Password Encryption
+* [ ] Set up db/MySql on AWS
+* [ ] Custom Domain and SSL set up on AWS
+* [ ] AWS BLOB/Image Upload Storage
+* [ ] *User Testing for Accessibility*
 
 ### Week 9
-**Weekly Checkpoint 3**w
+####**Weekly Checkpoint 3**
+* [ ] **Validation Week**
 * [ ] Weekly Journal Entry
 * [ ] Time Log
 * [ ] Server-side Validation
 * [ ] Data Base Security-SQL injection
+* [ ] **Client-Side validation-Bootstrap Library**
 
 
 ### Week 10
@@ -102,6 +104,8 @@ more detail.
 * [ ] Weekly Journal Entry
 * [ ] Time Log
 * [ ] Implement MultiThreading?
+* [ ] Custom Domain and SSL set up on AWS
+* [ ] Sessions an Cookies
 
 ### Week 12
 * [ ] Weekly Journal Entry
