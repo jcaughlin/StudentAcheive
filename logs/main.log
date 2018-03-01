@@ -74,3 +74,231 @@
 [DEBUG] 2018-02-27 21:43:34.538 [http-nio-8080-exec-9] NewUser - null
 [DEBUG] 2018-02-27 21:43:34.539 [http-nio-8080-exec-9] NewUser - 
 [DEBUG] 2018-02-27 21:43:34.539 [http-nio-8080-exec-9] NewUser - null
+[INFO ] 2018-02-28 19:42:28.872 [http-nio-8080-exec-6] SignUpNewUser - Fernando
+[INFO ] 2018-02-28 19:42:28.899 [http-nio-8080-exec-6] SignUpNewUser - unique
+[INFO ] 2018-02-28 19:42:28.899 [http-nio-8080-exec-6] SignUpNewUser - unique
+[DEBUG] 2018-02-28 19:43:19.359 [http-nio-8080-exec-1] NewUser - Tom
+[DEBUG] 2018-02-28 19:43:19.360 [http-nio-8080-exec-1] NewUser - Jackson
+[DEBUG] 2018-02-28 19:43:19.360 [http-nio-8080-exec-1] NewUser - null
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - null
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - 1009 Winston Way
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - Waunakee
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - Pick a state
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - jcaughlin@gmail.com
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - null
+[DEBUG] 2018-02-28 19:43:19.361 [http-nio-8080-exec-1] NewUser - 6300844
+[INFO ] 2018-02-28 20:10:34.233 [http-nio-8080-exec-5] SignUpNewUser - robert
+[INFO ] 2018-02-28 20:10:34.251 [http-nio-8080-exec-5] SignUpNewUser - password
+[INFO ] 2018-02-28 20:10:34.251 [http-nio-8080-exec-5] SignUpNewUser - password
+[DEBUG] 2018-02-28 20:11:22.648 [http-nio-8080-exec-7] NewUser - Bobby 
+[DEBUG] 2018-02-28 20:11:22.649 [http-nio-8080-exec-7] NewUser - Smith
+[DEBUG] 2018-02-28 20:11:22.649 [http-nio-8080-exec-7] NewUser - null
+[DEBUG] 2018-02-28 20:11:22.649 [http-nio-8080-exec-7] NewUser - null
+[DEBUG] 2018-02-28 20:11:22.649 [http-nio-8080-exec-7] NewUser - 
+[DEBUG] 2018-02-28 20:11:22.650 [http-nio-8080-exec-7] NewUser - 
+[DEBUG] 2018-02-28 20:11:22.650 [http-nio-8080-exec-7] NewUser - Pick a state
+[INFO ] 2018-02-28 20:18:50.348 [http-nio-8080-exec-5] SignUpNewUser - Fred
+[INFO ] 2018-02-28 20:18:50.366 [http-nio-8080-exec-5] SignUpNewUser - password
+[INFO ] 2018-02-28 20:18:50.366 [http-nio-8080-exec-5] SignUpNewUser - password
+[DEBUG] 2018-02-28 20:20:04.354 [http-nio-8080-exec-7] NewUser - User First Name: Fred 
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User Last Name: Smith
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User's user name: null
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User's Password: null
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User's Street Address: 123 Main Street
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User's CityChicago
+[DEBUG] 2018-02-28 20:20:04.355 [http-nio-8080-exec-7] NewUser - User's State: Pick a state
+[DEBUG] 2018-02-28 20:20:04.356 [http-nio-8080-exec-7] NewUser - User Zip Code: 53587
+[DEBUG] 2018-02-28 20:20:04.356 [http-nio-8080-exec-7] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-02-28 20:20:04.356 [http-nio-8080-exec-7] NewUser - User's Area Code: null
+[DEBUG] 2018-02-28 20:20:04.356 [http-nio-8080-exec-7] NewUser - User's Phone: 7426661
+[DEBUG] 2018-02-28 20:20:04.356 [http-nio-8080-exec-7] NewUser - User's String Birthday: 1976-02-23
+[DEBUG] 2018-02-28 20:20:04.359 [http-nio-8080-exec-7] NewUser - User's LocalDate Birthday: 1976-02-23
+[INFO ] 2018-02-28 20:25:58.822 [http-nio-8080-exec-4] SignUpNewUser - ramon
+[INFO ] 2018-02-28 20:25:58.842 [http-nio-8080-exec-4] SignUpNewUser - testuser
+[INFO ] 2018-02-28 20:25:58.842 [http-nio-8080-exec-4] SignUpNewUser - testuser
+[INFO ] 2018-02-28 20:28:27.739 [http-nio-8080-exec-10] SignUpNewUser - user
+[INFO ] 2018-02-28 20:28:27.755 [http-nio-8080-exec-10] SignUpNewUser - userpass
+[INFO ] 2018-02-28 20:28:27.756 [http-nio-8080-exec-10] SignUpNewUser - userpass
+[DEBUG] 2018-02-28 20:29:07.871 [http-nio-8080-exec-2] NewUser - User First Name: tom
+[DEBUG] 2018-02-28 20:29:07.873 [http-nio-8080-exec-2] NewUser - User Last Name: user
+[DEBUG] 2018-02-28 20:29:07.873 [http-nio-8080-exec-2] NewUser - User's user name: null
+[DEBUG] 2018-02-28 20:29:07.873 [http-nio-8080-exec-2] NewUser - User's Password: null
+[DEBUG] 2018-02-28 20:29:07.873 [http-nio-8080-exec-2] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's CityWaunakee
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's State: NH
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User Zip Code: 53539
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's Email: jcaughlin@gmail.com
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's Area Code: null
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's Phone: 6300844
+[DEBUG] 2018-02-28 20:29:07.874 [http-nio-8080-exec-2] NewUser - User's String Birthday: 1999-05-23
+[DEBUG] 2018-02-28 20:29:07.878 [http-nio-8080-exec-2] NewUser - User's LocalDate Birthday: 1999-05-23
+[INFO ] 2018-02-28 20:32:44.466 [http-nio-8080-exec-4] SignUpNewUser - newuser
+[INFO ] 2018-02-28 20:32:44.494 [http-nio-8080-exec-4] SignUpNewUser - password
+[INFO ] 2018-02-28 20:32:44.494 [http-nio-8080-exec-4] SignUpNewUser - password
+[DEBUG] 2018-02-28 20:33:14.170 [http-nio-8080-exec-6] NewUser - User First Name: jack
+[DEBUG] 2018-02-28 20:33:14.172 [http-nio-8080-exec-6] NewUser - User Last Name: smith
+[DEBUG] 2018-02-28 20:33:14.172 [http-nio-8080-exec-6] NewUser - User's user name: null
+[DEBUG] 2018-02-28 20:33:14.173 [http-nio-8080-exec-6] NewUser - User's Password: null
+[DEBUG] 2018-02-28 20:33:14.173 [http-nio-8080-exec-6] NewUser - User's Street Address: 123 Main Street
+[DEBUG] 2018-02-28 20:33:14.173 [http-nio-8080-exec-6] NewUser - User's CityChicago
+[DEBUG] 2018-02-28 20:33:14.173 [http-nio-8080-exec-6] NewUser - User's State: IL
+[DEBUG] 2018-02-28 20:33:14.174 [http-nio-8080-exec-6] NewUser - User Zip Code: 53587
+[DEBUG] 2018-02-28 20:33:14.174 [http-nio-8080-exec-6] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-02-28 20:33:14.174 [http-nio-8080-exec-6] NewUser - User's Area Code: null
+[DEBUG] 2018-02-28 20:33:14.174 [http-nio-8080-exec-6] NewUser - User's Phone: 7426661
+[DEBUG] 2018-02-28 20:33:14.174 [http-nio-8080-exec-6] NewUser - User's String Birthday: 1972-04-19
+[DEBUG] 2018-02-28 20:33:14.177 [http-nio-8080-exec-6] NewUser - User's LocalDate Birthday: 1972-04-19
+[INFO ] 2018-02-28 20:35:30.608 [http-nio-8080-exec-1] SignUpNewUser - james
+[INFO ] 2018-02-28 20:35:30.624 [http-nio-8080-exec-1] SignUpNewUser - password
+[INFO ] 2018-02-28 20:35:30.625 [http-nio-8080-exec-1] SignUpNewUser - password
+[DEBUG] 2018-02-28 20:36:07.298 [http-nio-8080-exec-3] NewUser - User First Name: James
+[DEBUG] 2018-02-28 20:36:07.299 [http-nio-8080-exec-3] NewUser - User Last Name: Lofton
+[DEBUG] 2018-02-28 20:36:07.299 [http-nio-8080-exec-3] NewUser - User's user name: null
+[DEBUG] 2018-02-28 20:36:07.299 [http-nio-8080-exec-3] NewUser - User's Password: null
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's Street Address: 101 Main Street
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's CityChicago
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's State: IL
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User Zip Code: 53587
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's Area Code: null
+[DEBUG] 2018-02-28 20:36:07.300 [http-nio-8080-exec-3] NewUser - User's Phone: 7426661
+[DEBUG] 2018-02-28 20:36:07.301 [http-nio-8080-exec-3] NewUser - User's String Birthday: 1981-01-01
+[DEBUG] 2018-02-28 20:36:07.304 [http-nio-8080-exec-3] NewUser - User's LocalDate Birthday: 1981-01-01
+[INFO ] 2018-02-28 22:40:55.408 [http-nio-8080-exec-4] SignUpNewUser - fred
+[INFO ] 2018-02-28 22:40:55.434 [http-nio-8080-exec-4] SignUpNewUser - password
+[INFO ] 2018-02-28 22:40:55.435 [http-nio-8080-exec-4] SignUpNewUser - password
+[DEBUG] 2018-02-28 22:41:26.753 [http-nio-8080-exec-1] NewUser - User First Name: Pete
+[DEBUG] 2018-02-28 22:41:26.754 [http-nio-8080-exec-1] NewUser - User Last Name: Burns
+[DEBUG] 2018-02-28 22:41:26.755 [http-nio-8080-exec-1] NewUser - User's user name: null
+[DEBUG] 2018-02-28 22:41:26.755 [http-nio-8080-exec-1] NewUser - User's Password: null
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's CityWaunakee
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's State: DE
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User Zip Code: 55555
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's Email: jcaughlin@gmail.com
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's Area Code: null
+[DEBUG] 2018-02-28 22:41:26.756 [http-nio-8080-exec-1] NewUser - User's Phone: 6300844
+[DEBUG] 2018-02-28 22:41:26.757 [http-nio-8080-exec-1] NewUser - User's String Birthday: 1999-01-01
+[DEBUG] 2018-02-28 22:41:26.761 [http-nio-8080-exec-1] NewUser - User's LocalDate Birthday: 1999-01-01
+[INFO ] 2018-02-28 22:51:24.332 [http-nio-8080-exec-3] SignUpNewUser - NewUser
+[INFO ] 2018-02-28 22:51:24.361 [http-nio-8080-exec-3] SignUpNewUser - password
+[INFO ] 2018-02-28 22:51:24.361 [http-nio-8080-exec-3] SignUpNewUser - password
+[INFO ] 2018-02-28 22:51:49.279 [http-nio-8080-exec-4] SignUpNewUser - NewUser
+[INFO ] 2018-02-28 22:51:49.282 [http-nio-8080-exec-4] SignUpNewUser - password
+[INFO ] 2018-02-28 22:51:49.282 [http-nio-8080-exec-4] SignUpNewUser - password
+[DEBUG] 2018-02-28 22:52:58.270 [http-nio-8080-exec-7] NewUser - User First Name: New
+[DEBUG] 2018-02-28 22:52:58.270 [http-nio-8080-exec-7] NewUser - User Last Name: User
+[DEBUG] 2018-02-28 22:52:58.271 [http-nio-8080-exec-7] NewUser - User's user name: null
+[DEBUG] 2018-02-28 22:52:58.271 [http-nio-8080-exec-7] NewUser - User's Password: null
+[DEBUG] 2018-02-28 22:52:58.271 [http-nio-8080-exec-7] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 22:52:58.271 [http-nio-8080-exec-7] NewUser - User's CityWaunakee
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User's State: WI
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User Zip Code: 53597
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User's Email: new@user.com
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User's Area Code: 414
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User's Phone: 8888922
+[DEBUG] 2018-02-28 22:52:58.272 [http-nio-8080-exec-7] NewUser - User's String Birthday: 1970-03-21
+[DEBUG] 2018-02-28 22:52:58.275 [http-nio-8080-exec-7] NewUser - User's LocalDate Birthday: 1970-03-21
+[INFO ] 2018-02-28 23:04:40.651 [http-nio-8080-exec-4] SignUpNewUser - tom
+[INFO ] 2018-02-28 23:04:40.670 [http-nio-8080-exec-4] SignUpNewUser - heythere
+[INFO ] 2018-02-28 23:04:40.670 [http-nio-8080-exec-4] SignUpNewUser - heythere
+[DEBUG] 2018-02-28 23:05:26.477 [http-nio-8080-exec-7] NewUser - User First Name: tom
+[DEBUG] 2018-02-28 23:05:26.478 [http-nio-8080-exec-7] NewUser - User Last Name: champ
+[DEBUG] 2018-02-28 23:05:26.478 [http-nio-8080-exec-7] NewUser - User's user name: tom
+[DEBUG] 2018-02-28 23:05:26.478 [http-nio-8080-exec-7] NewUser - User's Password: heythere
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's Street Address: 109 SMith street
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's CityMilwaukee
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's State: IL
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User Zip Code: 53442
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's Area Code: 
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's Phone: 7426661
+[DEBUG] 2018-02-28 23:05:26.479 [http-nio-8080-exec-7] NewUser - User's String Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:05:26.483 [http-nio-8080-exec-7] NewUser - User's LocalDate Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:07:27.371 [http-nio-8080-exec-9] NewUser - User First Name: tom
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User Last Name: champ
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's user name: tom
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's Password: heythere
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's Street Address: 109 SMith street
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's CityMilwaukee
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's State: IL
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User Zip Code: 53442
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-02-28 23:07:27.372 [http-nio-8080-exec-9] NewUser - User's Area Code: 444
+[DEBUG] 2018-02-28 23:07:27.374 [http-nio-8080-exec-9] NewUser - User's Phone: 7426661
+[DEBUG] 2018-02-28 23:07:27.374 [http-nio-8080-exec-9] NewUser - User's String Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:07:27.375 [http-nio-8080-exec-9] NewUser - User's LocalDate Birthday: 1999-01-01
+[INFO ] 2018-02-28 23:17:14.222 [http-nio-8080-exec-2] SignUpNewUser - Feed
+[INFO ] 2018-02-28 23:17:14.244 [http-nio-8080-exec-2] SignUpNewUser - tom
+[INFO ] 2018-02-28 23:17:14.244 [http-nio-8080-exec-2] SignUpNewUser - tom
+[DEBUG] 2018-02-28 23:17:41.297 [http-nio-8080-exec-4] NewUser - User First Name: Joe
+[DEBUG] 2018-02-28 23:17:41.297 [http-nio-8080-exec-4] NewUser - User Last Name: Bob
+[DEBUG] 2018-02-28 23:17:41.298 [http-nio-8080-exec-4] NewUser - User's user name: Feed
+[DEBUG] 2018-02-28 23:17:41.298 [http-nio-8080-exec-4] NewUser - User's Password: tom
+[DEBUG] 2018-02-28 23:17:41.298 [http-nio-8080-exec-4] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 23:17:41.298 [http-nio-8080-exec-4] NewUser - User's City: Waunakee
+[DEBUG] 2018-02-28 23:17:41.298 [http-nio-8080-exec-4] NewUser - User's State: 
+[DEBUG] 2018-02-28 23:18:08.046 [http-nio-8080-exec-6] NewUser - User First Name: Joe
+[DEBUG] 2018-02-28 23:18:08.047 [http-nio-8080-exec-6] NewUser - User Last Name: Bob
+[DEBUG] 2018-02-28 23:18:08.047 [http-nio-8080-exec-6] NewUser - User's user name: Feed
+[DEBUG] 2018-02-28 23:18:08.047 [http-nio-8080-exec-6] NewUser - User's Password: tom
+[DEBUG] 2018-02-28 23:18:08.048 [http-nio-8080-exec-6] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 23:18:08.048 [http-nio-8080-exec-6] NewUser - User's City: Waunakee
+[DEBUG] 2018-02-28 23:18:08.048 [http-nio-8080-exec-6] NewUser - User's State: CO
+[DEBUG] 2018-02-28 23:18:08.048 [http-nio-8080-exec-6] NewUser - User Zip Code: 55555
+[DEBUG] 2018-02-28 23:18:08.048 [http-nio-8080-exec-6] NewUser - User's Email: jcaughlin@gmail.com
+[DEBUG] 2018-02-28 23:18:08.049 [http-nio-8080-exec-6] NewUser - User's Area Code: 414
+[DEBUG] 2018-02-28 23:18:08.049 [http-nio-8080-exec-6] NewUser - User's Phone: 6300844
+[DEBUG] 2018-02-28 23:18:08.049 [http-nio-8080-exec-6] NewUser - User's String Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:18:08.053 [http-nio-8080-exec-6] NewUser - User's LocalDate Birthday: 1999-01-01
+[INFO ] 2018-02-28 23:23:59.495 [http-nio-8080-exec-3] SignUpNewUser - New
+[INFO ] 2018-02-28 23:23:59.512 [http-nio-8080-exec-3] SignUpNewUser - password
+[INFO ] 2018-02-28 23:23:59.512 [http-nio-8080-exec-3] SignUpNewUser - password
+[DEBUG] 2018-02-28 23:24:28.561 [http-nio-8080-exec-4] NewUser - User First Name: bob
+[DEBUG] 2018-02-28 23:24:28.562 [http-nio-8080-exec-4] NewUser - User Last Name: ott
+[DEBUG] 2018-02-28 23:24:28.562 [http-nio-8080-exec-4] NewUser - User's user name: New
+[DEBUG] 2018-02-28 23:24:28.563 [http-nio-8080-exec-4] NewUser - User's Password: password
+[DEBUG] 2018-02-28 23:24:28.563 [http-nio-8080-exec-4] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-02-28 23:24:28.563 [http-nio-8080-exec-4] NewUser - User's City: Waunakee
+[DEBUG] 2018-02-28 23:24:28.563 [http-nio-8080-exec-4] NewUser - User's State: IN
+[DEBUG] 2018-02-28 23:24:28.563 [http-nio-8080-exec-4] NewUser - User Zip Code: 55555
+[DEBUG] 2018-02-28 23:24:28.564 [http-nio-8080-exec-4] NewUser - User's Email: jcaughlin@gmail.com
+[DEBUG] 2018-02-28 23:24:28.564 [http-nio-8080-exec-4] NewUser - User's Area Code: 441
+[DEBUG] 2018-02-28 23:24:28.564 [http-nio-8080-exec-4] NewUser - User's Phone: 6300844
+[DEBUG] 2018-02-28 23:24:28.564 [http-nio-8080-exec-4] NewUser - User's String Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:24:28.567 [http-nio-8080-exec-4] NewUser - User's LocalDate Birthday: 1999-01-01
+[DEBUG] 2018-02-28 23:24:28.567 [http-nio-8080-exec-4] UserDao - insert
+[DEBUG] 2018-02-28 23:24:28.567 [http-nio-8080-exec-4] UserDao - User(id=0, firstName=bob, lastName=ott, userName=New, userPassword=password, streetAddress=1009 Winston Way, cityName=Waunakee, stateName=IN, zipCode=55555, areaCode=441, userPhoneNumber=6300844, userEmail=jcaughlin@gmail.com, userCreatedDate=null, userLastUpdated=null, userBirthDate=1999-01-01)
+[INFO ] 2018-03-01 06:56:01.412 [http-nio-8080-exec-9] SignUpNewUser - hermsn
+[INFO ] 2018-03-01 06:56:01.431 [http-nio-8080-exec-9] SignUpNewUser - german
+[INFO ] 2018-03-01 06:56:01.431 [http-nio-8080-exec-9] SignUpNewUser - german
+[DEBUG] 2018-03-01 06:56:36.643 [http-nio-8080-exec-5] NewUser - User First Name: Herman
+[DEBUG] 2018-03-01 06:56:36.644 [http-nio-8080-exec-5] NewUser - User Last Name: Cain
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's user name: hermsn
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's Password: german
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's Street Address: 1009 Winston Way
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's City: Waunakee
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's State: IN
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User Zip Code: 55555
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's Email: jcaughlin@gmail.com
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's Area Code: 414
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's Phone: 6300844
+[DEBUG] 2018-03-01 06:56:36.645 [http-nio-8080-exec-5] NewUser - User's String Birthday: 1972-04-19
+[DEBUG] 2018-03-01 06:56:36.649 [http-nio-8080-exec-5] NewUser - User's LocalDate Birthday: 1972-04-19
+[INFO ] 2018-03-01 09:17:50.989 [http-nio-8080-exec-8] SignUpNewUser - george
+[INFO ] 2018-03-01 09:17:51.014 [http-nio-8080-exec-8] SignUpNewUser - theory
+[INFO ] 2018-03-01 09:17:51.015 [http-nio-8080-exec-8] SignUpNewUser - theory
+[DEBUG] 2018-03-01 09:18:19.915 [http-nio-8080-exec-10] NewUser - User First Name: George
+[DEBUG] 2018-03-01 09:18:19.916 [http-nio-8080-exec-10] NewUser - User Last Name: Ryan
+[DEBUG] 2018-03-01 09:18:19.916 [http-nio-8080-exec-10] NewUser - User's user name: george
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's Password: theory
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's Street Address: 123 Main Street
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's City: Chicago
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's State: IL
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User Zip Code: 53587
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's Email: tom@altavista.com
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's Area Code: 847
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's Phone: 7426661
+[DEBUG] 2018-03-01 09:18:19.917 [http-nio-8080-exec-10] NewUser - User's String Birthday: 1972-04-19
+[DEBUG] 2018-03-01 09:18:19.920 [http-nio-8080-exec-10] NewUser - User's LocalDate Birthday: 1972-04-19
+[DEBUG] 2018-03-01 09:18:20.307 [http-nio-8080-exec-10] NewUser - My new user has an ID of 6

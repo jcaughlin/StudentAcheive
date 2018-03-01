@@ -22,6 +22,7 @@ public class SignUpNewUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
         String error = "Password Entries don't match. Try again";
 
 

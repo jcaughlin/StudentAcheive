@@ -50,14 +50,14 @@
                 </div>
 
                 <!--Remember Me-->
-                <div class="form-check">
+                <div class="col-sm-6 pb-3 form-check">
                     <label for="rememberLogin" class="form-check-label">
                         <input class="form-check-input" type="checkbox" id="rememberLogin" name="rememberLogin">
                         Keep Me Logged In!</label>
                 </div>
 
                 <!--Button Group-->
-                <div class="py-3">
+                <div class="col-sm-6 py-3">
                     <button class="btn btn-lg btn-primary" aria-pressed="false">Sign Up!</button>
                     <a href="/login" class="btn btn-lg btn-info">Existing User Login</a>
                 </div>

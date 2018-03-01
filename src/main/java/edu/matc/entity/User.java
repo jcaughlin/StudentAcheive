@@ -5,10 +5,15 @@ import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDate;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import java.time.LocalDate;
+import java.util.List;
 
 
 /*
@@ -16,8 +21,8 @@ import java.time.LocalDate;
  * @author JS Caughlin
  */
 @ToString
-@Entity(name = "User")
-@Table(name = "user")
+@Entity
+@Table(name="user")
 public class User {
 
     @Id
@@ -25,8 +30,8 @@ public class User {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-  /*  @Column(name = "user_roles")
-    @Getter @Setter private List<UserRoles> userRole;*/
+   /*@Column(name = "user_roles")
+    @Getter @Setter private List userRoles;*/
 
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
@@ -50,7 +55,7 @@ public class User {
     @Getter @Setter private String stateName;
 
     @Column(name = "zipcode")
-    @Getter @Setter private Integer zipCode;
+    @Getter @Setter private String zipCode;
 
     @Column(name = "areacode")
     @Getter @Setter private String areaCode;
@@ -70,8 +75,7 @@ public class User {
     @Column(name = "birthday")
     @Getter @Setter private LocalDate userBirthDate;
 
-    /*@Column(name = "user_photo_link")
-    @Getter @Setter private String linkToUserProfilePhoto;*/
+
 
     public User() {
 

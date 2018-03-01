@@ -15,6 +15,7 @@
     <jsp:include page="jumbotron.jsp"/>
     <hr>
     <h1>You are here!</h1>
+    <h3>${username}</h3>
     <jsp:include page="footer.jsp"/>
 </div>
 

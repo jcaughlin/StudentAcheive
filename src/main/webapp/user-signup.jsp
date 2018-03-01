@@ -28,6 +28,8 @@
     <!-- form complex example -->
     <div class="row mt-4">
 
+        <input type="hidden" name="password" value="${password}">
+        <input type="hidden" name="username" value="${username}">
         <!--User First Name-->
         <div class="col-sm-6 pb-3">
             <label class="sr-only" for="firstName">First Name</label>
@@ -55,7 +57,8 @@
         <div class="col-sm-3 pb-3">
             <label class="sr-only" for="state">State</label>
             <select class="form-control" id="state" name="state">
-                <option>Pick a state</option>
+                <option value="">Pick a state</option>
+                <jsp:include page="state-list.jsp"/>
             </select>
         </div>
 
@@ -82,6 +85,11 @@
             <label class="sr-only" for="phone">Phone Number</label>
             <input id="phone" type="text" class="form-control" name = "phone" placeholder="Enter Phone Number">
         </div>
+        <!--User Phone-->
+        <div class="col-sm-4 pb-3">
+            <label class="sr-only" for="birthday">Enter your birtday</label>
+            <input id="birthday" type="date" class="form-control" name = "birthday" placeholder="Enter Phone Number">
+        </div>
 
         <div class="col-sm-4 pb-3">
             <label for="userPhoto">Example file input</label>
@@ -90,7 +98,9 @@
                 Upload User Photo
             </small>
         </div>
+        <div class="col-sm-12 pb-3">
         <button class="btn btn-success">Submit</button>
+        </div>
 
     </div>
     </form>

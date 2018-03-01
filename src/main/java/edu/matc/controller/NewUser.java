@@ -19,51 +19,41 @@ public class NewUser extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
-    UserDao userDao = new UserDao();
-    User user;
+
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        User user = new User();
+        UserDao userDao = new UserDao();
+
         String firstName = request.getParameter("firstName");
-        logger.debug(firstName);
+        logger.debug("User First Name: " + firstName);
         String lastName = request.getParameter("lastName");
-        logger.debug(lastName);
+        logger.debug("User Last Name: " + lastName);
         String userName = request.getParameter("username");
-        logger.debug(userName);
+        logger.debug("User's user name: " + userName);
         String password = request.getParameter("password");
-        logger.debug(password);
+        logger.debug("User's Password: " + password);
         String address = request.getParameter("address");
-        logger.debug(address);
+        logger.debug("User's Street Address: " + address);
         String cityName = request.getParameter("city");
-        logger.debug(cityName);
+        logger.debug("User's City: " + cityName);
         String state = request.getParameter("state");
-        logger.debug(state);
-        String zipCodeHolder = request.getParameter("zipCode");
-
-        if(zipCodeHolder.equals(null)) {
-            Integer zipcode = Integer.parseInt(zipCodeHolder);
-            logger.debug(zipcode);
-            user.setZipCode(zipcode);
-        }
-
+        logger.debug("User's State: " + state);
+        String zipcode = request.getParameter("zipCode");
+        logger.debug("User Zip Code: " + zipcode);
         String email = request.getParameter("email");
-        logger.debug(email);
-        String areaCode = request.getParameter("areaCode");
-        logger.debug(areaCode);
+        logger.debug("User's Email: " + email);
+        String areaCode = request.getParameter("areacode");
+        logger.debug("User's Area Code: " + areaCode);
         String phone = request.getParameter("phone");
-        logger.debug(phone);
+        logger.debug("User's Phone: " + phone);
         String userBirthday = request.getParameter("birthday");
-        logger.debug(userBirthday);
-        LocalDate birthday =  LocalDate.parse(userBirthday);
-        logger.debug(birthday);
-        Part userPhotoFilePart = request.getPart("userPhoto");
-        // String userPhotolink = processImageFile(userPhotoFilePart);
-
-
-
-
+        logger.debug("User's String Birthday: "+ userBirthday);
+        LocalDate birthday = LocalDate.parse(userBirthday);
+        logger.debug("User's LocalDate Birthday: " + birthday);
 
 
         user.setFirstName(firstName);
@@ -73,17 +63,18 @@ public class NewUser extends HttpServlet {
         user.setStreetAddress(address);
         user.setCityName(cityName);
         user.setStateName(state);
-
+        user.setZipCode(zipcode);
         user.setUserEmail(email);
         user.setAreaCode(areaCode);
         user.setUserPhoneNumber(phone);
         user.setUserBirthDate(birthday);
-        // user.setLinkToUserProfilePhoto(userPhotolink);
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);
 
-        String url = "/user-signup.jsp";
+        request.setAttribute("user", user);
+
+        String url = "/success.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

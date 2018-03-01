@@ -1,16 +1,14 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.User;
-import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
-import org.hibernate.SessionFactory;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import javax.persistence.criteria.*;
 import java.util.List;
-
-
 
 /**
  * The type User dao.
@@ -35,7 +33,6 @@ public class UserDao {
         id = (int)session.save(user);
         transaction.commit();
         session.close();
-
         return id;
     }
 
