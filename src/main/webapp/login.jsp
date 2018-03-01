@@ -21,23 +21,34 @@
             <jsp:include page="sidebar-menu.jsp"/>
         </div>
         <div class="col-md-9 offset-md-1">
-            <form class="form mt-5" method="post" action="j_security_check">
-                <h2 class="form-signin-heading">Please Login</h2>
+            <form class="form mt-5" method="post" action="profile">
+                <h2>Please Login</h2>
 
-                <div class="form-group">
-                    <label for="username" class="" sr-only>Enter User Name</label>
+                <div class="col-sm-6 pb-3">
+                    <label class="radio-inline" for="teacher">
+                        <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">Teacher
+                    </label>
+                    <label class="radio-inline" for="student">
+                        <input class="form-check-input" type="radio" name="userType" value="student" id="student">Student
+                    </label>
+                    <label class="radio-inline" for="admin">
+                        <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">Admin
+                    </label>
+                </div>
+
+                <div class="col-sm-6 pb-3">
+                    <label for="username" class="sr-only">Enter User Name</label>
                     <input type="text" class="form-control" name="j_username" id="username"
                            placeholder="Enter User Name" required="">
                 </div>
 
-                <div class="form-group">
+                <div class="col-sm-6 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
                     <input type="password" class="form-control" name="j_password" id="password" placeholder="Password"
                            required="">
                 </div>
                 <div class="btn-group" role="group" aria-label="button-group">
                     <button role="button" class="btn btn-lg btn-success" type="submit">Submit!!</button>
-                    <a href="/login" class="btn btn-lg btn-info">Existing User Login</a>
                 </div>
             </form>
         </div>
