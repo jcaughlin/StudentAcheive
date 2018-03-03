@@ -25,8 +25,8 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border px-2 pb-2" action="signUpNewUser" method="post">
-                <h2>Please Join The Fun</h2>
+            <form class="border px-4 pb-2" action="signUpNewUser" method="post">
+                <h2 class="col-sm-6 pb-3">Please Join The Fun</h2>
 
                 <!--User Name-->
                 <div class="col-sm-6 pb-3">
@@ -50,9 +50,9 @@
                 </div>
 
                 <!--Remember Me-->
-                <div class="col-sm-6 pb-3 form-check">
+                <div class="col-sm-6 pb-3">
                     <label for="rememberLogin" class="form-check-label">
-                        <input class="form-check-input" type="checkbox" id="rememberLogin" name="rememberLogin">
+                        <input type="checkbox" id="rememberLogin" name="rememberLogin">
                         Keep Me Logged In!</label>
                 </div>
 

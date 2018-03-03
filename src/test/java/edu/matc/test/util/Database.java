@@ -40,11 +40,9 @@ public class Database {
         try {
             properties.load (this.getClass().getResourceAsStream("/database.properties"));
         } catch (IOException ioe) {
-            System.out.println("Database.loadProperties()...Cannot load the properties file");
-            ioe.printStackTrace();
+
         } catch (Exception e) {
-            System.out.println("Database.loadProperties()..." + e);
-            e.printStackTrace();
+
         }
 
     }
@@ -106,7 +104,6 @@ public class Database {
                     break;
                 }
                 stmt.executeUpdate(sql);
-
             }
 
         } catch (SQLException se) {
