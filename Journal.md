@@ -33,3 +33,9 @@
 ### Today is March 1st
 * Still struggling with AWS Lost my debugging notes.
 * jsp to add user is working.
+
+### Today is March 5th
+* Can someone remind me that whenever I think I have time to try something out that I do not. 
+<ol><li> I do not have time to create a custom tomcat bounce script.</li>
+<li>I do not have time to create the world's greatest log file.</li>
+<li>I do not have time to transcribe every old school rap song into Italian with the Mac voice application.</ol>

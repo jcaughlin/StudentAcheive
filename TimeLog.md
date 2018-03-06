@@ -22,6 +22,8 @@
 |7|2/26/18|Hibernate and working on Repository|3|
 |7|2/27/18|AWS Mess|4|	
 |7|3/1/18|Working on checkpoint One|2|
+|8|3/4/18|Deploying AWS|3|
+|8|3/5/18|Back to finish Hibernate Section|4|
 
 
 
