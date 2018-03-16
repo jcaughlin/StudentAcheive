@@ -30,7 +30,7 @@
         <div class="col-lg-10">
             <!--FORM-->
             <form class="border px-4 pb-2" action="signUpNewUser" method="post">
-                <h2 class="col-sm-6 pb-3">Please Join The Fun</h2>
+                <h2 class="col-sm-6 py-3">Please Join The Fun</h2>
 
                 <!--User Name-->
                 <div class="col-sm-6 pb-3">
@@ -61,10 +61,11 @@
                 </div>
 
                 <!--Button Group-->
-                <div class="col-sm-6 py-3">
-                    <button class="btn btn-lg btn-primary" aria-pressed="false">Sign Up!</button>
-                    <a href="/login" class="btn btn-lg btn-info">Existing User Login</a>
-                </div>
+
+                    <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
+
+                    <a href="/login" class="btn btn-info btn-lg">Existing User?</a>
+
             </form>
             <div>${passwordmismatch}</div>
         </div>
