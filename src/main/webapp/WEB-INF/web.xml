@@ -3,6 +3,13 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
   <display-name>StudentAchieve</display-name>
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login</form-login-page>
+      <form-error-page>/error-pages/403.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
   <error-page>
     <error-code>400</error-code>
     <location>/error-pages/404.jsp</location>
@@ -23,4 +30,51 @@
     <error-code>500</error-code>
     <location>/error-pages/500.jsp</location>
   </error-page>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>admin</web-resource-name>
+      <url-pattern>/admin-landing.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>ADMIN</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>teacher</web-resource-name>
+            <url-pattern>/teacher-landing.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>TEACHER</role-name>
+          <role-name>ADMIN</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>student</web-resource-name>
+            <url-pattern>/student-portal.jsp</url-pattern>
+        </web-resource-collection>
+      <auth-constraint>
+        <role-name>STUDENT</role-name>
+        <role-name>TEACHER</role-name>
+        <role-name>ADMIN</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+
+  <security-role>
+    <role-name>ADMIN</role-name>
+  </security-role>
+  <security-role>
+    <role-name>STUDENT</role-name>
+  </security-role>
+  <security-role>
+    <role-name>PENDING</role-name>
+  </security-role>
+  <security-role>
+    <role-name>TEACHER</role-name>
+  </security-role>
 </web-app>

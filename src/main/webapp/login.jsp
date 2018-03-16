@@ -11,7 +11,11 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<!DOCTYPE html>
+<html lang="en">
+
 <jsp:include page="head.jsp"/>
+<body>
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
     <hr>
@@ -21,7 +25,7 @@
             <jsp:include page="sidebar-menu.jsp"/>
         </div>
         <div class="col-md-9 offset-md-1">
-            <form class="form mt-5" method="post" action="profile">
+            <form class="form mt-5 border" method="post" action="profile">
                 <h2>Please Login</h2>
 
                 <div class="col-sm-6 pb-3">
@@ -57,6 +61,8 @@
     </div>
 
     <jsp:include page="footer.jsp"/>
-</div>
+</div><!--End Container-->
+</body>
+</html>
 
 

@@ -2,7 +2,13 @@ body {
     background: #eee !important;
 }
 
-
-.border {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+form {
+    background-color: antiquewhite;
 }
+
+.form-control {
+    text-align: center  ;
+}
+/*.border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}*/

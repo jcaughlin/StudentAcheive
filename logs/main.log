@@ -356,3 +356,31 @@
 [DEBUG] 2018-03-01 17:18:25.842 [http-nio-8080-exec-5] NewUser - User's String Birthday: 2011-03-24
 [DEBUG] 2018-03-01 17:18:25.845 [http-nio-8080-exec-5] NewUser - User's LocalDate Birthday: 2011-03-24
 [DEBUG] 2018-03-01 17:18:25.973 [http-nio-8080-exec-5] NewUser - My new user has an ID of 9
+[INFO ] 2018-03-06 11:56:24.320 [http-nio-8080-exec-5] LinkRouterServlet - 
+[INFO ] 2018-03-06 11:57:50.435 [http-nio-8080-exec-10] LinkRouterServlet - 
+[INFO ] 2018-03-06 13:21:06.126 [http-nio-8080-exec-5] LinkRouterServlet - 
+[INFO ] 2018-03-06 13:29:34.075 [http-nio-8080-exec-1] LinkRouterServlet - 
+[INFO ] 2018-03-06 13:32:08.163 [http-nio-8080-exec-1] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:04:18.041 [http-nio-8080-exec-1] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:11:04.400 [http-nio-8080-exec-1] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:12:18.306 [http-nio-8080-exec-10] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:18:13.039 [http-nio-8080-exec-2] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:52:20.830 [http-nio-8080-exec-2] LinkRouterServlet - 
+[INFO ] 2018-03-06 14:56:50.070 [http-nio-8080-exec-2] LinkRouterServlet - 
+[INFO ] 2018-03-06 15:01:14.760 [http-nio-8080-exec-3] LinkRouterServlet - 
+[INFO ] 2018-03-06 15:12:15.073 [http-nio-8080-exec-3] LinkRouterServlet - 
+[INFO ] 2018-03-06 15:16:08.703 [http-nio-8080-exec-3] LinkRouterServlet - 
+[INFO ] 2018-03-06 16:26:00.030 [http-nio-8080-exec-10] LinkRouterServlet - 
+[INFO ] 2018-03-06 16:26:17.305 [http-nio-8080-exec-2] LinkRouterServlet - 
+[INFO ] 2018-03-06 17:55:01.271 [http-nio-8080-exec-8] LinkRouterServlet - null
+[INFO ] 2018-03-06 17:59:57.255 [http-nio-8080-exec-4] LinkRouterServlet - null
+[INFO ] 2018-03-06 17:59:57.338 [http-nio-8080-exec-5] LinkRouterServlet - null
+[INFO ] 2018-03-06 17:59:58.261 [http-nio-8080-exec-8] LinkRouterServlet - 
+[INFO ] 2018-03-07 07:10:33.068 [http-nio-8080-exec-2] LinkRouterServlet - lunch"
+[INFO ] 2018-03-15 14:24:09.687 [http-nio-8080-exec-1] LinkRouterServlet - calendar
+[INFO ] 2018-03-15 23:15:50.870 [http-nio-8080-exec-3] LinkRouterServlet - homeroom
+[INFO ] 2018-03-15 23:15:50.878 [http-nio-8080-exec-2] LinkRouterServlet - homeroom
+[INFO ] 2018-03-15 23:23:01.740 [http-nio-8080-exec-3] LinkRouterServlet - calendar
+[INFO ] 2018-03-15 23:23:09.398 [http-nio-8080-exec-4] LinkRouterServlet - calendar
+[INFO ] 2018-03-16 02:23:56.169 [http-nio-8080-exec-2] LinkRouterServlet - calendar
+[INFO ] 2018-03-16 02:43:02.164 [http-nio-8080-exec-7] LinkRouterServlet - homeroom

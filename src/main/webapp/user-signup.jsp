@@ -106,10 +106,12 @@
     </form>
 </div>
 
-
 </div>
 <!--/row-->
 <jsp:include page="footer.jsp"/>
-</div> <!--End Container-->
+</div>
+</body>
+</html>
+
 
 

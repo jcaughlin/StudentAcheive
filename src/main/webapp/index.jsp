@@ -10,8 +10,12 @@
   Time: 2:19 PM
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
 
 <jsp:include page="head.jsp"/>
+
+<body>
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
     <hr>
@@ -68,8 +72,10 @@
 
     <jsp:include page="footer.jsp"/>
 
-</div>
-<!--End Container-->
+</div><!--End Container-->
+
+</body>
+</html>
 
 
 

@@ -10,7 +10,10 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<!DOCTYPE html>
+<html lang="en">
 <jsp:include page="head.jsp"/>
+<body>
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
     <hr>
@@ -20,5 +23,7 @@
     <h1>Would you like to Upload a photo?</h1>
     <jsp:include page="footer.jsp"/>
 </div>
+</body>
+</html>
 
 

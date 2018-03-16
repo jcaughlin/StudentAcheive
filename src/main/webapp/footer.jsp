@@ -10,13 +10,15 @@
 
 <div class="row">
     <hr>
-    <div class="footer my-2">
-        <p class="text-center py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias blanditiis consequuntur culpa, maiores minima nisi,
-            possimus quasi repudiandae rerum sequi vel voluptates voluptatibus? Animi aspernatur commodi consequatur earum nostrum.</p>
+    <div class="footer py-5">
+        <p class="text-center py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias blanditiis
+            consequuntur culpa, maiores minima nisi,
+            possimus quasi repudiandae rerum sequi vel voluptates voluptatibus? Animi aspernatur commodi consequatur
+            earum nostrum.</p>
     </div>
 </div><!--End Row-->
-</body>
-</html>
+
+
 
 
 

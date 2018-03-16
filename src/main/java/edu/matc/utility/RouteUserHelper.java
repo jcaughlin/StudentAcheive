@@ -11,7 +11,7 @@ public class RouteUserHelper {
         switch (userType) {
 
             case "student":
-                return url = "student-profile.jsp";
+                return url = "student-portal.jsp";
 
             case "teacher":
                 return url = "teacher-landing.jsp";
@@ -20,7 +20,7 @@ public class RouteUserHelper {
                 return url = "admin-landing.jsp";
 
             default:
-                return url = "error-page.jsp";
+                return url = "error-page/500.jsp";
         }
     }
 }
