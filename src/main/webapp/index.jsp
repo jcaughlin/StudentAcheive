@@ -29,42 +29,45 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border px-4 pb-2" action="signUpNewUser" method="post">
-                <h2 class="col-sm-6 py-3">Please Join The Fun</h2>
+            <form class="border px-4 pb-2" id="signup" action="signUpNewUser" method="post">
+                <h2 class="col-sm-9 py-3">Please Join The Fun</h2>
 
                 <!--User Name-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-9 pb-3">
                     <label for="username" class="sr-only">Enter User Name</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Enter User Name"
                            required="">
                 </div>
 
                 <!--User Password-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-9 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password"
                            required="">
                 </div>
 
                 <!--Password Confirm-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-9 pb-3">
                     <label for="passwordConfirm" class="sr-only">Confirm Password</label>
                     <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
                            placeholder="Confirm Password" required="">
                 </div>
 
                 <!--Remember Me-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-9 pb-3">
                     <label for="rememberLogin" class="form-check-label">
                         <input type="checkbox" id="rememberLogin" name="rememberLogin">
                         Keep Me Logged In!</label>
                 </div>
 
                 <!--Button Group-->
+                <div class="col-sm-9 pb-3">
 
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
 
                     <a href="/login" class="btn btn-info btn-lg">Existing User?</a>
+                </div>
+
 
             </form>
             <div>${passwordmismatch}</div>
