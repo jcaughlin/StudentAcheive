@@ -12,8 +12,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "UserProfileControllerTemplate", urlPatterns = "/profile")
-public class UserProfileControllerTemplate extends HttpServlet {
+@WebServlet(name = "RouteUserController", urlPatterns = "/routeUser")
+public class RouteUserController extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     RouteUserHelper helper;

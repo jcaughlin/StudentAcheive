@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" scope="session" value="Error 403 Forbidden"/>
-<c:set var="heading" scope="session" value="header"/>
+<c:set var="heading" scope="session" value="403 Error"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
@@ -10,13 +10,21 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<jsp:include page="partials/head.jsp"/>
+<!DOCTYPE html>
+<html lang="en">
 
-<jsp:include page="partials/header.jsp"/>
+<jsp:include page="../head.jsp"/>
 
-<!-- Your Content Goes Here -->
+<body>
+<div class="container py-2">
 
-<jsp:include page="1"/>
+<jsp:include page="../jumbotron.jsp"/>
 
-<jsp:include page="partials/footer.jsp"/>
+<div class="row">
+    <div class="col-sm-12">
+    <h1>You are a naughty baby and don't belong here</h1>
+    </div>
+</div>
+
+<jsp:include page="../footer.jsp"/>
 

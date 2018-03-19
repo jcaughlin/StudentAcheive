@@ -385,3 +385,6 @@
 [INFO ] 2018-03-16 02:23:56.169 [http-nio-8080-exec-2] LinkRouterServlet - calendar
 [INFO ] 2018-03-16 02:43:02.164 [http-nio-8080-exec-7] LinkRouterServlet - homeroom
 [INFO ] 2018-03-16 07:28:05.103 [http-nio-8080-exec-2] LinkRouterServlet - lunch"
+[INFO ] 2018-03-19 10:48:19.083 [http-nio-8080-exec-1] SignUpNewUser - New User
+[INFO ] 2018-03-19 10:48:19.108 [http-nio-8080-exec-1] SignUpNewUser - testing
+[INFO ] 2018-03-19 10:48:19.108 [http-nio-8080-exec-1] SignUpNewUser - testing
