@@ -65,7 +65,7 @@
                 <!--Button Group-->
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
-                    <a href="#full" class="btn btn-info btn-lg fullscreen">Existing User?</a>
+                    <a href="#full" class="btn btn-info btn-lg fullscreen" role="button">Existing User?</a>
                 </div>
                 <div class="col-sm-9 pb-3">
                     <a href="forgotPassword">Forgot Password</a>

@@ -39,7 +39,8 @@ public class AdminReports extends HttpServlet {
 
         } else if(reportRequested.equals("showAll")) {
             userDao = new UserDao();
-            url = "/admin/admin-reports.jsp";
+            logger.info("Made It");
+            url = "admin/admin-reports.jsp";
 
             request.setAttribute("users", userDao.getAllUsers());
 
