@@ -3,6 +3,7 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.util.*;
 
+import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,13 +23,35 @@ public class AdminReports extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String url;
+        UserDao userDao;
+        List users;
+
         String reportRequested = request.getParameter("reportRequested");
+        logger.info(reportRequested);
 
-        String url = "/admin/adminReports";
+        if(reportRequested.equals("addUser")) {
+            url = "user-signup.jsp";
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+
+        } else if(reportRequested.equals("showAll")) {
+            userDao = new UserDao();
+            url = "/admin/admin-reports.jsp";
+
+            request.setAttribute("users", userDao.getAllUsers());
+
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+
+        } else if(reportRequested.equals("")) {
+            String errorMessage = "Please Make a Selection";
+            request.setAttribute("errorMessage",errorMessage);
+            response.sendRedirect("admin/admin-landing.jsp");
+        }
     }
 }
     

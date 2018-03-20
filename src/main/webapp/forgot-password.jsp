@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="Today's Lunch"/>
-<c:set var="heading" scope="session" value="THe Lunch Project"/>
+<c:set var="title" scope="session" value="Password Reset"/>
+<c:set var="heading" scope="session" value="Reset Password"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
-  Date: 3/6/18
-  Time: 11:42 AM
+  Date: 3/20/18
+  Time: 10:12 AM
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -16,7 +16,6 @@
 <jsp:include page="head.jsp"/>
 
 <body>
-<!--Container Start-->
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
     <hr>
@@ -29,15 +28,18 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
+            <form class="border px-4 pb-2" id="signup" action="signUpNewUser" method="post">
+                <h1 class="display-4">Enter Your Password</h1>
+                <!--User Email-->
+                <div class="col-sm-6 pb-3">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email" type="email" class="form-control" name = "email" placeholder="Enter Email Address">
+                </div>
+                <div class="col-sm-6 pb-3">
+                    <p class="text-muted">If you submit a valid password, You will receive an email with instructions on resetting your password</p>
+                </div>
+            </form>
 
-            <div class="card mb-3">
-                <h1 class="card-title">Walking Tacos</h1>
-                <img class="card-img-top" src="images/walkingTacos.jpg" alt="Delicious Walking Tacos">
-            <div class="card-block">
-                <h4 class="card-title">Walking Tacos</h4>
-                <p class="card-text">Tacos You Can Eat When you are walking</p>
-            </div>
-            </div>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 

@@ -17,6 +17,8 @@ form {
 .footer{
     background-color: #FAEBD7;
 }
-/*.border {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}*/
+
+,jumbotron {
+    padding: 2rem 2rem;
+ }
+

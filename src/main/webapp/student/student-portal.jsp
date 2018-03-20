@@ -8,6 +8,7 @@
   Date: 3/7/18
   Time: 4:19 PM
   To change this template use Preferences | File and Code Templates--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
 <html lang="en">

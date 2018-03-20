@@ -8,6 +8,7 @@
   Date: 3/7/18
   Time: 4:20 PM
   To change this template use Preferences | File and Code Templates--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,19 +28,33 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
-
-            <form method="get" action="/adminReports">
+            <h2 class="col-sm-9 py-3">Choose Report</h2>
+            <form "border px-4 pb-2"method="get" action="/adminReports">
+            <div class="col-sm-9 pb-3">
                 <label for="adminReport" class="sr-onlu">Choose Report Type</label>
                 <select class="form-control" id="adminReport" name="reportRequested">
                     <option value="">Choose Report</option>
-                    <option value="all">Show All</option>
+                    <option value="addUser">Add New User</option>
+                    <option value="showAll">Show All</option>
                     <option value="students">Students Reports</option>
                     <option value="teachers">Teacher Reports</option>
                 </select>
+            </div>
+            <div class="col-sm-9 pb-3">
+                ${errorMessage}
+            </div>
+            <div class="col-sm-9 pb-3">
+            <button class="btn btn-primary btn-large">Go!</button>
+            </div>
             </form>
 
         </div><!--Center Column End-->
     </div> <!--End Row-->
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-2">
+
+        </div>
+    </div>
 
     <jsp:include page="../footer.jsp"/>
 

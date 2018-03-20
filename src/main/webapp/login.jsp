@@ -21,38 +21,43 @@
     <hr>
 
     <div class="row">
+        <!--Sidebar Menu-->
         <div class="col-sm-2">
             <jsp:include page="sidebar-menu.jsp"/>
         </div>
+
+        <!--Main Section-->
         <div class="col-md-9 offset-md-1">
+
+            <!--Form-->
             <form class="border px-4 pb-2" method="POST" action="j_security_check">
 
                 <div class="col-sm-6 pb-3">
-                <h2>Please Login</h2>
+                    <h1 class="display-4">Please Login</h1>
                 </div>
 
-
+        <!--User Name-->
         <div class="col-sm-6 pb-3">
             <label for="username" class="sr-only">Enter User Name</label>
             <input type="text" class="form-control" name="j_username" id="username"
                    placeholder="Enter User Name" required="">
         </div>
 
+        <!--User Password-->
         <div class="col-sm-6 pb-3">
             <label for="password" class="sr-only">Enter Password</label>
             <input type="password" class="form-control" name="j_password" id="password" placeholder="Password"
                    required="">
         </div>
-                <div class="col-sm-6 pb-3">
+
+        <!--Submit Button-->
+        <div class="col-sm-6 pb-3">
             <input class="btn btn-lg btn-success" type="submit" value="Submit!!">
-                </div>
+        </div>
 
         </form>
     </div>
-    <div class="col-lg-3"></div>
-
-</div>
-
+    </div><!--End Row-->
 <jsp:include page="footer.jsp"/>
 </div><!--End Container-->
 </body>

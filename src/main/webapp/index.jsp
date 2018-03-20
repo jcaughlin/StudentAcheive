@@ -16,6 +16,7 @@
 <jsp:include page="head.jsp"/>
 
 <body>
+<!--Container Start-->
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
     <hr>
@@ -63,64 +64,54 @@
 
                 <!--Button Group-->
                 <div class="col-sm-9 pb-3">
-
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
-
-                    <a href="#userTypeForm" class="btn modaal-inline-content">Existing User?</a>
+                    <a href="#full" class="btn btn-info btn-lg fullscreen">Existing User?</a>
+                </div>
+                <div class="col-sm-9 pb-3">
+                    <a href="forgotPassword">Forgot Password</a>
+                </div>
+                <div class="col-sm-9 pb-3">
+                    <div>${passwordmismatch}</div>
                 </div>
             </form>
+        </div>
+        </div><!--End Row-->
+</div><!--End First Container-->
 
-            <div id="userTypeForm" style="display-none">
-
-                <div class="col-sm-6 pb-3">
-
-                    <form action="routeUser" method="get">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">
-                        <label class="form-check-label" for="teacher">Teacher</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="userType" value="student" id="student">
-                        <label class="form-check-label" for="student">Student</label>
-                    </div>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">
-                        <label class="form-check-label" for="admin">Admin</label>
-                    </div>
-
-                    <button class="btn btn-info btn-lg">GO!</button>
-                    </form>
+        <div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-10">
+        <div id="full" style="display:none;">
+            <form class="border px-4 pb-2" action="routeUser" method="get">
+                <h4>Select User Type:</h4>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">
+                    <label class="form-check-label" for="teacher">Teacher</label>
                 </div>
-            </div>
-            <div>${passwordmismatch}</div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="userType" value="student" id="student">
+                    <label class="form-check-label" for="student">Student</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">
+                    <label class="form-check-label" for="admin">Admin</label>
+                </div>
+                <button class="btn btn-info btn-lg">GO!</button>
+            </form>
         </div>
     </div> <!--End Row-->
 
     <jsp:include page="footer.jsp"/>
 </div><!--End Container-->
-<script>
-$('.userTypeForm').modaal({
-    type: 'inline',
-    accessible_title: 'Modal title',
-    before_open: function() {
-        //console.log('log before open');
-    },
-    before_close: function() {
-        //console.log('log before close');
-    },
-    after_open: function() {
-        //console.log('log after open');
-    },
-    after_close: function() {
-        //console.log('log after close');
-    },
-    should_open: function () {
-        //console.log('just checking to see if we should open');
-        return true;
-    }
-});</script>
+<script charset="UTF-8">
+    $('.fullscreen').modaal({
+        fullscreen: true,
+        hide_close: true
+    });
+</script>
 </body>
 </html>
 

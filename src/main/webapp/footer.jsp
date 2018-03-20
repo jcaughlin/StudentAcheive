@@ -13,6 +13,10 @@
 
         <div class="row py-2 d-flex align-items-center footer">
             <div class="col-sm-4">
+                    <h6 class="text-upper-case font-weight-bold">Business Solutions</h6>
+            </div>
+
+            <div class="col-sm-4">
                 <address>
                     <strong>Student Achieve</strong><br>
                     1009 Winston Way<br>
@@ -22,12 +26,9 @@
                 </address>
             </div>
 
-            <div class="col-sm-4">
-                    <h6 class="text-upper-case font-weight-bold">Center Div</h6>
-            </div>
 
             <div class="col-sm-4">
-                <h6 class="text-upper-case font-weight-bold">Right Div</h6>
+                <h6 class="text-upper-case font-weight-bold">Developers</h6>
             </div>
         </div>
 
