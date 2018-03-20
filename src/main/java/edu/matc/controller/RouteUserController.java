@@ -16,24 +16,49 @@ import javax.servlet.http.*;
 public class RouteUserController extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    RouteUserHelper helper;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String url;
-        helper = new RouteUserHelper();
         String userType = request.getParameter("userType");
 
-        url = helper.routeUserType(userType);
+        if (userType.equals("admin")) {
+
+            String url = "/admin/admin-landing.jsp";
+
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+
+        } else if(userType.equals("student")) {
+
+            String url = "/student/student-portal.jsp";
+
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+
+            dispatcher.forward(request, response);
+        } else if(userType.equals("teacher")) {
+
+            String url = "/teacher/teacher-landing.jsp";
+
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        } else {
+
+            String url = "/lunch-calendar.jsp";
+
+            logger.info("made it");
 
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        }
+
     }
-
 }
     
     

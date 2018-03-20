@@ -12,17 +12,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<jsp:include page="head.jsp"/>
+<jsp:include page="../head.jsp"/>
 
 <body>
 <div class="container py-2">
-    <jsp:include page="jumbotron.jsp"/>
+    <jsp:include page="../jumbotron.jsp"/>
     <hr>
 
     <div class="row">
         <!--Sidebar Menu-->
         <div class="col-lg-2">
-            <jsp:include page="sidebar-menu.jsp"/>
+            <jsp:include page="../sidebar-menu.jsp"/>
         </div><!--Sidebar Column End-->
 
         <!--Center Column-->
@@ -31,7 +31,7 @@
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="../footer.jsp"/>
 
 </div><!--End Container-->
 

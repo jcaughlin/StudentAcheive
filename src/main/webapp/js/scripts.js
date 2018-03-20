@@ -4,6 +4,4 @@ $(document).ready(function () {
 
     $('#date').append(date);
 
-    console.log("THis year it is  " + date);
-
 });

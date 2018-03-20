@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="Your Student Portal"/>
-<c:set var="heading" scope="session" value="Student Portal"/>
+<c:set var="title" scope="session" value="SuccessTest"/>
+<c:set var="heading" scope="session" value="Test Passed"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
-  Date: 3/7/18
-  Time: 4:19 PM
+  Date: 3/19/18
+  Time: 3:22 PM
   To change this template use Preferences | File and Code Templates--%>
 
 <!DOCTYPE html>
@@ -27,6 +27,8 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
+
+            <h1 class="display-2">Success</h1>
 
         </div><!--Center Column End-->
     </div> <!--End Row-->

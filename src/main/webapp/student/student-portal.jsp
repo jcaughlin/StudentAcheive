@@ -1,28 +1,28 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="Admin Page"/>
-<c:set var="heading" scope="session" value="The Admin Page"/>
+<c:set var="title" scope="session" value="Your Student Portal"/>
+<c:set var="heading" scope="session" value="Student Portal"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
   Date: 3/7/18
-  Time: 4:20 PM
+  Time: 4:19 PM
   To change this template use Preferences | File and Code Templates--%>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<jsp:include page="head.jsp"/>
+<jsp:include page="../head.jsp"/>
 
 <body>
 <div class="container py-2">
-    <jsp:include page="jumbotron.jsp"/>
+    <jsp:include page="../jumbotron.jsp"/>
     <hr>
 
     <div class="row">
         <!--Sidebar Menu-->
         <div class="col-lg-2">
-            <jsp:include page="sidebar-menu.jsp"/>
+            <jsp:include page="../sidebar-menu.jsp"/>
         </div><!--Sidebar Column End-->
 
         <!--Center Column-->
@@ -31,7 +31,7 @@
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="../footer.jsp"/>
 
 </div><!--End Container-->
 

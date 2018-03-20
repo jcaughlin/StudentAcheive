@@ -388,3 +388,6 @@
 [INFO ] 2018-03-19 10:48:19.083 [http-nio-8080-exec-1] SignUpNewUser - New User
 [INFO ] 2018-03-19 10:48:19.108 [http-nio-8080-exec-1] SignUpNewUser - testing
 [INFO ] 2018-03-19 10:48:19.108 [http-nio-8080-exec-1] SignUpNewUser - testing
+[INFO ] 2018-03-19 15:43:09.756 [http-nio-8080-exec-10] RouteUserController - made it
+[INFO ] 2018-03-19 16:00:50.753 [http-nio-8080-exec-8] RouteUserController - made it
+[INFO ] 2018-03-19 16:06:24.739 [http-nio-8080-exec-3] RouteUserController - made it

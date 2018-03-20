@@ -2,7 +2,7 @@ package edu.matc.utility;
 
 public class RouteUserHelper {
 
-    // #TODO Create Test
+
     public String routeUserType(String userType) {
 
         String url;
@@ -11,16 +11,16 @@ public class RouteUserHelper {
         switch (userType) {
 
             case "student":
-                return url = "student-portal.jsp";
+                return url = "/student/student-portal.jsp";
 
             case "teacher":
-                return url = "teacher-landing.jsp";
+                return url = "/teacher/teacher-landing.jsp";
 
             case "admin":
-                return url = "admin-landing.jsp";
+                return url = "/admin/admin-landing.jsp";
 
             default:
-                return url = "error-page/500.jsp";
+                return url = "/error-pages/error-page/500.jsp";
         }
     }
 }

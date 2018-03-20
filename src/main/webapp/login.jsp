@@ -25,7 +25,7 @@
             <jsp:include page="sidebar-menu.jsp"/>
         </div>
         <div class="col-md-9 offset-md-1">
-            <form class="border px-4 pb-2" method="j_security_check" action="login">
+            <form class="border px-4 pb-2" method="POST" action="j_security_check">
 
                 <div class="col-sm-6 pb-3">
                 <h2>Please Login</h2>
@@ -44,7 +44,7 @@
                    required="">
         </div>
                 <div class="col-sm-6 pb-3">
-            <button class="btn btn-lg btn-success" type="submit">Submit!!</button>
+            <input class="btn btn-lg btn-success" type="submit" value="Submit!!">
                 </div>
 
         </form>

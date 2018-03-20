@@ -40,6 +40,7 @@
 
     <!--Local Javascript Directory-->
     <script src="js/scripts.js"></script>
+    <script src="js/Modaal.js"></script>
 </head>
 <!--<body>-->
 

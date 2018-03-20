@@ -66,13 +66,15 @@
 
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
 
-                    <a href="login" class="btn btn-info btn-lg">Existing User?</a>
+                    <a href="#userTypeForm" class="btn modaal-inline-content">Existing User?</a>
                 </div>
             </form>
 
             <div id="userTypeForm" style="display-none">
+
                 <div class="col-sm-6 pb-3">
 
+                    <form action="routeUser" method="get">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">
                         <label class="form-check-label" for="teacher">Teacher</label>
@@ -88,16 +90,37 @@
                         <label class="form-check-label" for="admin">Admin</label>
                     </div>
 
-                    <a href="routeUser" class="btn btn-info btn-lg">GO!</a>
-
+                    <button class="btn btn-info btn-lg">GO!</button>
+                    </form>
                 </div>
             </div>
             <div>${passwordmismatch}</div>
         </div>
     </div> <!--End Row-->
-    
+
     <jsp:include page="footer.jsp"/>
 </div><!--End Container-->
+<script>
+$('.userTypeForm').modaal({
+    type: 'inline',
+    accessible_title: 'Modal title',
+    before_open: function() {
+        //console.log('log before open');
+    },
+    before_close: function() {
+        //console.log('log before close');
+    },
+    after_open: function() {
+        //console.log('log after open');
+    },
+    after_close: function() {
+        //console.log('log after close');
+    },
+    should_open: function () {
+        //console.log('just checking to see if we should open');
+        return true;
+    }
+});</script>
 </body>
 </html>
 

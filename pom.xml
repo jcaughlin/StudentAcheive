@@ -90,7 +90,11 @@
         </dependency>
 
 
-
+            <dependency>
+                <groupId>com.google.apis</groupId>
+                <artifactId>google-api-services-calendar</artifactId>
+                <version>v3-rev300-1.23.0</version>
+            </dependency>
     </dependencies>
 
     <build>

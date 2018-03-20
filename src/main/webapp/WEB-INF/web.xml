@@ -20,7 +20,7 @@
 
   <error-page>
     <error-code>400</error-code>
-    <location>/error-pages/404.jsp</location>
+    <location>/error-pages/400.jsp</location>
   </error-page>
   <error-page>
     <error-code>401</error-code>
@@ -42,7 +42,7 @@
   <security-constraint>
     <web-resource-collection>
       <web-resource-name>admin</web-resource-name>
-      <url-pattern>/admin-landing.jsp</url-pattern>
+      <url-pattern>/admin/</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>ADMIN</role-name>
@@ -64,7 +64,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>teacher</web-resource-name>
-            <url-pattern>/teacher-landing.jsp</url-pattern>
+            <url-pattern>/teacher/</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>TEACHER</role-name>
@@ -75,7 +75,7 @@
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>student</web-resource-name>
-            <url-pattern>/student-portal.jsp</url-pattern>
+            <url-pattern>/student/</url-pattern>
         </web-resource-collection>
       <auth-constraint>
         <role-name>STUDENT</role-name>
