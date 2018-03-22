@@ -12,6 +12,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
+//#TODO SHOW TEACHERS AND SHOW STUDENTS
 
 @WebServlet(name = "AdminReports", urlPatterns = "/adminReports")
 public class AdminReports extends HttpServlet {
@@ -31,7 +32,7 @@ public class AdminReports extends HttpServlet {
         logger.info(reportRequested);
 
         if(reportRequested.equals("addUser")) {
-            url = "user-signup.jsp";
+            url = "/admin/admin-add-user.jsp";
 
             RequestDispatcher dispatcher =
                     getServletContext().getRequestDispatcher(url);
@@ -40,7 +41,7 @@ public class AdminReports extends HttpServlet {
         } else if(reportRequested.equals("showAll")) {
             userDao = new UserDao();
             logger.info("Made It");
-            url = "admin/admin-reports.jsp";
+            url = "/admin/admin-reports.jsp";
 
             request.setAttribute("users", userDao.getAllUsers());
 
@@ -50,8 +51,8 @@ public class AdminReports extends HttpServlet {
 
         } else if(reportRequested.equals("")) {
             String errorMessage = "Please Make a Selection";
-            request.setAttribute("errorMessage",errorMessage);
-            response.sendRedirect("admin/admin-landing.jsp");
+            request.setAttribute("/errorMessage",errorMessage);
+            response.sendRedirect("/admin/admin-landing.jsp");
         }
     }
 }

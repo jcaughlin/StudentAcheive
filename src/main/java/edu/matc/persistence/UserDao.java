@@ -46,7 +46,6 @@ public class UserDao {
 
         Session session = sessionFactory.openSession();
         User user = session.get(User.class, id);
-        log.debug("The user is: " + user);
         session.close();
 
         return user;
@@ -63,7 +62,6 @@ public class UserDao {
         CriteriaQuery<User> query = builder.createQuery(User.class);
         Root<User> root = query.from(User.class);
         List<User> userList = session.createQuery(query).getResultList();
-        log.debug("My List of Users" + userList);
         session.close();
 
         return  userList;

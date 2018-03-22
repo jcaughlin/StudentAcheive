@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <c:set var="title" scope="session" value="New User Sign Up"/>
 <c:set var="heading" scope="session" value="Register Yourself"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
@@ -24,7 +25,7 @@
     <h3>Welcome ${username}! Let's Finish Getting You Registered</h3>
 
     <!--Start of form-->
-    <form class="border" method="post" action="signup">
+    <form class="border px-4 pb-2" method="post" action="signup">
     <!-- form complex example -->
     <div class="row mt-4">
 

@@ -17,65 +17,63 @@
 <jsp:include page="../head.jsp"/>
 
 <body>
+<script>
+    $(document).ready(function(){
+        $('#adminUserReport').dataTable();
+    });
+</script>
 <div class="container py-2">
     <jsp:include page="../jumbotron.jsp"/>
     <hr>
 
     <div class="row">
         <!--Sidebar Menu-->
-        <div class="col-lg-2">
-            <jsp:include page="../sidebar-menu.jsp"/>
-        </div><!--Sidebar Column End-->
 <!--TODO Confirm Delete Modal-->
         <!--Center Column-->
-        <div class="col-lg-10">
-            <table><caption>Administration Report</caption>
-            <thead>
-            <tr>
-            <th scope="col">Last Name</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">State</th>
-            <th scope="col">Zip Code</th>
-            <th scope="col">Email</th>
-            <th scoper="col">Phone Number</th>
-            <th scope="col">Registered Date</th>
-            <th scope="col">Last Updated</th>
-            <th scope="col">Update Profile</th>
-            <th scope="col">Delete User</th>
-            </tr>
+        <div class="col-lg-12">
+            <table id="adminUserReport" class="table table-striped table-bordered"><caption>Administration Report</caption>
+                <thead>
+                <tr scope="row">
+                    <th scope="col">User ID</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Zip Code</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Registered Date</th>
+                    <th scope="col">Last Updated</th>
+                    <th scope="col">Update Profile</th>
+                    <th scope="col">Delete User</th>
+                 </tr>
             </thead>
-            <tbody>
 
             <c:forEach var="user" items="${users}">
-            <tr scope="row">${user.lastName}</tr>
-            <tr scope="row">${user.firstName}</tr>
-            <tr scope="row">${user.streetAddress}</tr>
-            <tr scope="row">${user.cityName}</tr>
-            <tr scope="row">${user.stateName}</tr>
-            <tr scope="row">${user.zipCode}</tr>
-            <tr scope="row">${user.userEmail}</tr>
-            <tr scoper="row">(${user.areaCode})${user.userPhoneNumber}</tr>
-            <tr scope="row">${user.userCreatedDate}</tr>
-            <tr scope="row">${user.userLastUpdated}</tr>
-            <tr scope="row"><a href="placeholder" class="btn btn-primary btn-sm">Update</a></tr>
-            <tr scope="row"><a href="placeholder" class="btn btn-warning btn-sm">Remove</a></tr>
-                </c:forEach
-            </tbody>
-                </table>
-
-
+                <tr scope="row">
+                    <td>${user.id}</td>
+                    <td>${user.lastName}</td>
+                    <td>${user.firstName}</td>
+                    <td>${user.streetAddress}</td>
+                    <td>${user.cityName}</td>
+                    <td>${user.stateName}</td>
+                    <td>${user.zipCode}</td>
+                    <td>${user.userEmail}</td>
+                    <td>(${user.areaCode}) ${user.userPhoneNumber}</td>
+                    <td>${user.userCreatedDate}</td>
+                    <td>${user.userLastUpdated}</td>
+                    <td><a href="placeholder" class="btn btn-primary btn-sm">Update</a></td>
+                    <td><a href="adminDelete?id=${user.id}" class="btn btn-warning btn-sm">Remove</a></td>
+                </tr>
+            </c:forEach>
+            </table>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="../footer.jsp"/>
 
 </div><!--End Container-->
-<script>
-    $(document).ready(function() {
-        $('#adminReport').dataTable();
-    } );
-</script>
 
 </body>
 </html>

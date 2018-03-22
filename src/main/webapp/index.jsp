@@ -2,14 +2,15 @@
 
 <c:set var="title" value="Welcome-Student Achieve!"/>
 <c:set var="author" value="JS Caughlin"/>
-<c:set var="heading" scope="request" value="to Student Achieve!!"/>
+<c:set var="heading" scope="request" value="Welcome to Student Achieve!!"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
   Date: 2/9/18
   Time: 2:19 PM
   To change this template use Preferences | File and Code Templates--%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +66,7 @@
                 <!--Button Group-->
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
-                    <a href="#full" class="btn btn-info btn-lg fullscreen" role="button">Existing User?</a>
+                    <button type="button" class="btn btn-info btn-lg" data-target="#userType" data-toggle="modal">Existing User?</button>
                 </div>
                 <div class="col-sm-9 pb-3">
                     <a href="forgotPassword">Forgot Password</a>
@@ -76,42 +77,42 @@
             </form>
         </div>
         </div><!--End Row-->
-</div><!--End First Container-->
-
-        <div class="container">
     <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-10">
-        <div id="full" style="display:none;">
-            <form class="border px-4 pb-2" action="routeUser" method="get">
-                <h4>Select User Type:</h4>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">
-                    <label class="form-check-label" for="teacher">Teacher</label>
-                </div>
+        <div class="modal fade" id="userType" tabindex="-1" role="dialog" aria-labelledby="userType" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content py-4">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Select User Type and Submit</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="border px-4 py-4" action="routeUser" method="get">
+                            <h4>Select User Type:</h4>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="userType" value="teacher" id="teacher">
+                                <label class="form-check-label" for="teacher">Teacher</label>
+                            </div>
 
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="userType" value="student" id="student">
-                    <label class="form-check-label" for="student">Student</label>
-                </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="userType" value="student" id="student">
+                                <label class="form-check-label" for="student">Student</label>
+                            </div>
 
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">
-                    <label class="form-check-label" for="admin">Admin</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">
+                                <label class="form-check-label" for="admin">Admin</label>
+                            </div>
+                            <button class="btn btn-info btn-lg">GO!</button>
+                        </form>
+                    </div>
                 </div>
-                <button class="btn btn-info btn-lg">GO!</button>
-            </form>
+            </div>
         </div>
-    </div> <!--End Row-->
+    </div>
+
 
     <jsp:include page="footer.jsp"/>
 </div><!--End Container-->
-<script charset="UTF-8">
-    $('.fullscreen').modaal({
-        fullscreen: true,
-        hide_close: true
-    });
-</script>
+
 </body>
 </html>
 

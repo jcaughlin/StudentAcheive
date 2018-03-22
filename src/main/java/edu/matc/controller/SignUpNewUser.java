@@ -3,6 +3,7 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.util.*;
 
+import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,12 +16,15 @@ import javax.servlet.http.*;
 @WebServlet(name = "SignUpNewUser", urlPatterns = "/signUpNewUser")
 public class SignUpNewUser extends HttpServlet {
 
+    // TODO query database to make sure no duplicate usernames
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        UserDao userDao = new UserDao();
 
 
         String error = "Password Entries don't match. Try again";

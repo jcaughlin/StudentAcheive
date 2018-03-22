@@ -35,8 +35,16 @@
     <location>/error-pages/404.jsp</location>
   </error-page>
   <error-page>
+    <error-code>405</error-code>
+    <location>/error-pages/405.jsp</location>
+  </error-page>
+  <error-page>
     <error-code>500</error-code>
     <location>/error-pages/500.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.io.IOException</exception-type>
+    <location>/error-pages/IOException.jsp</location>
   </error-page>
 
   <security-constraint>

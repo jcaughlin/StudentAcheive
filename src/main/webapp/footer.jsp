@@ -13,12 +13,18 @@
 
         <div class="row py-2 d-flex align-items-center footer">
             <div class="col-sm-4">
-                    <h6 class="text-upper-case font-weight-bold">Business Solutions</h6>
+                    <h6 class="text-uppercase align-self-start font-weight-bold">Business Solutions</h6>
+                <ul class="no-style-list">
+                    <li><a href="/">Contact Sales</a></li>
+                    <li><a href="/">Success Stories</a></li>
+                    <li><a href="/">Executive Team</a></li>
+                    <li><a href="/">Social Media</a></li>
+                </ul>
             </div>
 
             <div class="col-sm-4">
                 <address>
-                    <strong>Student Achieve</strong><br>
+                    <h6 class="text-uppercase font-weight-bold">Student Achieve</h6>
                     1009 Winston Way<br>
                     Waunakee WI 53597<br>
                     <abbr title="Phone">P:</abbr> (608) 630-0844
@@ -28,7 +34,14 @@
 
 
             <div class="col-sm-4">
-                <h6 class="text-upper-case font-weight-bold">Developers</h6>
+                <h6 class="text-uppercase align-self-start font-weight-bold">Developers</h6>
+                <ul class="no-style-list">
+                    <li><a href="/">API</a></li>
+                    <li><a href="/">GitHub</a></li>
+                    <li><a href="/">Affiliate Program</a></li>
+                    <li><a href="/">Secret Dark Web Corporation</a></li>
+                    <li><a href="https://www.nhl.com/penguins" target="_blank">Liam's Favorite Hockey Team</a></li>
+                </ul>
             </div>
         </div>
 

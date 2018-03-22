@@ -14,6 +14,28 @@
 <html lang="en">
 
 <jsp:include page="head.jsp"/>
+<style>
+
+    body {
+        margin: 40px 10px;
+        padding: 0;
+        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+        font-size: 14px;
+    }
+
+    #loading {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #calendar {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+</style>
 
 <body>
 <!--Container Start-->
@@ -29,19 +51,21 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
+            <div id="calendar">
 
-            <div class="card mb-3">
-                <h1 class="card-title">Walking Tacos</h1>
-                <img class="card-img-top" src="images/walkingTacos.jpg" alt="Delicious Walking Tacos">
-            <div class="card-block">
-                <h4 class="card-title">Walking Tacos</h4>
-                <p class="card-text">Tacos You Can Eat When you are walking</p>
             </div>
-            </div>
+            <div id='loading'>loading...</div>
+
+
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
     <jsp:include page="footer.jsp"/>
+    <script>
+        $('#calendar').fullCalendar({
+            defaultView: 'month'
+        });
+    </script>
 
 </div><!--End Container-->
 

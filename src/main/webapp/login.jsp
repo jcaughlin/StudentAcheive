@@ -9,7 +9,7 @@
   Date: 2/9/18
   Time: 2:19 PM
   To change this template use Preferences | File and Code Templates--%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="en">

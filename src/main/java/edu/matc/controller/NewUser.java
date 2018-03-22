@@ -74,7 +74,7 @@ public class NewUser extends HttpServlet {
 
         request.setAttribute("user", user);
 
-        String url = "/success.jsp";
+        String url = "/new-user-added.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

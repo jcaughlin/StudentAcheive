@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="Error 500-Internal Server Error"/>
-<c:set var="heading" scope="session" value="500 Error"/>
+<c:set var="title" scope="session" value="Error 500 Internal Server Error"/>
+<c:set var="heading" scope="session" value="500 Internal Server Error"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1>Internal Server Error</h1>
+            <h1 class="text-center">500 Internal Server Error</h1>
         </div>
     </div>
 </div>

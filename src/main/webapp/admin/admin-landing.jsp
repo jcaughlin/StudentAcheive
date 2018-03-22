@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <c:set var="title" scope="session" value="Admin Page"/>
 <c:set var="heading" scope="session" value="The Admin Page"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
@@ -29,8 +30,8 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <h2 class="col-sm-9 py-3">Choose Report</h2>
-            <form "border px-4 pb-2"method="get" action="/adminReports">
-            <div class="col-sm-9 pb-3">
+            <form class="border px-4 pb-2" method="post" action="adminReports">
+            <div class="col-sm-6 py-3">
                 <label for="adminReport" class="sr-onlu">Choose Report Type</label>
                 <select class="form-control" id="adminReport" name="reportRequested">
                     <option value="">Choose Report</option>
@@ -40,12 +41,12 @@
                     <option value="teachers">Teacher Reports</option>
                 </select>
             </div>
-            <div class="col-sm-9 pb-3">
-                ${errorMessage}
-            </div>
-            <div class="col-sm-9 pb-3">
+            <div class="col-sm-6 pb-3">
             <button class="btn btn-primary btn-large">Go!</button>
             </div>
+                <div class="col-sm-9 pb-3">
+                    ${errorMessage}
+                </div>
             </form>
 
         </div><!--Center Column End-->

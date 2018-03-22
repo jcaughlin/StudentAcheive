@@ -22,7 +22,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1>Error 400</h1>
+            <h1 class="text-center">Error 400</h1>
         </div>
     </div>
 </div>
