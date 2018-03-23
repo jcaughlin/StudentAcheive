@@ -560,3 +560,31 @@
 [INFO ] 2018-03-21 23:41:16.531 [http-nio-8080-exec-2] AdminDelete - test
 [INFO ] 2018-03-21 23:41:16.852 [http-nio-8080-exec-2] AdminDelete - null
 [INFO ] 2018-03-21 23:41:16.853 [http-nio-8080-exec-2] AdminDelete - 11
+[INFO ] 2018-03-22 14:28:00.083 [http-nio-8080-exec-7] AdminReports - showAll
+[INFO ] 2018-03-22 14:28:07.695 [http-nio-8080-exec-7] AdminReports - Made It
+[INFO ] 2018-03-22 14:28:37.621 [http-nio-8080-exec-8] AdminDelete - 10
+[INFO ] 2018-03-22 14:28:37.626 [http-nio-8080-exec-8] AdminDelete - 10
+[INFO ] 2018-03-22 14:28:37.685 [http-nio-8080-exec-8] AdminDelete - getId for current is: 10
+[INFO ] 2018-03-22 14:28:37.685 [http-nio-8080-exec-8] AdminDelete - test
+[INFO ] 2018-03-22 14:28:37.796 [http-nio-8080-exec-8] AdminDelete - null
+[INFO ] 2018-03-22 14:28:37.796 [http-nio-8080-exec-8] AdminDelete - 10
+[INFO ] 2018-03-22 14:29:13.910 [http-nio-8080-exec-3] AdminReports - showAll
+[INFO ] 2018-03-22 14:29:13.920 [http-nio-8080-exec-3] AdminReports - Made It
+[INFO ] 2018-03-22 15:36:59.780 [http-nio-8080-exec-4] LinkRouterServlet - executives
+[INFO ] 2018-03-22 15:41:27.831 [http-nio-8080-exec-1] LinkRouterServlet - executives
+[INFO ] 2018-03-22 15:51:18.833 [http-nio-8080-exec-2] LinkRouterServlet - executives
+[INFO ] 2018-03-22 16:02:02.241 [http-nio-8080-exec-1] LinkRouterServlet - executives
+[INFO ] 2018-03-22 16:07:41.292 [http-nio-8080-exec-4] LinkRouterServlet - executives
+[INFO ] 2018-03-22 16:12:21.664 [http-nio-8080-exec-1] LinkRouterServlet - executives
+[INFO ] 2018-03-22 20:15:58.614 [http-nio-8080-exec-8] LinkRouterServlet - executives
+[INFO ] 2018-03-22 20:43:50.549 [http-nio-8080-exec-4] LinkRouterServlet - lunch.jsp
+[INFO ] 2018-03-22 20:52:56.106 [http-nio-8080-exec-1] LinkRouterServlet - menu-content/calendar.jsp
+[INFO ] 2018-03-22 20:53:00.861 [http-nio-8080-exec-2] LinkRouterServlet - menu-content/homeroom.jsp
+[INFO ] 2018-03-22 20:54:43.191 [http-nio-8080-exec-2] LinkRouterServlet - /menu-content/calendar.jsp
+[INFO ] 2018-03-22 20:54:46.144 [http-nio-8080-exec-3] LinkRouterServlet - /menu-content/homeroom.jsp
+[INFO ] 2018-03-22 20:54:48.051 [http-nio-8080-exec-4] LinkRouterServlet - /menu-content/lunch.jsp
+[INFO ] 2018-03-22 20:54:49.905 [http-nio-8080-exec-5] LinkRouterServlet - /menu-content/contacts.jsp
+[INFO ] 2018-03-22 20:54:51.994 [http-nio-8080-exec-6] LinkRouterServlet - /menu-content/newsletter.jsp
+[INFO ] 2018-03-22 20:54:54.205 [http-nio-8080-exec-8] LinkRouterServlet - /menu-content/generalinfo.jsp
+[INFO ] 2018-03-22 20:57:28.509 [http-nio-8080-exec-5] AdminReports - showAll
+[INFO ] 2018-03-22 20:57:35.468 [http-nio-8080-exec-5] AdminReports - Made It

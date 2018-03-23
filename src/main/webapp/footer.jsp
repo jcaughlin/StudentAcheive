@@ -17,7 +17,7 @@
                 <ul class="no-style-list">
                     <li><a href="/">Contact Sales</a></li>
                     <li><a href="/">Success Stories</a></li>
-                    <li><a href="/">Executive Team</a></li>
+                    <li><a href="link?pageRequested=executives">Executive Team</a></li>
                     <li><a href="/">Social Media</a></li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
 
         <div class="row d-flex text-center">
             <div class="col-sm-12">
-            <p class="text-muted"><i class="far fa-copyright"></i><span id="date"></span></p>
+            <p class="text-muted" id="date"><span><i class="fa fa-copyright fa-5x"></i></span></p>
             </div>
          </div>
     </div><!--End Footer Container-->

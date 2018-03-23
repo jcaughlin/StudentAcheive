@@ -24,6 +24,11 @@
 |7|3/1/18|Working on checkpoint One|2|
 |8|3/4/18|Deploying AWS|3|
 |8|3/5/18|Back to finish Hibernate Section|4|
+|?|?/?/18|Myserious Gap|?|
+|8|3/16/18|Routing Users...Admin Features|6|
+|8|3/19/18|Routing Users...Admin Features|3|
+|8|3/20/18|Routing Users...Admin Features|4|
+|8|3/22/18|Deploying to AWS|8|
 
 
 

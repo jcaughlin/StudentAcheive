@@ -1,7 +1,7 @@
 package edu.matc.controller;
 
 import java.io.IOException;
-import java.util.*;
+import edu.matc.utility.RouteUserHelper;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,8 +12,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "LinkRouterServlet", urlPatterns = "/link")
-public class LinkRouterServlet extends HttpServlet {
+@WebServlet(name = "RouteUserController", urlPatterns = "/routeUser")
+public class UserRoleRouter extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
@@ -21,17 +21,17 @@ public class LinkRouterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String pageRequested = request.getParameter("pageRequested");
+        RouteUserHelper helper = new RouteUserHelper();
 
-        logger.info(pageRequested);
+        String userType = request.getParameter("userType");
 
-        String url = "/lunch-calendar.jsp";
+        String url = helper.routeUserByRole(userType);
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-    }
 
+    }
 }
     
     
