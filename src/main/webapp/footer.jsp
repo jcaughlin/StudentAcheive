@@ -17,14 +17,14 @@
                 <ul class="no-style-list">
                     <li><a href="/">Contact Sales</a></li>
                     <li><a href="/">Success Stories</a></li>
-                    <li><a href="link?pageRequested=executives">Executive Team</a></li>
-                    <li><a href="/">Social Media</a></li>
+                    <li><a href="footerLink?pageRequested=executive-team">Executive Team</a></li>
+                    <li><a href="https://www.scholastic.com/teachers/books/dog-man-by-dav-pilkey/" target="_blank">The Greatest Story of ever!!!</a></li>
                 </ul>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 border">
                 <address>
-                    <h6 class="text-uppercase font-weight-bold">Student Achieve</h6>
+                    <h6 class="text-uppercase align-self-start font-weight-bold">Student Achieve</h6>
                     1009 Winston Way<br>
                     Waunakee WI 53597<br>
                     <abbr title="Phone">P:</abbr> (608) 630-0844
@@ -33,10 +33,9 @@
             </div>
 
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 border">
                 <h6 class="text-uppercase align-self-start font-weight-bold">Developers</h6>
                 <ul class="no-style-list">
-                    <li><a href="/">API</a></li>
                     <li><a href="/">GitHub</a></li>
                     <li><a href="/">Affiliate Program</a></li>
                     <li><a href="/">Secret Dark Web Corporation</a></li>

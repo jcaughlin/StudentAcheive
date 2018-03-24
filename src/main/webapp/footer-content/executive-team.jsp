@@ -13,17 +13,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<jsp:include page="head.jsp"/>
+<jsp:include page="../head.jsp"/>
 
 <body>
 <div class="container py-2">
-    <jsp:include page="jumbotron.jsp"/>
+    <jsp:include page="../jumbotron.jsp"/>
     <hr>
 
     <div class="row">
         <!--Sidebar Menu-->
         <div class="col-lg-2">
-            <jsp:include page="sidebar-menu.jsp"/>
+            <jsp:include page="../sidebar-menu.jsp"/>
         </div><!--Sidebar Column End-->
 
         <!--Center Column-->
@@ -31,14 +31,14 @@
             <div class="card">
                 <h1 class="card-header mx-auto">Our Executive Team</h1>
                 <div class="card-body">
-                    <img class="card-img-top" src="images/paul-manafort-roger-stone-lee-atwater.jpg" alt="Executive Team">
+                    <img class="card-img-top" src="../images/paul-manafort-roger-stone-lee-atwater.jpg" alt="Executive Team">
                     <p class="card-text text-center"><small class="text-muted">Paul, Rog, Lee</small></p>
                 </div>
             </div>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="../footer.jsp"/>
 
 </div><!--End Container-->
 

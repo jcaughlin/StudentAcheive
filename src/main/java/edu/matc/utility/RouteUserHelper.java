@@ -2,8 +2,10 @@ package edu.matc.utility;
 
 /**
  * Utility Class to assist Servlets in routing links and menus.
+ * @author josephcaughlin
  */
 public class RouteUserHelper {
+    String jspSuffix = ".jsp";
 
     /**
      * Assists Login Servlet in routing Users based on their userole.
@@ -39,7 +41,15 @@ public class RouteUserHelper {
      */
     public String pageRouter(String pageRequested) {
         String filePath = "/menu-content/";
-        String jspSuffix = ".jsp";
+
+        String url = filePath + pageRequested + jspSuffix;
+
+        return url;
+
+    }
+
+    public String footerLinkRouter(String pageRequested) {
+        String filePath = "/footer-content/";
 
         String url = filePath + pageRequested + jspSuffix;
 

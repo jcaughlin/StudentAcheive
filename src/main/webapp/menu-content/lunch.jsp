@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" scope="session" value="Today's Lunch"/>
-<c:set var="heading" scope="session" value="THe Lunch Project"/>
+<c:set var="heading" scope="session" value="What's For Lunch?"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
