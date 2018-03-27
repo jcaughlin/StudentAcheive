@@ -31,7 +31,7 @@
             <div class="card">
                 <h1 class="card-header mx-auto">Our Executive Team</h1>
                 <div class="card-body">
-                    <img class="card-img-top" src="../images/paul-manafort-roger-stone-lee-atwater.jpg" alt="Executive Team">
+                    <img class="card-img-top" src="images/paul-manafort-roger-stone-lee-atwater.jpg" alt="Executive Team">
                     <p class="card-text text-center"><small class="text-muted">Paul, Rog, Lee</small></p>
                 </div>
             </div>
