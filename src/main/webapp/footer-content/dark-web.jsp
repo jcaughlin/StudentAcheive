@@ -1,19 +1,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<c:set var="title" scope="session" value="Teacher Classroom"/>
-<c:set var="heading" scope="session" value="Welcome To Your Classroom"/>
+<c:set var="title" scope="session" value="The Darkest Web"/>
+<c:set var="heading" scope="session" value="Many Sites are Dark In China"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
-  Date: 3/7/18
-  Time: 4:17 PM
+  Date: 4/7/18
+  Time: 1:16 PM
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <jsp:include page="../head.jsp"/>
 
 <body>
@@ -29,7 +27,14 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
+            <div class="card">
+                <h1 class="card-header mx-auto">Many Webs are Dark in China</h1>
+                <div class="card-body">
+                    <img class="card-img-top" src="images/bannedinchina.png" alt="Banned In China Search Result>
 
+                    <p class="card-text text-center"><small class="text-muted">Test Your Website</small></p>
+                </div>
+            </div>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 
@@ -39,7 +44,6 @@
 
 </body>
 </html>
-
 
 
 

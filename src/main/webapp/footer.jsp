@@ -38,7 +38,8 @@
                 <ul class="no-style-list">
                     <li><a href="/">GitHub</a></li>
                     <li><a href="/">Affiliate Program</a></li>
-                    <li><a href="/">Secret Dark Web Corporation</a></li>
+                    <li><a href="footerLink?pageRequested=dark-web">Dark Web</a></li>
+                    <li><a href="footerLink?pageRequested=darkest-web">Darkest Web</a> </li>
                     <li><a href="https://www.nhl.com/penguins" target="_blank">Liam's Favorite Hockey Team</a></li>
                 </ul>
             </div>
