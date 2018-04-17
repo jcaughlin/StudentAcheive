@@ -29,6 +29,7 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
+            <a href="/createQuiz" class="btn btn-success">Create a Quiz</a>
 
         </div><!--Center Column End-->
     </div> <!--End Row-->

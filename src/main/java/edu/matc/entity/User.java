@@ -1,6 +1,7 @@
 package edu.matc.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
@@ -21,6 +22,7 @@ import java.time.LocalDate;
  * @author JS Caughlin
  */
 @ToString
+@NoArgsConstructor
 @Entity
 @Table(name="user")
 public class User {
@@ -75,11 +77,6 @@ public class User {
     @Column(name = "birthday")
     @Getter @Setter private LocalDate userBirthDate;
 
-
-
-    public User() {
-
-    }
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
         this.firstName = firstName;

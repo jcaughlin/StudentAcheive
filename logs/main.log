@@ -614,3 +614,12 @@
 [INFO ] 2018-04-07 13:40:34.113 [http-nio-8080-exec-1] FooterLinkRouter - /footer-content/darkest-web.jsp
 [INFO ] 2018-04-07 13:40:42.742 [http-nio-8080-exec-5] FooterLinkRouter - /footer-content/dark-web.jsp
 [INFO ] 2018-04-07 13:40:46.247 [http-nio-8080-exec-6] FooterLinkRouter - /footer-content/executive-team.jsp
+[INFO ] 2018-04-13 17:35:16.351 [http-nio-8080-exec-8] FooterLinkRouter - /footer-content/dark-web.jsp
+[INFO ] 2018-04-13 17:35:24.055 [http-nio-8080-exec-10] FooterLinkRouter - /footer-content/darkest-web.jsp
+[INFO ] 2018-04-13 17:35:37.011 [http-nio-8080-exec-2] FooterLinkRouter - /footer-content/executive-team.jsp
+[INFO ] 2018-04-17 08:29:36.200 [http-nio-8080-exec-7] StudentQuizController - secondResponse
+[INFO ] 2018-04-17 08:37:53.695 [http-nio-8080-exec-4] StudentQuizController - secondResponse
+[INFO ] 2018-04-17 08:40:42.876 [http-nio-8080-exec-7] StudentQuizController - secondResponse
+[INFO ] 2018-04-17 08:42:24.032 [http-nio-8080-exec-6] StudentQuizController - secondResponse
+[INFO ] 2018-04-17 08:46:34.881 [http-nio-8080-exec-10] StudentQuizController - secondResponse
+[INFO ] 2018-04-17 08:51:45.628 [http-nio-8080-exec-5] StudentQuizController - secondResponse

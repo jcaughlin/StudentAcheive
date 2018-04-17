@@ -1,43 +1,39 @@
 package edu.matc.entity;
 
-
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.Table;
 
 import javax.persistence.Entity;
-import org.hibernate.annotations.GenericGenerator;
-
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import java.time.LocalDate;
 
 @ToString
 @NoArgsConstructor
 @Entity
-@Table(name="user_roles")
-public class UserRoles {
+@Table(name="quiz")
+public class Quiz {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
+    @Getter @Setter private LocalDate quizCreatedDate;
 
-    @Getter @Setter private RoleName roleName;
+    @Getter @Setter private String quizName;
 
-    @Getter @Setter private User user;
+    @Getter @Setter private String questionA;
 
-    @Getter @Setter private String userName;
+    @Getter @Setter private String questionB;
 
-    public UserRoles(String userName, RoleName roleName){
-        this.userName = userName;
-        this.roleName = roleName;
+    @Getter @Setter private String questionC;
 
-    }
+    @Getter @Setter private String correctAnswer;
+
 }
-
-

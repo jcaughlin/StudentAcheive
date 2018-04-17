@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="title" scope="session" value="Your Student Portal"/>
-<c:set var="heading" scope="session" value="Student Portal"/>
+<c:set var="title" scope="session" value="Teacher Quiz Builder"/>
+<c:set var="heading" scope="session" value="Quiz Builder"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
-  Date: 3/7/18
-  Time: 4:19 PM
+  Date: 4/13/18
+  Time: 4:47 PM
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -28,7 +28,6 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
-            <a href="takeQuiz" class="btn btn-primary">Take Quiz</a>
 
         </div><!--Center Column End-->
     </div> <!--End Row-->
