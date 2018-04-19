@@ -25,7 +25,7 @@
     <h3>Welcome ${username}! Let's Finish Getting You Registered</h3>
 
     <!--Start of form-->
-    <form class="border px-4 pb-2" method="post" action="signup">
+    <form class="border p-4" method="post" action="signup">
     <!-- form complex example -->
     <div class="row mt-4">
 

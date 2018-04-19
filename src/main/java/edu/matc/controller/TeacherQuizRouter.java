@@ -20,7 +20,7 @@ public class TeacherQuizRouter extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "teacher-quiz-builder.jsp";
+        String url = "/teacher/teacher-quiz-builder.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

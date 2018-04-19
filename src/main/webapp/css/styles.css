@@ -2,8 +2,12 @@ body {
     background: #eee !important;
 }
 
-form card {
+.card form {
     background-color: antiquewhite;
+}
+
+.card{
+    border: 5px solid;
 }
 
 .form-control {

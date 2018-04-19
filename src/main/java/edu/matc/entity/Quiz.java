@@ -5,12 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
-import javax.persistence.Table;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 import java.time.LocalDate;
 
 @ToString
@@ -24,8 +21,14 @@ public class Quiz {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
+
+    @Column(name = "created_date")
     @Getter @Setter private LocalDate quizCreatedDate;
 
+    @Column(name = "quiz_author")
+    @Getter @Setter private String quizAuthor;
+
+    @Column(name = "quiz_name")
     @Getter @Setter private String quizName;
 
     @Getter @Setter private String questionA;
