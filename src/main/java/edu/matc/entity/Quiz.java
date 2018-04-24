@@ -9,6 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 @ToString
 @NoArgsConstructor
@@ -22,21 +23,21 @@ public class Quiz {
     @Getter @Setter private int id;
 
 
-    @Column(name = "created_date")
+
     @Getter @Setter private LocalDate quizCreatedDate;
 
-    @Column(name = "quiz_author")
-    @Getter @Setter private String quizAuthor;
-
-    @Column(name = "quiz_name")
     @Getter @Setter private String quizName;
 
-    @Getter @Setter private String questionA;
+    @Getter @Setter private String quizAuthor;
 
-    @Getter @Setter private String questionB;
+    @Getter @Setter private String student;
 
-    @Getter @Setter private String questionC;
+    @Getter @Setter private int totalQuizQuestions;
 
-    @Getter @Setter private String correctAnswer;
+    @Getter @Setter private int studentResults;
+
+    @Getter @Setter private Set quizQuestion;
+
+    @Getter @Setter private LocalDate quizLastModifiedDate;
 
 }

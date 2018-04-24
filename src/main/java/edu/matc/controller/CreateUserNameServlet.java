@@ -13,8 +13,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "SignUpNewUser", urlPatterns = "/signUpNewUser")
-public class SignUpNewUser extends HttpServlet {
+@WebServlet(name = "CreateUserNameServlet", urlPatterns = "/signUpNewUser")
+public class CreateUserNameServlet extends HttpServlet {
 
     // TODO query database to make sure no duplicate usernames
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -25,6 +25,9 @@ public class SignUpNewUser extends HttpServlet {
             throws ServletException, IOException {
 
         UserDao userDao = new UserDao();
+
+        logger.info("I am here");
+        logger.info("I am here");
 
 
         String error = "Password Entries don't match. Try again";

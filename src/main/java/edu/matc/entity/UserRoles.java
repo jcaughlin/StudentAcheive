@@ -15,6 +15,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/*
+ * This Class represents the Security Access Roles for the Users.
+ *
+ *@author jscaughlin
+*/
 @ToString
 @NoArgsConstructor
 @Entity

@@ -54,7 +54,7 @@
                         <input type="text" class="form-control" id="wrongAnswerB" name="wrongAnswerB" placeholder="Enter Wrong Answer">
                     </div>
 
-                    <div class="col-sm-9 pb-3">
+                    <div class="col-lg-9 pb-3">
                         <label for="wrongAnswerC" class="sr-only">Enter One Last Wrong Answer</label>
                         <input type="text" class="form-control" id="wrongAnswerC" name="wrongAnswerC" placeholder="Enter Wrong Answer">
                     </div>

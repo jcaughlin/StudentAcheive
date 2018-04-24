@@ -624,3 +624,12 @@
 [INFO ] 2018-04-17 08:46:34.881 [http-nio-8080-exec-10] StudentQuizController - secondResponse
 [INFO ] 2018-04-17 08:51:45.628 [http-nio-8080-exec-5] StudentQuizController - secondResponse
 [INFO ] 2018-04-17 10:37:40.453 [http-nio-8080-exec-6] StudentQuizController - secondResponse
+[INFO ] 2018-04-19 18:15:47.399 [http-nio-8080-exec-6] StarterServlet - org.apache.tomcat.util.http.NamesEnumerator@43b7b1ae
+[INFO ] 2018-04-19 18:15:47.418 [http-nio-8080-exec-6] StarterServlet - The local address: 
+[INFO ] 2018-04-19 18:15:50.033 [http-nio-8080-exec-9] StarterServlet - org.apache.tomcat.util.http.NamesEnumerator@63ecd545
+[INFO ] 2018-04-19 18:15:50.036 [http-nio-8080-exec-9] StarterServlet - The local address: 
+[INFO ] 2018-04-19 18:53:04.087 [http-nio-8080-exec-3] CreateUserNameServlet - I am here
+[INFO ] 2018-04-19 18:53:04.092 [http-nio-8080-exec-3] CreateUserNameServlet - I am here
+[INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - thomas
+[INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - senior
+[INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - senior

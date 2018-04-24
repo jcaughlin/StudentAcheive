@@ -14,8 +14,8 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "NewUser", urlPatterns = "/signup")
-public class NewUser extends HttpServlet {
+@WebServlet(name = "CreateNewUserServlet", urlPatterns = "/signup")
+public class CreateNewUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 

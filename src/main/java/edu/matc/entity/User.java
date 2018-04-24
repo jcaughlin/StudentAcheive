@@ -14,12 +14,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import java.time.LocalDate;
-
+import java.util.List;
 
 
 /*
- * The User Entity.
- * @author JS Caughlin
+ * This Class Represents a User.
+ *
+ *@author JS Caughlin
  */
 @ToString
 @NoArgsConstructor
@@ -31,9 +32,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
-
-   /*@Column(name = "user_roles")
-    @Getter @Setter private List userRoles;*/
 
     @Column(name = "first_name")
     @Getter @Setter private String firstName;

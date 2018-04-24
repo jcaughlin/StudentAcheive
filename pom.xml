@@ -5,12 +5,17 @@
     <artifactId>StudentAchieve</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>StudentAchieve</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+    <developers>
+        <developer>
+        <name>Joseph Stephen Caughlin</name>
+        <email>jcaughlin@madisoncollege.edu</email>
+        <roles><role>Developer</role></roles>
+        </developer>
+    </developers>
 
         <dependencies>
             <dependency>
@@ -93,12 +98,19 @@
             <scope>provided</scope>
         </dependency>
 
-
             <dependency>
                 <groupId>com.google.apis</groupId>
                 <artifactId>google-api-services-calendar</artifactId>
-                <version>v3-rev300-1.23.0</version>
+                <version>v3-rev310-1.23.0</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.google.api-client/google-api-client -->
+            <dependency>
+                <groupId>com.google.api-client</groupId>
+                <artifactId>google-api-client</artifactId>
+                <version>1.23.0</version>
+            </dependency>
+
     </dependencies>
 
     <build>
@@ -126,5 +138,4 @@
                 </plugin>
             </plugins>
         </build>
-
 </project>

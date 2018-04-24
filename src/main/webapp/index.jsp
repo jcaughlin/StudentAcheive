@@ -31,7 +31,7 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border px-4 pb-2" id="signup" action="signUpNewUser" method="post">
+            <form class="border p-4" id="signup" action="signUpNewUser" method="post">
 
                 <h2 class="col-sm-9 py-3">Please Join The Fun</h2>
 

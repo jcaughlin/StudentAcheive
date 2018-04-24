@@ -15,7 +15,7 @@ import javax.servlet.http.*;
 
 
 @WebServlet(name = "AdminDelete", urlPatterns = "/adminDelete")
-public class AdminDelete extends HttpServlet {
+public class AdminDeleteUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 

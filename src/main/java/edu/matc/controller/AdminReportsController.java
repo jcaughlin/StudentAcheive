@@ -15,7 +15,7 @@ import javax.servlet.http.*;
 //#TODO SHOW TEACHERS AND SHOW STUDENTS
 
 @WebServlet(name = "AdminReports", urlPatterns = "/adminReports")
-public class AdminReports extends HttpServlet {
+public class AdminReportsController extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
