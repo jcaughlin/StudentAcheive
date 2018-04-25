@@ -23,11 +23,11 @@
         </div>
     </div><!--End Row-->
 
-        <div class="row">
-            <div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-12">
             <h3>Please Confirm Your Registration info</h3>
-            </div>
-        </div><!--End Row-->
+        </div>
+    </div><!--End Row-->
 
 
     <div class="row">
@@ -66,6 +66,19 @@
             </table>
         </div>
     </div><!--End Row-->
+
+    <div class="row">
+
+        <div class="col-sm-12">
+            <form class="py-3" action="uploadPhoto" method="post" enctype="multipart/form-data">
+                <h1 class="text-center">Would You Like to Upload a Profile Photo</h1>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <jsp:include page="footer.jsp"/>
 </div><!--End of Container-->

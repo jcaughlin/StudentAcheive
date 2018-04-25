@@ -11,6 +11,9 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<!--TODO Separate Reports for Students and Teachers
+<!--TODO Report option and Servlet/DAO for PENDING USERS
+<!--TODO Update User Form-->
 <!DOCTYPE html>
 <html lang="en">
 

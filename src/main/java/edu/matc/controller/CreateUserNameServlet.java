@@ -16,7 +16,7 @@ import javax.servlet.http.*;
 @WebServlet(name = "CreateUserNameServlet", urlPatterns = "/signUpNewUser")
 public class CreateUserNameServlet extends HttpServlet {
 
-    // TODO query database to make sure no duplicate usernames
+    // TODO DAO user getUserByUser to check if exists so no duplicates
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
@@ -25,10 +25,6 @@ public class CreateUserNameServlet extends HttpServlet {
             throws ServletException, IOException {
 
         UserDao userDao = new UserDao();
-
-        logger.info("I am here");
-        logger.info("I am here");
-
 
         String error = "Password Entries don't match. Try again";
 

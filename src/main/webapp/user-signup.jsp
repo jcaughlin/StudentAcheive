@@ -11,6 +11,8 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+<!--#TODO Improve Validation Now behaves different by browser-->
+
 <jsp:include page="head.jsp"/>
 <div class="container py-2">
     <jsp:include page="jumbotron.jsp"/>
@@ -92,13 +94,6 @@
             <input id="birthday" type="date" class="form-control" name = "birthday" placeholder="Enter Phone Number">
         </div>
 
-        <div class="col-sm-4 pb-3">
-            <label for="userPhoto">Example file input</label>
-            <input type="file" name="userPhoto" class="form-control-file" id="userPhoto">
-            <small class="form-text text-muted">
-                Upload User Photo
-            </small>
-        </div>
         <div class="col-sm-12 pb-3">
         <button class="btn btn-success">Submit</button>
         </div>
