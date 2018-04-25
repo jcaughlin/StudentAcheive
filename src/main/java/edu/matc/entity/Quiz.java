@@ -11,6 +11,11 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Set;
 
+/**
+ * This Class Represents a Quiz.
+ *
+ * @author josephcaughlin
+ */
 @ToString
 @NoArgsConstructor
 @Entity
@@ -22,22 +27,20 @@ public class Quiz {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-
-
-    @Getter @Setter private LocalDate quizCreatedDate;
-
+    @Column(name="quiz_name")
     @Getter @Setter private String quizName;
 
+    @Column(name="quiz_author")
     @Getter @Setter private String quizAuthor;
 
-    @Getter @Setter private String student;
+    @Column(name="quiz_created_date")
+    @Getter @Setter private LocalDate quizCreatedDate;
 
-    @Getter @Setter private int totalQuizQuestions;
+    @Column(name="quiz_last_updated")
+    @Getter @Setter private LocalDate quizLastUpDated;
 
-    @Getter @Setter private int studentResults;
+    // @Getter @Setter private int totalQuizQuestions;
 
-    @Getter @Setter private Set quizQuestion;
-
-    @Getter @Setter private LocalDate quizLastModifiedDate;
+    // @Getter @Setter private Set quizQuestion;
 
 }

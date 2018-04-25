@@ -33,24 +33,24 @@
             <!--FORM-->
             <form class="border p-4" id="signup" action="signUpNewUser" method="post">
 
-                <h2 class="col-sm-9 py-3">Please Join The Fun</h2>
+                <h2 class="col-sm-6 py-3">Please Join The Fun</h2>
 
                 <!--User Name-->
-                <div class="col-sm-9 pb-3">
+                <div class="col-sm-6 pb-3">
                     <label for="username" class="sr-only">Enter User Name</label>
                     <input type="text" class="form-control" name="username" id="username" placeholder="Enter User Name"
                            required="">
                 </div>
 
                 <!--User Password-->
-                <div class="col-sm-9 pb-3">
+                <div class="col-sm-6 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password"
                            required="">
                 </div>
 
                 <!--Password Confirm-->
-                <div class="col-sm-9 pb-3">
+                <div class="col-sm-6 pb-3">
                     <label for="passwordConfirm" class="sr-only">Confirm Password</label>
                     <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
                            placeholder="Confirm Password" required="">

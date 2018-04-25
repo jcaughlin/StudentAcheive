@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div class="col-sm-4 border">
+            <div class="col-sm-4">
                 <address>
                     <h6 class="text-uppercase align-self-start font-weight-bold">Student Achieve</h6>
                     1009 Winston Way<br>
@@ -33,7 +33,7 @@
             </div>
 
 
-            <div class="col-sm-4 border">
+            <div class="col-sm-4">
                 <h6 class="text-uppercase align-self-start font-weight-bold">Developers</h6>
                 <ul class="no-style-list">
                     <li><a href="/">GitHub</a></li>

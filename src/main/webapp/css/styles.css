@@ -2,7 +2,7 @@ body {
     background: #eee !important;
 }
 
-.card form {
+form {
     background-color: antiquewhite;
 }
 
@@ -14,9 +14,10 @@ body {
     text-align: center;
 }
 
+/*
 #signup{
     max-width: 500px;
-}
+}*/
 
 .footer{
     background-color:antiquewhite;

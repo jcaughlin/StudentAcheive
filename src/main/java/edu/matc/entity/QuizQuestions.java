@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +17,9 @@ public class QuizQuestions {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-    @Getter @Setter private String questions;
+    @Column(name="quiz_question")
+    @Getter @Setter private String question;
 
-    @Getter @Setter private Set choices;
+    // #OneToMany
+    // @Getter @Setter private Set choices;
 }

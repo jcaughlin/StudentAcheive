@@ -633,3 +633,15 @@
 [INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - thomas
 [INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - senior
 [INFO ] 2018-04-19 18:53:04.093 [http-nio-8080-exec-3] CreateUserNameServlet - senior
+[INFO ] 2018-04-24 19:53:53.305 [http-nio-8080-exec-9] SideMenuRouter - /menu-content/lunch.jsp
+[INFO ] 2018-04-24 19:59:12.975 [http-nio-8080-exec-10] SideMenuRouter - /menu-content/lunch.jsp
+[INFO ] 2018-04-24 20:46:54.363 [ajp-nio-8009-exec-6] CreateUserNameServlet - I am here
+[INFO ] 2018-04-24 20:46:54.369 [ajp-nio-8009-exec-6] CreateUserNameServlet - I am here
+[INFO ] 2018-04-24 20:46:54.370 [ajp-nio-8009-exec-6] CreateUserNameServlet - Francisco
+[INFO ] 2018-04-24 20:46:54.370 [ajp-nio-8009-exec-6] CreateUserNameServlet - mypassword
+[INFO ] 2018-04-24 20:46:54.370 [ajp-nio-8009-exec-6] CreateUserNameServlet - mypassword
+[INFO ] 2018-04-24 20:49:34.453 [ajp-nio-8009-exec-5] CreateUserNameServlet - I am here
+[INFO ] 2018-04-24 20:49:34.471 [ajp-nio-8009-exec-5] CreateUserNameServlet - I am here
+[INFO ] 2018-04-24 20:49:34.474 [ajp-nio-8009-exec-5] CreateUserNameServlet - mrcohen
+[INFO ] 2018-04-24 20:49:34.474 [ajp-nio-8009-exec-5] CreateUserNameServlet - password
+[INFO ] 2018-04-24 20:49:34.474 [ajp-nio-8009-exec-5] CreateUserNameServlet - password
