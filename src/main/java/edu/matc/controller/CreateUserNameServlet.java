@@ -26,11 +26,13 @@ public class CreateUserNameServlet extends HttpServlet {
 
         UserDao userDao = new UserDao();
 
-        String error = "Password Entries don't match. Try again";
+        String mismatchError = "Password Entries don't match. Try again";
+        String userAlreadyExistsMessage = "User Name Already Exists. Please Choose Another";
 
 
         String username = request.getParameter("username");
         logger.info(username);
+
         String password = request.getParameter("password");
         logger.info(password);
         String passwordConfirm = request.getParameter("passwordConfirm");
@@ -38,7 +40,7 @@ public class CreateUserNameServlet extends HttpServlet {
 
 
         if (!password.equals(passwordConfirm)) {
-            request.setAttribute("passwordmismatch", error);
+            request.setAttribute("passwordmismatch", mismatchError);
             response.sendRedirect("/index.jsp");
         } else {
 

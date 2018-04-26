@@ -51,6 +51,8 @@ public class UserDao {
         return user;
     }
 
+
+
     /**
      * Gets all Users.
      *
@@ -93,6 +95,27 @@ public class UserDao {
         Root<User> root = query.from(User.class);
         Expression<String> propertyPath = root.get("lastName");
         query.where(builder.like(propertyPath, "%" + lastName + "%"));
+        List<User> userList = session.createQuery(query).getResultList();
+
+        session.close();
+
+        return userList;
+    }
+
+    /**
+     * Returns a List of Users with where a value is equal to a property.
+     *
+     * @param propertyValue the criteria that is being uses for the search.
+     * @param  propertyName the name of the property that is being searched.
+     * @return the users by last name
+     */
+    public List<User> getUserByProperty(String propertyValue, String propertyName) {
+        Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery query = builder.createQuery(User.class);
+        Root<User> root = query.from(User.class);
+        Expression<String> propertyPath = root.get(propertyName);
+        query.where(builder.equal(propertyPath, propertyValue));
         List<User> userList = session.createQuery(query).getResultList();
 
         session.close();

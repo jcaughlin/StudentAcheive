@@ -6,14 +6,9 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
+
 import org.hibernate.annotations.GenericGenerator;
-
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 /*
  * This Class represents the Security Access Roles for the Users.
@@ -31,7 +26,8 @@ public class UserRoles {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-
+    @Enumerated(EnumType.STRING)
+    @Column(name="user_roles")
     @Getter @Setter private RoleName roleName;
 
     @Getter @Setter private User user;

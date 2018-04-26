@@ -74,37 +74,12 @@ public class CreateNewUserServlet extends HttpServlet {
 
         request.setAttribute("user", user);
 
-        String url = "/new-user-added.jsp";
+        String url = "/user-added-confirmation.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
-
-   /* private String processImageFile(Part imageFilePart) {
-        //TODO Decide where images will be stored
-        //TODO Validate maximum image size
-        //TODO Use Google API
-        String userPhotoFilePath = "../Test";
-
-        String fileName = getFileName(imageFilePart);
-        String userPhotoLink = userPhotoFilePath + fileName;
-        return userPhotoLink;
-    }
-
-
-
-    private String getFileName(final Part part) {
-        final String partHeader = part.getHeader("content-disposition");
-        for (String content : part.getHeader("content-disposition").split(";")) {
-            if (content.trim().startsWith("filename")) {
-                return content.substring(
-                        content.indexOf('=') + 1).trim().replace("\"", "");
-            }
-        }
-        return null;
-    }*/
-
 }
     
     

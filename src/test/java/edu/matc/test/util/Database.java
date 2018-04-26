@@ -98,6 +98,7 @@ public class Database {
             connect();
             stmt = connection.createStatement();
 
+
             while (true) {
                 String sql = br.readLine();
                 if (sql == null) {

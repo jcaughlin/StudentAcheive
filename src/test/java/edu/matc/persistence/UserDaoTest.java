@@ -37,7 +37,7 @@ public class UserDaoTest {
         int id = userDao.insert(user);
         assertNotEquals(0,id);
         User user2 = userDao.getById(id);
-        log.debug("The retrieve Users last name: " + user2.getLastName());
+        log.info("The retrieve Users last name: " + user2.getLastName());
         assertEquals(user2.getLastName(),"Smith");
 
 
@@ -46,7 +46,7 @@ public class UserDaoTest {
     @Test
     void getByIdSuccess() {
 
-        log.debug(userDao.getById(3));
+        log.info(userDao.getById(3));
         user = userDao.getById(4);
         log.info(user);
 
@@ -81,5 +81,11 @@ public class UserDaoTest {
         log.debug(userDao.getAllUsers().size());
         List<User>userList = userDao.getAllUsers();
         assertEquals(5, userList.size());
+    }
+
+    @Test
+    void getUserByPropertyTest() {
+        List<User> userList = userDao.getUserByProperty("Manafort", "lastName");
+        assertEquals(1,userList.size());
     }
 }
