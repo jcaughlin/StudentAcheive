@@ -1,0 +1,29 @@
+// Teacher Creates Quiz-Web Form
+One Teacher has many quizzes
+// Teacher Assigns Quiz to Student
+Quiz can be taken by many students and a student can take many quizes
+// Student Takes Quiz
+Communication with MySql for Questions and Answers
+Randomizer for question order and answer display
+Compute Total Number of Questions
+Keep Track of Correct Answers
+For Now-Just save total correct out of total questions
+Add score to database
+// Teacher Can READ SCORES
+// Student Will Have Many Scores
+// Teacher Can Assign Quiz or  Change Quiz...Update
+JSON OBJECT ajax quiz or can I load the Quiz into the Browser?
+What happends if student stops quiz during the quiz?
+
+StudentQuiz Linking Table
+student_name
+quiz_name
+date_quiz_assigned
+date_quiz_completed
+total_questions_answered
+total_questions
+percentage_correct
+
+VERSION 2.0
+Ability to save quiz
+
