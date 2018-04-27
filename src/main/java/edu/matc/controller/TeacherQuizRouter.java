@@ -12,7 +12,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "TeacherQuizRouter", urlPatterns = "/createQuiz")
+@WebServlet(name = "TeacherQuizRouter", urlPatterns = "/createQuizRouter")
 public class TeacherQuizRouter extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());

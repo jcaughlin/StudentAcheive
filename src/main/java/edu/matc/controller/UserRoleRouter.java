@@ -21,6 +21,8 @@ public class UserRoleRouter extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        // #TODO METHOD SOMEWHERE TO ROUTE PENDING USERS
+
         RouteUserHelper helper = new RouteUserHelper();
 
         String userType = request.getParameter("userType");

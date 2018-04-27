@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" scope="session" value="Error 405-Method Not Allowed"/>
-<c:set var="heading" scope="session" value="header"/>
+<c:set var="heading" scope="session" value="Whatever we tried to do. We shouldn't Have!"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.

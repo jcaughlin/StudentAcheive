@@ -3,6 +3,7 @@
 <c:set var="title" value="Welcome-Student Achieve!"/>
 <c:set var="author" value="JS Caughlin"/>
 <c:set var="heading" scope="request" value="Welcome to Student Achieve!!"/>
+<c:set var="pageType" scope="session" value="index-page"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin

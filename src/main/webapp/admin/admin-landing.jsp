@@ -3,6 +3,7 @@
 <c:set var="title" scope="session" value="Admin Page"/>
 <c:set var="heading" scope="session" value="The Admin Page"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
+<c:set var="pageType" scope="session" value="admin-landing"/>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
