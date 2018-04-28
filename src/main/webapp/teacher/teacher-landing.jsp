@@ -27,12 +27,24 @@
             <jsp:include page="../sidebar-menu.jsp"/>
         </div><!--Sidebar Column End-->
 
-        <!--Center Column-->
-        <div class="col-lg-10">
-            <a href="/createQuizRouter" class="btn btn-success">Create a Quiz</a>
 
-        </div><!--Center Column End-->
+        <div class="col-lg-10">
+            <div class="col-sm-3 pb-3">
+                <form class="form border py-4" method="post" action="teacherRouter">
+                    <label for="teacherSelect" class="sr-only">Choose Teacher Portal</label>
+                    <select id="teacherSelect" class="form-control" name="teacherPortalChoice">
+                        <option value="">Choose Portal</option>
+                        <option value="showStudentReports">Class List</option>
+                        <option value="createQuiz">Create A New Quiz</option>
+                        <option value="viewOrEditClassPage">My Classroom</option>
+                        <option value="complainAboutStudents">Complain About Students</option>
+                    </select>
+                    <button class="btn btn-dark btn-lg">GO!</button>
+                </form>
+            </div>
+        </div>
     </div> <!--End Row-->
+
 
     <jsp:include page="../footer.jsp"/>
 

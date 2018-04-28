@@ -1,2 +1,14 @@
 Delete From user;
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `address`, `city`, `state`, `zipcode`, `areacode`, `phone`, `user_name`, `user_pass`, `registered_date`, `birthday`, `email`, `user_roles`, `last_updated`, `user_photo_link`) VALUES (1,'Paul','Manafort',NULL,NULL,NULL,NULL,NULL,NULL,'paul','password1','2018-02-19 06:00:00',NULL,'paul@trump.com','PENDING','2018-02-19',NULL),(2,'George','apadopoulos',NULL,NULL,NULL,NULL,NULL,NULL,'george','password2','2018-02-19 06:00:00',NULL,'george@trump.com','PENDING','2018-02-19',NULL),(3,'Carter','Page',NULL,NULL,NULL,NULL,NULL,NULL,'carter','password3','2018-02-19 06:00:00',NULL,'carter@trump.com','PENDING','2018-02-19',NULL),(4,'Roger','Stone',NULL,NULL,NULL,NULL,NULL,NULL,'roger','password4','2018-02-19 06:00:00',NULL,'roger@trump.com','PENDING','2018-02-19',NULL),(5,'Michael','Flynn',NULL,NULL,NULL,NULL,NULL,NULL,'mflynn','password5','2018-02-19 06:00:00',NULL,'mflynn@trump.com','PENDING','2018-02-19',NULL);
+INSERT INTO `user`
+(`id`, `areacode`, `city`, `first_name`, `last_name`, `state`, `address`, `birthday`, `registered_date`, `email`, `last_updated`, `user_name`, `user_pass`, `phone`, `zipcode`, `user_photo_link`)
+VALUES
+  (1,NULL,NULL,'Paul','Manafort',NULL,NULL,'1949-04-01','2018-02-19 06:00:00','paul@trump.com','2018-02-19 06:00:00','paul','password1',NULL,NULL,NULL),
+  (2,NULL,NULL,'George','Papadopoulos',NULL,NULL,NULL,'2018-02-19 06:00:00','george@trump.com','2018-04-28 18:40:02','george','password2',NULL,NULL,NULL),
+  (3,NULL,NULL,'Carter','Page',NULL,NULL,'1971-06-03','2018-02-19 06:00:00','carter@trump.com','2018-02-19 06:00:00','carter','password3',NULL,NULL,NULL),
+  (4,NULL,NULL,'Roger','Stone',NULL,NULL,'1952-08-27','2018-02-19 06:00:00','roger@trump.com','2018-04-28 18:40:02','roger','password4',NULL,NULL,NULL),
+  (5,NULL,NULL,'Michael','Flynn',NULL,NULL,NULL,'2018-02-19 06:00:00','mflynn@trump.com','2018-02-19 06:00:00','mflynn','password5',NULL,NULL,NULL),
+  (6,NULL,NULL,'Michael','Cohen',NULL,NULL,'2018-04-25','2018-04-28 05:00:00','mcohen@trump.com','2018-04-28 18:47:20','mcohen','password6',NULL,NULL,NULL),
+  (7,NULL,NULL,'Felix','Sater',NULL,NULL,'1966-03-02','2018-04-28 05:00:00','felix@trump','2018-04-28 18:47:20','fsater','password7',NULL,NULL,NULL),
+  (8,NULL,NULL,'Anthony','Scaramucci',NULL,NULL,'1964-01-06','2018-04-28 18:48:44','themooch@trump.com','2018-04-28 18:48:44','themooch','password8',NULL,NULL,NULL);
+
+

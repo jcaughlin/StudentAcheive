@@ -47,14 +47,6 @@
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
                     </div>
 
-                    <div class="col-sm-12 pb-3">
-                        <label for="dummyField" class="sr-only">Enter whatever</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                            <input class="form-control" type="text" id="dummyField" placeholder="Dummy Field">
-                        </div>
-                    </div>
-
                     <!--User Address-->
                     <div class="col-sm-12 pb-3">
                         <label class="sr-only" for="address">Enter User Address</label>
