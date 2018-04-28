@@ -679,3 +679,23 @@
 [INFO ] 2018-04-26 13:17:04.418 [ajp-nio-8009-exec-9] AdminReportsController - Made It
 [INFO ] 2018-04-27 09:59:55.084 [ajp-nio-8009-exec-9] LogoutController - In the Logout Servlet
 [INFO ] 2018-04-27 09:59:55.143 [ajp-nio-8009-exec-9] LogoutController - The Current Context Path: /StudentAchieve
+[INFO ] 2018-04-28 15:24:30.203 [ajp-nio-8009-exec-8] TeacherRouter - complainAboutStudents
+[INFO ] 2018-04-28 16:01:36.099 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 16:01:36.124 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 16:07:14.514 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 16:07:14.533 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 16:24:01.331 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 16:24:01.364 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 16:24:31.366 [ajp-nio-8009-exec-9] TeacherComplaintServlet - The Complaint was: I hate my Students. They suck
+[INFO ] 2018-04-28 16:24:31.481 [ajp-nio-8009-exec-9] TeacherComplaintServlet - Days Left in School: -2
+[INFO ] 2018-04-28 16:46:57.365 [ajp-nio-8009-exec-9] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 16:46:57.390 [ajp-nio-8009-exec-9] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 16:47:32.553 [ajp-nio-8009-exec-10] TeacherComplaintServlet - The Complaint was: I hate My Student
+[INFO ] 2018-04-28 16:47:32.670 [ajp-nio-8009-exec-10] TeacherComplaintServlet - Days Left in School: -2
+[INFO ] 2018-04-28 16:56:48.494 [ajp-nio-8009-exec-10] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 16:56:48.526 [ajp-nio-8009-exec-10] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 16:57:17.693 [ajp-nio-8009-exec-1] TeacherComplaintServlet - The Complaint was: My students Suck
+[INFO ] 2018-04-28 16:57:17.849 [ajp-nio-8009-exec-1] TeacherComplaintServlet - Days Left in School: -2
+[INFO ] 2018-04-28 17:03:38.660 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 17:03:38.697 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 17:03:57.812 [ajp-nio-8009-exec-9] TeacherComplaintServlet - The Complaint was: I hate my students

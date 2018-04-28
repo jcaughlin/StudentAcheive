@@ -21,6 +21,12 @@
     <hr>
 
     <div class="row">
+        <div class="col-lg-12">
+            <h1>${daysLeftMessage}</h1>
+        </div>
+    </div>
+
+    <div class="row">
         <!--Sidebar Menu-->
         <div class="col-lg-2">
             <jsp:include page="../sidebar-menu.jsp"/>
@@ -28,7 +34,7 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
-            <h1>
+            <h1 class="text-center antique-white-background py-3">
             ${complaintResponse}
             </h1>
         </div><!--Center Column End-->

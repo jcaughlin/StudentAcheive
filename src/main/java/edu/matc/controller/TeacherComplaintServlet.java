@@ -25,21 +25,21 @@ public class TeacherComplaintServlet extends HttpServlet {
 
         String theResponse = "No One Cares";
 
-        String theComplaint = request.getParameter("teacherComplaint");
+        LocalDate today = LocalDate.now();
 
-
-        String todayDate = request.getParameter("todaysDate");
-        LocalDate today = LocalDate.parse(todayDate);
+        String theComplaint = request.getParameter("teacherComplaintText");
+        logger.info("the complaint was: " + theComplaint);
 
         String lastDayOfSchool = request.getParameter("lastDayOfClass");
         LocalDate lastDay = LocalDate.parse(lastDayOfSchool);
 
-        int DaysLeftInSchoolYear= today.compareTo(lastDay);
-        logger.info("Days Left in School");
+        int daysLeftInSchoolYear = today.compareTo(lastDay);
+        String daysLeftMessage = "There are " + daysLeftInSchoolYear + "Days Until The End of the Year! So Sorry!";
 
+        request.setAttribute("DaysLeft", daysLeftMessage);
         request.setAttribute("complaintResponse", theResponse);
 
-        String url = "teacher-complaint-received.jsp";
+        String url = "/teacher/teacher-complaint-received.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

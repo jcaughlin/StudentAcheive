@@ -12,6 +12,10 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
+/**
+ * Servlet Receives String Parameter of userType and calls the RouteUserHelperUtility
+ * to perform logic of where to route the user.
+ */
 @WebServlet(name = "RouteUserController", urlPatterns = "/routeUser")
 public class UserRoleRouter extends HttpServlet {
 

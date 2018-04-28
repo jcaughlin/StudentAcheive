@@ -27,21 +27,25 @@
             <jsp:include page="../sidebar-menu.jsp"/>
         </div><!--Sidebar Column End-->
 
-
+        <!--Center Div-->
         <div class="col-lg-10">
-            <div class="col-sm-3 pb-3">
-                <form class="form border py-4" method="post" action="teacherRouter">
+            <form class="form border py-4" method="post" action="teacherRouter">
+
+                <div class="col-sm-6">
                     <label for="teacherSelect" class="sr-only">Choose Teacher Portal</label>
-                    <select id="teacherSelect" class="form-control" name="teacherPortalChoice">
+                    <select id="teacherSelect" class="form-control" name="teacherChoice">
                         <option value="">Choose Portal</option>
                         <option value="showStudentReports">Class List</option>
                         <option value="createQuiz">Create A New Quiz</option>
                         <option value="viewOrEditClassPage">My Classroom</option>
-                        <option value="complainAboutStudents">Complain About Students</option>
+                        <option value="complain">Complain About Students</option>
                     </select>
-                    <button class="btn btn-dark btn-lg">GO!</button>
-                </form>
-            </div>
+                </div>
+                <div class="col-sm-12 py-3">
+                    <button class="btn btn-dark ">GO!</button>
+                </div>
+            </form>
+
         </div>
     </div> <!--End Row-->
 

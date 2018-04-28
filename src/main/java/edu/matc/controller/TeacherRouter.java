@@ -1,5 +1,6 @@
 package edu.matc.controller;
 
+import edu.matc.utility.RouteUserHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -22,41 +23,23 @@ public class TeacherRouter extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String teacherPortalChoice = request.getParameter("teacherPortalChoice");
+        RouteUserHelper routeUser = new RouteUserHelper();
 
-        logger.info(teacherPortalChoice);
-        String url = routeTeacher(teacherPortalChoice);
+        String teacherPortalChoice = request.getParameter("teacherChoice");
+
+        logger.info("The Portal Chosen Was:" + teacherPortalChoice);
+
+
+        String url = routeUser.routeTeacher(teacherPortalChoice);
+
+        logger.info(url);
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
     }
 
-    /**
-     * @param portalChosen
-     * @return The String url for the site that the user has chosen.
-     */
-    private String routeTeacher(String portalChosen) {
-        String url;
 
-        switch (portalChosen) {
-            case "createQuiz":
-                return "/teacher/teacher-quiz-builder.jsp";
-
-            case "showStudentReport":
-                return "teacher/teacher-student-report.jsp";
-
-            case "viewOrEditClassPage":
-                return "teacher/teacher-homeroom.jsp";
-
-            case "complainAboutStudents":
-                return "teacher/teacher-complain.jsp";
-
-            default:
-                return "../error-pages/500.jsp";
-
-        }
-    }
 }
     
     
