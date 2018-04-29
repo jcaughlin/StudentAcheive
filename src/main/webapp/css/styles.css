@@ -6,8 +6,8 @@ form {
     background-color: antiquewhite;
 }
 
-.card{
-    border: 5px solid;
+.card, .modal-content{
+    border: 5px solid black;
 }
 
 .form-control {
@@ -36,5 +36,19 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.message-animation{
+
+    animation:
+            stretch
+            1.5s
+            ease-out
+            0s
+            alternate
+            infinite
+            none
+            running;
+
 }
 

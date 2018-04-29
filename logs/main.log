@@ -699,3 +699,30 @@
 [INFO ] 2018-04-28 17:03:38.660 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
 [INFO ] 2018-04-28 17:03:38.697 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
 [INFO ] 2018-04-28 17:03:57.812 [ajp-nio-8009-exec-9] TeacherComplaintServlet - The Complaint was: I hate my students
+[INFO ] 2018-04-28 17:17:08.342 [ajp-nio-8009-exec-10] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 17:17:08.433 [ajp-nio-8009-exec-10] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 17:17:32.601 [ajp-nio-8009-exec-1] TeacherComplaintServlet - the complaint was: Students SUCK
+[INFO ] 2018-04-28 19:12:41.399 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-28 19:12:41.424 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-28 19:13:18.128 [ajp-nio-8009-exec-9] TeacherComplaintServlet - the complaint was: My kids are lazy and don't want to work. They talk in class and pick their noses.
+[INFO ] 2018-04-29 08:35:40.312 [ajp-nio-8009-exec-3] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 08:35:40.341 [ajp-nio-8009-exec-3] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 08:36:59.766 [ajp-nio-8009-exec-5] TeacherComplaintServlet - the complaint was: I hate students. They are laxy
+[INFO ] 2018-04-29 08:41:52.188 [ajp-nio-8009-exec-10] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 08:41:52.210 [ajp-nio-8009-exec-10] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 08:42:03.724 [ajp-nio-8009-exec-1] TeacherComplaintServlet - the complaint was: I hate Students!!!
+[INFO ] 2018-04-29 08:48:39.572 [ajp-nio-8009-exec-10] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 08:48:39.595 [ajp-nio-8009-exec-10] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 08:49:00.976 [ajp-nio-8009-exec-1] TeacherComplaintServlet - the complaint was: I hate my students. They Suck
+[INFO ] 2018-04-29 08:55:07.109 [ajp-nio-8009-exec-9] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 08:55:07.134 [ajp-nio-8009-exec-9] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 08:55:18.930 [ajp-nio-8009-exec-10] TeacherComplaintServlet - the complaint was: I hate Kids
+[INFO ] 2018-04-29 08:57:25.186 [ajp-nio-8009-exec-9] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 08:57:25.211 [ajp-nio-8009-exec-9] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 08:57:54.889 [ajp-nio-8009-exec-10] TeacherComplaintServlet - the complaint was: The kids swear in class all day. They are naughty.
+[INFO ] 2018-04-29 11:29:11.249 [ajp-nio-8009-exec-8] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 11:29:11.272 [ajp-nio-8009-exec-8] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 11:29:34.302 [ajp-nio-8009-exec-9] TeacherComplaintServlet - the complaint was: I hate my students
+[INFO ] 2018-04-29 11:41:02.223 [ajp-nio-8009-exec-1] TeacherRouter - The Portal Chosen Was:complain
+[INFO ] 2018-04-29 11:41:02.244 [ajp-nio-8009-exec-1] TeacherRouter - /teacher/teacher-complain.jsp
+[INFO ] 2018-04-29 11:41:16.767 [ajp-nio-8009-exec-3] TeacherComplaintServlet - the complaint was: I hate Kids.

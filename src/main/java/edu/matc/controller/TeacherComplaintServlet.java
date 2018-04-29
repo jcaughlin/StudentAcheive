@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
+import edu.matc.utility.DateHelper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,20 +24,17 @@ public class TeacherComplaintServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String theResponse = "No One Cares";
-
-        LocalDate today = LocalDate.now();
-
+        DateHelper dateHelper = new DateHelper();
         String theComplaint = request.getParameter("teacherComplaintText");
         logger.info("the complaint was: " + theComplaint);
 
         String lastDayOfSchool = request.getParameter("lastDayOfClass");
-        LocalDate lastDay = LocalDate.parse(lastDayOfSchool);
+        LocalDate lastDate = LocalDate.parse(lastDayOfSchool);
 
-        int daysLeftInSchoolYear = today.compareTo(lastDay);
-        String daysLeftMessage = "There are " + daysLeftInSchoolYear + "Days Until The End of the Year! So Sorry!";
+        int daysLeftInSchoolYear = dateHelper.daysFromToday(lastDate);
 
-        request.setAttribute("DaysLeft", daysLeftMessage);
+        String theResponse = "Too Bad!!! There are  " + daysLeftInSchoolYear + " Days Left In the School Year And No One Cares";
+
         request.setAttribute("complaintResponse", theResponse);
 
         String url = "/teacher/teacher-complaint-received.jsp";

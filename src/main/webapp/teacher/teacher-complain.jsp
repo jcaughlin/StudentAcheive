@@ -38,34 +38,24 @@
                     </div>
                     <div class="col-sm-10">
                         <textarea id="complaintText" name="teacherComplaintText"
-                                  rows="5">Lodge Your Complaint</textarea>
+                                  rows="5" class="w-100"></textarea>
                     </div>
                 </div>
 
-                <!--Today's Date-->
-                <div class="form-group row">
-                    <div class="col-sm-2 col-form-label">
-                    <label for="todaysDate" class="font-weight-bold">Today's Date:</label>
-                    </div>
-                    <div class="col-sm-10">
-                        <input type="date" name="todaysDate" id="todaysDate" class="form-control"/>
-
-                    </div>
-                </div>
 
                 <!--Last Day of School-->
                 <div class="form-group row">
                     <div class="col-sm-2 col-form-label">
                         <label for="lastDayOfClass" class="font-weight-bold"">What is the last day of school?:</label>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-10">
                         <input type="date" name="lastDayOfClass" id="lastDayOfClass" class="form-control">
                     </div>
                 </div>
                 <!--Submit Buttom-->
                 <div class="form-group row">
                     <div class="col-sm-12 pb-3">
-                        <button class="btn btn-warning">GO!</button>
+                        <button class="btn btn-warning btn-lg ml-2" aria-pressed="false">GO!</button>
                     </div>
                 </div>
             </form>
