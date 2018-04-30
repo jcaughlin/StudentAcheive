@@ -55,7 +55,7 @@
                 <!--Submit Buttom-->
                 <div class="form-group row">
                     <div class="col-sm-12 pb-3">
-                        <button class="btn btn-warning btn-lg ml-2" aria-pressed="false">GO!</button>
+                        <button class="btn btn-warning btn-lg offset-sm-4" aria-pressed="false">GO!</button>
                     </div>
                 </div>
             </form>

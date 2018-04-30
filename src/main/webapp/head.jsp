@@ -40,6 +40,10 @@
             integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
             crossorigin="anonymous"></script>
 
+    <!--Google Recaptcha-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
 
     <!-- Bootstrap Supported jQuery datatables. Learn more about datatables here:https://datatables.net -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>

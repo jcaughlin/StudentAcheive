@@ -24,7 +24,7 @@ public class CreateUserNameServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        UserDao userDao = new UserDao();
+
 
         String mismatchError = "Password Entries don't match. Try again";
         String userAlreadyExistsMessage = "User Name Already Exists. Please Choose Another";
@@ -32,6 +32,7 @@ public class CreateUserNameServlet extends HttpServlet {
 
         String username = request.getParameter("username");
         logger.info(username);
+
 
         String password = request.getParameter("password");
         logger.info(password);
