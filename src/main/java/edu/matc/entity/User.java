@@ -29,17 +29,11 @@ public class User {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-    @Column(name = "first_name")
-    @Getter @Setter private String firstName;
-
     @Column(name = "last_name")
     @Getter @Setter private String lastName;
 
-    @Column(name = "user_name")
-    @Getter @Setter private String userName;
-
-    @Column(name = "user_pass")
-    @Getter @Setter private String userPassword;
+    @Column(name = "first_name")
+    @Getter @Setter private String firstName;
 
     @Column(name = "address")
     @Getter @Setter private String streetAddress;
@@ -59,8 +53,17 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
+    @Column(name = "user_name")
+    @Getter @Setter private String userName;
+
+    @Column(name = "user_pass")
+    @Getter @Setter private String userPassword;
+
     @Column(name = "email")
     @Getter @Setter private String userEmail;
+
+    @Column(name = "birthday")
+    @Getter @Setter private LocalDate userBirthDate;
 
     @Column(name = "registered_date")
     @Getter @Setter private LocalDate userCreatedDate;
@@ -68,8 +71,10 @@ public class User {
     @Column(name = "last_updated")
     @Getter @Setter private LocalDate userLastUpdated;
 
-    @Column(name = "birthday")
-    @Getter @Setter private LocalDate userBirthDate;
+    @Column(name = "user_photo_link")
+    @Getter @Setter private String user_photo_link;
+
+
 
 
 

@@ -22,6 +22,7 @@ public class UserDaoTest {
 
     UserDao userDao;
     User user;
+
     private String sqlFilePath = "cleandb.sql";
 
     @BeforeEach
@@ -50,7 +51,7 @@ public class UserDaoTest {
         user = userDao.getById(4);
         log.info(user);
 
-        assertEquals(user.getLastName(),"Stone");
+        assertEquals("Stone",user.getLastName());
     }
 
     @Test
@@ -80,7 +81,7 @@ public class UserDaoTest {
     void getAllUsers() {
         log.debug(userDao.getAllUsers().size());
         List<User>userList = userDao.getAllUsers();
-        assertEquals(5, userList.size());
+        assertEquals(8, userList.size());
     }
 
     @Test

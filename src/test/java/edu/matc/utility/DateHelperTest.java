@@ -19,9 +19,7 @@ class DateHelperTest {
 
     @BeforeEach
     void setUp() {
-
         dateHelper = new DateHelper();
-
     }
 
     @Test
