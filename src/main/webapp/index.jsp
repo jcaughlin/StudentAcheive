@@ -80,7 +80,7 @@
         </div><!--End Row-->
     <div class="row">
         <div class="modal fade" id="userType" tabindex="-1" role="dialog" aria-labelledby="userType" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content py-4">
                     <div class="modal-header">
                         <h5 class="modal-title">Select User Type and Submit</h5>
