@@ -66,7 +66,7 @@ public class UserDao {
         List<User> userList = session.createQuery(query).getResultList();
         session.close();
 
-        return  userList;
+        return userList;
     }
 
     /**

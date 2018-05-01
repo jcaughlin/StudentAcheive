@@ -18,18 +18,16 @@ import java.util.List;
 public class UserDaoTest {
 
     private final Logger log = LogManager.getLogger(this.getClass());
-
-
     UserDao userDao;
     User user;
 
-    private String sqlFilePath = "cleandb.sql";
 
     @BeforeEach
     public void setUp() {
+        user = new User();
         userDao = new UserDao();
         Database database = Database.getInstance();
-        database.runSQL(sqlFilePath);
+        database.runSQL( "/cleandb.sql");
     }
 
     @Test
@@ -79,7 +77,7 @@ public class UserDaoTest {
 
     @Test
     void getAllUsers() {
-        log.debug(userDao.getAllUsers().size());
+        log.info("The current size of the userlist it: " + userDao.getAllUsers().size());
         List<User>userList = userDao.getAllUsers();
         assertEquals(8, userList.size());
     }

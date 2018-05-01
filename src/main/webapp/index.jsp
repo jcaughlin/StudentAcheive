@@ -39,17 +39,19 @@
                 <!--User Name-->
                 <div class="col-sm-6 pb-3">
                     <label for="username" class="sr-only">Enter User Name</label>
-                    <input type="text" class="form-control is-invalid" name="username" id="username" placeholder="Enter User Name"
+                    <input type="text" class="form-control is-invalid" name="username" id="username"
+                           placeholder="Enter User Name"
                            required="">
                 </div>
                 <div class="invalid-feedback">
-                        ${userExists}
+                    ${userExists}
                 </div>
 
                 <!--User Password-->
                 <div class="col-sm-6 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
-                    <input type="password" class="form-control is-invalid" name="password" id="password" placeholder="Password"
+                    <input type="password" class="form-control is-invalid" name="password" id="password"
+                           placeholder="Password"
                            required="">
                 </div>
 
@@ -67,9 +69,15 @@
                         Keep Me Logged In!</label>
                 </div>
 
+                <!--Deployed AWS RECAPTCHA-->
                 <div class="col-sm-9 pb-3">
-                <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
+                    <div class="g-recaptcha" data-sitekey="6Ldki1YUAAAAAPCVpZy6okQPZoQKsdlVa6mgIO_J"></div>
                 </div>
+
+                <!--Localhost Recaptcha-->
+           <!--     <div class="col-sm-9 pb-3">
+                    <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
+                </div>-->
                 <!--Button Group-->
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
@@ -88,7 +96,8 @@
     </div><!--End Row-->
 
     <div class="row">
-        <div class="modal fade" id="forgottenPassword" role="dialog" aria-labelby="forgottenPassword" aria-hidden="true">
+        <div class="modal fade" id="forgottenPassword" role="dialog" aria-labelby="forgottenPassword"
+             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content py-4">
                     <div class="modal-header">
@@ -97,7 +106,7 @@
                     <div class="modal-body">
                         <form class="border p-4" action="forgotPassword" method="post">
                             <div class="col-6 pb-3">
-                            <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
+                                <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
                             </div>
                             <button class="btn btn-dark btn-large">Submit</button>
                         </form>
