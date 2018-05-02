@@ -90,6 +90,8 @@ public class UserDaoTest {
 
         List<User> newList = userDao.getUserByProperty("user_name", "george");
         assertEquals(1,newList.size());
+
+
     }
 
     @Test

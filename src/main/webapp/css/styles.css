@@ -38,17 +38,4 @@ nav {
     padding: 0;
 }
 
-.message-animation{
-
-    animation:
-            stretch
-            1.5s
-            ease-out
-            0s
-            alternate
-            infinite
-            none
-            running;
-
-}
 
