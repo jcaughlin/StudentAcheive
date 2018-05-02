@@ -23,7 +23,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1 class="text-center">File Not Found. Call the Admin</h1>
+            <h1 class="text-center">The boss made us (The Server Do Something We Weren't Supposed to DO</h1>
         </div>
     </div>
 </div>

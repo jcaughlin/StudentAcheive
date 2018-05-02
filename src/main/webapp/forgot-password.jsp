@@ -27,19 +27,9 @@
         </div><!--Sidebar Column End-->
 
         <!--Center Column-->
-        <div class="col-lg-10">
-            <form class="border px-4 pb-2" id="signup" action="signUpNewUser" method="post">
-                <h1 class="display-4">Enter Your Password</h1>
-                <!--User Email-->
-                <div class="col-sm-6 pb-3">
-                    <label class="sr-only" for="email">Email</label>
-                    <input id="email" type="email" class="form-control" name = "email" placeholder="Enter Email Address">
-                </div>
-                <div class="col-sm-6 pb-3">
-                    <p class="text-muted">If you submit a valid password, You will receive an email with instructions on resetting your password</p>
-                </div>
-            </form>
 
+                <div class="col-lg-10 pb-3">
+                    <p>${passwordResetConfirmationMessage}</p>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 

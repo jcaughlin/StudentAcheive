@@ -12,7 +12,7 @@
     <div class="container-fluid text-center">
 
         <div class="row py-2 d-flex align-items-center antique-white-background">
-            <div class="col-sm-4">
+            <div class="col-sm-4 border">
                     <h6 class="text-uppercase align-self-start font-weight-bold">Business Solutions</h6>
                 <ul class="no-style-list">
                     <li><a href="/">Contact Sales</a></li>
@@ -22,9 +22,9 @@
                 </ul>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 border">
+                <h6 class="text-uppercase align-self-start font-weight-bold">Student Achieve</h6>
                 <address>
-                    <h6 class="text-uppercase align-self-start font-weight-bold">Student Achieve</h6>
                     1009 Winston Way<br>
                     Waunakee WI 53597<br>
                     <abbr title="Phone">P:</abbr> (608) 630-0844
@@ -33,7 +33,7 @@
             </div>
 
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 border">
                 <h6 class="text-uppercase align-self-start font-weight-bold">Developers</h6>
                 <ul class="no-style-list">
                     <li><a href="/">GitHub</a></li>

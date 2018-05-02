@@ -6,8 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.temporal.ChronoUnit;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,11 +26,14 @@ class DateHelperTest {
 
         DateHelper helper = new DateHelper();
 
-        LocalDate christmas = LocalDate.of(2018,Month.DECEMBER,25);
+        LocalDate today = LocalDate.now();
+        LocalDate comparisonDate = today.plusDays(7);
 
-        int days = helper.daysFromToday(christmas);
 
-        assertEquals(240,days);
+
+        int days = helper.daysFromToday(comparisonDate);
+
+        assertEquals(7,days);
 
         logger.info("The difference in day: " + days);
 

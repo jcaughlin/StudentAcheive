@@ -26,8 +26,9 @@ public class UserDaoTest {
     public void setUp() {
         user = new User();
         userDao = new UserDao();
+
         Database database = Database.getInstance();
-        database.runSQL( "/cleandb.sql");
+        database.runSQL( "cleandb.sql");
     }
 
     @Test
@@ -86,5 +87,15 @@ public class UserDaoTest {
     void getUserByPropertyTest() {
         List<User> userList = userDao.getUserByProperty("Manafort", "lastName");
         assertEquals(1,userList.size());
+
+        List<User> newList = userDao.getUserByProperty("user_name", "george");
+        assertEquals(1,newList.size());
+    }
+
+    @Test
+    void getUserByPropertyFailTest(){
+        List<User> userList = userDao.getUserByProperty("Ulvaeus", "lastName");
+        assertEquals(0,userList.size());
+
     }
 }

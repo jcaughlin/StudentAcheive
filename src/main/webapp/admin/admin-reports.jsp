@@ -46,6 +46,7 @@
                     <th scope="col">Zip Code</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone Number</th>
+                    <th scope="col">Role Name</th>
                     <th scope="col">Registered Date</th>
                     <th scope="col">Last Updated</th>
                     <th scope="col">Update Profile</th>
@@ -64,10 +65,11 @@
                     <td>${user.zipCode}</td>
                     <td>${user.userEmail}</td>
                     <td>(${user.areaCode}) ${user.userPhoneNumber}</td>
+                    <td>${user.userRole}</td>
                     <td>${user.userCreatedDate}</td>
                     <td>${user.userLastUpdated}</td>
-                    <td><a href="placeholder" class="btn btn-primary btn-sm">Update</a></td>
-                    <td><a href="adminDelete?id=${user.id}" class="btn btn-warning btn-sm">Remove</a></td>
+                    <td><a href="adminUpdateUser?id=${user.id}" class="btn btn-primary btn-sm">Update</a></td>
+                    <td><a href="adminDeleteUser?id=${user.id}" class="btn btn-warning btn-sm">Remove</a></td>
                 </tr>
             </c:forEach>
             </table>

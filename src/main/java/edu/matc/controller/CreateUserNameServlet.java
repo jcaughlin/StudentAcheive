@@ -1,8 +1,10 @@
 package edu.matc.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
+import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,6 +20,7 @@ public class CreateUserNameServlet extends HttpServlet {
 
     // TODO DAO user getUserByUser to check if exists so no duplicates
     private final Logger logger = LogManager.getLogger(this.getClass());
+    private UserDao userDao;
 
 
     @Override
@@ -33,6 +36,13 @@ public class CreateUserNameServlet extends HttpServlet {
         String username = request.getParameter("username");
         logger.info(username);
 
+
+        List<User> userList = userDao.getUserByProperty(username,"user_name");
+
+        if(userList.size() > 0) {
+            request.setAttribute("usernameAlreadyExists", userAlreadyExistsMessage);
+            response.sendRedirect("/index.jsp");
+        }
 
         String password = request.getParameter("password");
         logger.info(password);

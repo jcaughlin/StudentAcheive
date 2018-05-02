@@ -9,6 +9,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -27,7 +28,7 @@ public class Quiz {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-    @Column(name="quiz_name")
+    @Column(name="quiz_name", unique = true, nullable = false)
     @Getter @Setter private String quizName;
 
     @Column(name="quiz_author")
@@ -39,8 +40,14 @@ public class Quiz {
     @Column(name="quiz_last_updated")
     @Getter @Setter private LocalDate quizLastUpDated;
 
-    // @Getter @Setter private int totalQuizQuestions;
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true,fetch=FetchType.EAGER)
+    @Getter @Setter private Set<QuizQuestions> questions = new HashSet<>();
 
-    // @Getter @Setter private Set quizQuestion;
+   public Quiz(String quizName,String quizAuthor,QuizQuestions questions) {
+       this.quizName = quizName;
+       this.quizAuthor = quizAuthor;
+
+   }
+
 
 }

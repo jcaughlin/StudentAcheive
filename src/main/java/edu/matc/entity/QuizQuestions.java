@@ -1,16 +1,22 @@
 package edu.matc.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
+@NoArgsConstructor
+@ToString
+@Table(name="quiz_questions")
+@Entity
 public class QuizQuestions {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -20,6 +26,12 @@ public class QuizQuestions {
     @Column(name="quiz_question")
     @Getter @Setter private String question;
 
-    // #OneToMany
-    // @Getter @Setter private Set choices;
+    @ManyToOne
+    @Getter @Setter private Quiz quiz;
+
+    @OneToMany(mappedBy = "quiz_question")
+    @Getter @Setter private Set<QuizChoices> choices = new HashSet<>();
+
+
+
 }

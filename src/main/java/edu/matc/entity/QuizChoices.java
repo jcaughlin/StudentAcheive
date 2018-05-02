@@ -30,4 +30,7 @@ public class QuizChoices {
 
     @Column(name="correct_answer")
     @Getter @Setter Boolean isCorrect = false;
+
+    @ManyToOne
+    @Getter @Setter private QuizQuestions question;
 }

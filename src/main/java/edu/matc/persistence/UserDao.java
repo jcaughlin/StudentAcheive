@@ -51,8 +51,6 @@ public class UserDao {
         return user;
     }
 
-
-
     /**
      * Gets all Users.
      *

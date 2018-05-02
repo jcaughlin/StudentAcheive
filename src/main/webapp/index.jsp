@@ -70,14 +70,15 @@
                 </div>
 
                 <!--Deployed AWS RECAPTCHA-->
+                <!--
                 <div class="col-sm-9 pb-3">
                     <div class="g-recaptcha" data-sitekey="6Ldki1YUAAAAAPCVpZy6okQPZoQKsdlVa6mgIO_J"></div>
-                </div>
+                </div>-->
 
                 <!--Localhost Recaptcha-->
-           <!--     <div class="col-sm-9 pb-3">
+           <div class="col-sm-9 pb-3">
                     <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
-                </div>-->
+                </div>
                 <!--Button Group-->
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
@@ -86,7 +87,7 @@
                     </button>
                 </div>
                 <div class="col-sm-9 pb-3">
-                    <a href="forgotPassword">Forgot Password</a>
+                    <a href="forgotPassword" data-target="#forgottenPassword" data-toggle="modal">Forgot Password</a>
                 </div>
                 <div class="invalid-feedback">
                     ${passwordmismatch}
@@ -101,11 +102,11 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content py-4">
                     <div class="modal-header">
-                        <h5 class="modal-title">So You are a KnuckleHead and Forgot Your Password?</h5>
+                        <h4 class="modal-title">So You are a KnuckleHead and Forgot Your Password?</h4>
                     </div>
                     <div class="modal-body">
-                        <form class="border p-4" action="forgotPassword" method="post">
-                            <div class="col-6 pb-3">
+                        <form class="border p-4" action="forgotPassword" method="get">
+                            <div class="col-12 pb-3">
                                 <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
                             </div>
                             <button class="btn btn-dark btn-large">Submit</button>

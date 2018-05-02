@@ -3,6 +3,7 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.util.List;
 
+import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
 
 import org.apache.logging.log4j.LogManager;
@@ -24,16 +25,24 @@ public class PasswordResetController extends HttpServlet {
             throws ServletException, IOException {
 
         UserDao userDao = new UserDao();
+        String passwordResetConfirmationMessage = "Your Account has been retrieved. Check your email for instructions on how to reset your password";
 
         String email = request.getParameter("email");
 
-        List user =  userDao.getUserByProperty(email,"email");
+        try {
 
-        String url = "index.jsp";
+            List<User> user = userDao.getUserByProperty(email, "email");
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+            String url = "/forgot-password.jsp";
+
+            request.setAttribute("passwordReset", passwordResetConfirmationMessage);
+
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        } catch (Exception exception) {
+            logger.info(exception);
+        }
     }
 
 

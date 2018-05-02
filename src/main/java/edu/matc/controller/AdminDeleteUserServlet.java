@@ -14,7 +14,7 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 
 
-@WebServlet(name = "AdminDelete", urlPatterns = "/adminDelete")
+@WebServlet(name = "AdminDelete", urlPatterns = "/adminDeleteUser")
 public class AdminDeleteUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());

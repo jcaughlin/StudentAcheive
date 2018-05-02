@@ -30,8 +30,8 @@ public class UserRoles {
     @Column(name="user_roles")
     @Getter @Setter private RoleName roleName;
 
-    @Getter @Setter private User user;
-
+    @OneToOne
+    @PrimaryKeyJoinColumn
     @Getter @Setter private String userName;
 
     public UserRoles(String userName, RoleName roleName){
