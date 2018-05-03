@@ -9,10 +9,21 @@ public class ReCaptchaVerify {
 
     private Logger logger = LogManager.getLogger(this.getClass());
 
-    private String reCaptchapublicKey = "6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1";
-    private  String recaptchaprivateKey = "6LcoVTMUAAAAABdRQl6iFYAg0ubYlOC5npvfvDIv";
-    private String recaptchaVerifySite = "https://www.google.com/recaptcha/api/siteverify";
-    private String googleApp = "fejqaynwxeobexmw";
+    private final String recaptchaVerifySite = "https://www.google.com/recaptcha/api/siteverify";
+
+
+
+    private  final String localhostSecretKey = "6LcoVTMUAAAAABdRQl6iFYAg0ubYlOC5npvfvDIv";
+    private String localhostRecaptchaResponse;
+    private String localhostResponseRemoteIP;
+
+
+    private String awsPrivateString = "6Ldki1YUAAAAACqVzTqmvgWxySdoXNWtrfoEMNyo";
+    private String gRecaptchaResponse;
+    private String awsResponseRemoteIP;
+
+
+
 
 
 }

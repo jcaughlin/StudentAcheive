@@ -18,7 +18,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name="quiz_choices")
-public class QuizChoices {
+public class QuestionChoices {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")

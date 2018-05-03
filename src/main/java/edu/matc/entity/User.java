@@ -74,12 +74,6 @@ public class User {
     @Column(name = "user_photo_link")
     @Getter @Setter private String user_photo_link;
 
-    @OneToOne(mappedBy = "user_roles", cascade= CascadeType.ALL)
-    @Getter @Setter private UserRoles roleName;
-
-
-
-
 
 
 

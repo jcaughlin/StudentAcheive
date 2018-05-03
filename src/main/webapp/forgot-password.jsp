@@ -29,7 +29,7 @@
         <!--Center Column-->
 
                 <div class="col-lg-10 pb-3">
-                    <p>${passwordResetConfirmationMessage}</p>
+                    <p>${resetConfirmationMessageToUserAgent}</p>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 

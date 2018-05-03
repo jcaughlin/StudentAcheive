@@ -47,7 +47,7 @@ UNLOCK TABLES;
 -- Table structure for table `quiz_choices`
 --
 
-DROP TABLE IF EXISTS `quiz_choices`;
+DROP TABLE IF EXISTS question_choices;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quiz_choices` (
@@ -62,9 +62,9 @@ CREATE TABLE `quiz_choices` (
 -- Dumping data for table `quiz_choices`
 --
 
-LOCK TABLES `quiz_choices` WRITE;
-/*!40000 ALTER TABLE `quiz_choices` DISABLE KEYS */;
-/*!40000 ALTER TABLE `quiz_choices` ENABLE KEYS */;
+LOCK TABLES question_choices WRITE;
+/*!40000 ALTER TABLE question_choices DISABLE KEYS */;
+/*!40000 ALTER TABLE question_choices ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

@@ -27,11 +27,9 @@ public class UserRoles {
     @Getter @Setter private int id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name="user_roles")
+    @Column(name="role_name")
     @Getter @Setter private RoleName roleName;
 
-    @OneToOne
-    @PrimaryKeyJoinColumn
     @Getter @Setter private String userName;
 
     public UserRoles(String userName, RoleName roleName){

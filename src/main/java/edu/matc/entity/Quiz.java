@@ -40,7 +40,7 @@ public class Quiz {
     @Column(name="quiz_last_updated")
     @Getter @Setter private LocalDate quizLastUpDated;
 
-    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true,fetch=FetchType.EAGER)
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL, orphanRemoval = true,fetch=FetchType.LAZY)
     @Getter @Setter private Set<QuizQuestions> questions = new HashSet<>();
 
    public Quiz(String quizName,String quizAuthor,QuizQuestions questions) {

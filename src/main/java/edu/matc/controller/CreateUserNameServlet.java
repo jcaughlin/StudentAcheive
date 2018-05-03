@@ -37,6 +37,9 @@ public class CreateUserNameServlet extends HttpServlet {
         String password = request.getParameter("password");
         String passwordConfirm = request.getParameter("passwordConfirm");
 
+        String gRecaptchaResponse = request
+                .getParameter("g-recaptcha-response");
+
         if (!password.equals(passwordConfirm)) {
             request.setAttribute("passwordMismatch", mismatchError);
             response.sendRedirect("/index.jsp");

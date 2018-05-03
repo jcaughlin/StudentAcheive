@@ -12,8 +12,8 @@ import java.util.Set;
 
 @NoArgsConstructor
 @ToString
-@Table(name="quiz_questions")
-@Entity
+@Table(name ="quiz_questions")
+@Entity(name = "QuizQuestions")
 public class QuizQuestions {
 
 
@@ -29,8 +29,8 @@ public class QuizQuestions {
     @ManyToOne
     @Getter @Setter private Quiz quiz;
 
-    @OneToMany(mappedBy = "quiz_question")
-    @Getter @Setter private Set<QuizChoices> choices = new HashSet<>();
+    @OneToMany(mappedBy = "question")
+    @Getter @Setter private Set<QuestionChoices> choices = new HashSet<>();
 
 
 

@@ -88,7 +88,7 @@ public class UserDaoTest {
         List<User> userList = userDao.getUserByProperty("Manafort", "lastName");
         assertEquals(1,userList.size());
 
-        List<User> newList = userDao.getUserByProperty("user_name", "george");
+        List<User> newList = userDao.getUserByProperty("george", "userName");
         assertEquals(1,newList.size());
 
 
