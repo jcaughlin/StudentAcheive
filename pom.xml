@@ -57,6 +57,14 @@
                 <version>1.6.1</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/com.sun.mail/javax.mail -->
+            <!--Full Implementation to run code -->
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.6.1</version>
+            </dependency>
+
 
             <!-- log4j2 dependencies-->
             <dependency>

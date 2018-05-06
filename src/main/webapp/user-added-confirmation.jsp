@@ -67,18 +67,18 @@
                 <h1 class="text-center">Would You Like to Upload a Profile Photo</h1>
 
                 <div class="pb-2 col-sm-6">
-                    <div class="custom-file col-sm-6">
-                    <input type="file" name="image-file" class="custom-file-input" id="customFile">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+                    <div class="custom-file">
+                        <input type="file" name="image-file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
 
                 <div class="pb-2 col-sm-6">
-                <button type="submit" class="btn btn-success btn-lg">GO!</button>
-                <button class="btn btn-warning btn-lg" id="no-image-selected">NO!</button>
+                    <button type="submit" class="btn btn-success">GO!</button>
+                    <button type="button" class="btn btn-warning" id="no-image-selected">NO!</button>
                 </div>
                 <div class="pb-2 col-sm-6">
-                <small class="form-text text-muted">${uploadFailedMessage}</small>
+                    <small class="form-text text-muted">${uploadFailedMessage}</small>
                 </div>
                 <div id="confirmMessage">
 

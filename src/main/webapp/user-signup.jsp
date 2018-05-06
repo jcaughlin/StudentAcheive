@@ -61,7 +61,7 @@
                     </div>
 
                     <!--User State-->
-                    <div class="col-sm-3 pb-3">
+                    <div class="col-sm-3 col-2 pb-3">
                         <label class="sr-only" for="state">State</label>
                         <select class="form-control" id="state" name="state">
                             <option value="">Pick a state</option>

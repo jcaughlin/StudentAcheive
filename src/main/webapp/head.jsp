@@ -60,12 +60,10 @@
             integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
             crossorigin="anonymous"></script>
 
-    <!--Button Handler Script-->
-    <script src="js/button-events.js"></script>
+
 
     <!--Google Recaptcha-->
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
 
 
     <!-- Bootstrap Supported jQuery datatables. Learn more about datatables here:https://datatables.net -->
@@ -74,6 +72,12 @@
 
     <!--Local Javascript Directory-->
     <script src="js/scripts.js"></script>
+
+    <!--Button Handler Script-->
+    <script src="js/button-events.js"></script>
+
+    <!--Bootstrap Javascript Validation-->
+   <!-- <script src="js/validate.js"></script>-->
 </head>
 <!--<body>-->
 

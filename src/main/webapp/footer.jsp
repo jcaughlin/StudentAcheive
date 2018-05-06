@@ -12,6 +12,8 @@
     <div class="container-fluid text-center">
 
         <div class="row py-2 d-flex align-items-center antique-white-background">
+
+
             <div class="col-sm-4 border">
                     <h6 class="text-uppercase align-self-start font-weight-bold">Business Solutions</h6>
                 <ul class="no-style-list">

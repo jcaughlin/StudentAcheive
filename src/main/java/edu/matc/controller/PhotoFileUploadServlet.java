@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +17,11 @@ import java.io.*;
 // #TODO Add Google API to validate image
 // #TODO Where to Route User
 @WebServlet(name = "PhotoFileUploadServlet", urlPatterns = "/uploadFile")
+@MultipartConfig
 public class PhotoFileUploadServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    private final String theFilePath = "/Users/josephcaughlin/EnterpriseJavaSpring/userimages";
 
 
     @Override
@@ -26,8 +29,10 @@ public class PhotoFileUploadServlet extends HttpServlet {
             throws ServletException, IOException {
 
 
-        final String filePath = "/Users/josephcaughlin/EnterpriseJavaSpring/images";
+        final String filePath = theFilePath ;
+        logger.info("File Path: " + filePath);
         final Part filePart = request.getPart("image-file");
+        logger.info("FilePart: " + filePart.toString());
         final String fileName = getFileName(filePart);
 
         String uploadSuccess = "Your image was successfully uploaded and you are ugly...Just Kidding";
@@ -35,6 +40,7 @@ public class PhotoFileUploadServlet extends HttpServlet {
 
         OutputStream outputStream = null;
         InputStream fileContent = null;
+        final PrintWriter writer = response.getWriter();
 
         try {
             outputStream = new FileOutputStream(new File(filePath + File.separator

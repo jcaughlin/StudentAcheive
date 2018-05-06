@@ -39,9 +39,8 @@
                 <!--User Name-->
                 <div class="col-sm-6 pb-3">
                     <label for="username" class="sr-only">Enter User Name</label>
-                    <input type="text" class="form-control is-invalid" name="username" id="username"
-                           placeholder="Enter User Name"
-                           required="">
+                    <input type="text" class="form-control" name="username" id="username"
+                           placeholder="Enter User Name" required>
                 </div>
                 <div class="invalid-feedback">
                     ${userExists}
@@ -50,16 +49,20 @@
                 <!--User Password-->
                 <div class="col-sm-6 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
-                    <input type="password" class="form-control is-invalid" name="password" id="password"
-                           placeholder="Password"
-                           required="">
+                    <input type="password" class="form-control" name="password" id="password"
+                           placeholder="Password" required>
                 </div>
 
                 <!--Password Confirm-->
                 <div class="col-sm-6 pb-3">
                     <label for="passwordConfirm" class="sr-only">Confirm Password</label>
-                    <input type="password" class="form-control is-invalid" name="passwordConfirm" id="passwordConfirm"
-                           placeholder="Confirm Password" required="">
+                    <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
+                           placeholder="Password" required>
+                </div>
+                <div class="col-sm-6">
+                    <small id="passwordFeedback">
+
+                    </small>
                 </div>
 
                 <!--Remember Me-->
@@ -157,7 +160,7 @@
     </div><!--End Row-->
 
 
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="footer2.jsp"/>
 </div><!--End Container-->
 
 </body>

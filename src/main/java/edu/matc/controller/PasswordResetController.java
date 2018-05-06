@@ -5,10 +5,7 @@ import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.RequestDispatcher;
@@ -32,21 +29,24 @@ public class PasswordResetController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String resetConfirmationMessageToUserAgent = "Your Account has been retrieved. Check your email for instructions on how to reset your password";
 
-        UserDao userDao = new UserDao();
+        // UserDao userDao = new UserDao();
+        List<User> user;
 
-        String userEmailToSendConfirmation = request.getParameter("email");
+        String userEmail = request.getParameter("email");
+        logger.info("User's Email is: " + userEmail );
 
 
         try {
 
-            List<User> user = userDao.getUserByProperty(userEmailToSendConfirmation, "email");
-            generateAndSentPasswordResetEmail(userEmailToSendConfirmation);
+            // userDao.getUserByProperty(userEmailToSendConfirmation, "email");
+            generateAndSentPasswordResetEmail(userEmail);
+            String passwordResetMessage = generateConfirmationEmailString(userEmail);
+            request.setAttribute("passwordReset", userEmail );
 
             String url = "/forgot-password.jsp";
 
-            request.setAttribute("passwordReset", resetConfirmationMessageToUserAgent);
+
 
             RequestDispatcher dispatcher =
                     getServletContext().getRequestDispatcher(url);
@@ -76,9 +76,15 @@ public class PasswordResetController extends HttpServlet {
         javaMailServerProperties.put("mail.smtp.starttls.enable", "true");
         javaMailServerProperties.put("mail.smtp.host", "smtp.gmail.com");
 
-        getMailSession = Session.getDefaultInstance(javaMailServerProperties, null);
+        getMailSession = Session.getInstance(javaMailServerProperties,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(gmailId ,gmailvailidation);
+                    }
+                });
+
         message = new MimeMessage(getMailSession);
-        message.setFrom(new InternetAddress("from-email@gmail.com"));
+        message.setFrom(new InternetAddress(gmailId));
         message.addRecipient(Message.RecipientType.TO, new InternetAddress(usersEmailAddress));
         message.setSubject(resetEmailSubject);
         message.setText(resetConfirmationMessage, "text/html");
@@ -89,6 +95,10 @@ public class PasswordResetController extends HttpServlet {
 
         transport.close();
 
+    }
+
+    private String generateConfirmationEmailString(String usersEmailAddress){
+        return "Your Account has been retrieved. An email has been sent to: " + usersEmailAddress + " for instructions on how to reset your password";
     }
 }
 

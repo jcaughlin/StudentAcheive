@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <c:set var="title" scope="session" value="Password Reset"/>
-<c:set var="heading" scope="session" value="Reset Password"/>
+<c:set var="heading" scope="session" value="Password Reset Success"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>
 <%--
   Created by IntelliJ IDEA.
