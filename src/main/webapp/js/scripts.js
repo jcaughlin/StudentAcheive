@@ -1,4 +1,5 @@
 $(document).ready(function () {
-    var date = new Date().getFullYear() + " js caughlin and unnamed partners";
+    var date = new Date().getFullYear();
     $('#date').append(date);
+
 });

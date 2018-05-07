@@ -7,8 +7,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @NoArgsConstructor
 @ToString
@@ -30,7 +29,7 @@ public class QuizQuestions {
     @Getter @Setter private Quiz quiz;
 
     @OneToMany(mappedBy = "question")
-    @Getter @Setter private Set<QuestionChoices> choices = new HashSet<>();
+    @Getter @Setter private Set<QuestionChoices> choices = new TreeSet<>();
 
 
 
