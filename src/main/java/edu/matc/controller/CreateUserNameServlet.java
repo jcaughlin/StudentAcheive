@@ -17,7 +17,9 @@ import java.io.IOException;
 public class CreateUserNameServlet extends HttpServlet {
 
     // TODO DAO user getUserByUser to check if exists so no duplicates
+    // TODO Break up server side validation into separate method
     private final Logger logger = LogManager.getLogger(this.getClass());
+
 
 
     @Override
@@ -26,23 +28,25 @@ public class CreateUserNameServlet extends HttpServlet {
 
 
         String mismatchError = "Password Entries don't match. Try again";
+        String missingValueError = "You are missing some Data";
 
         String username = request.getParameter("username");
-        logger.info("User Name is: " + username);
         String password = request.getParameter("password");
         String passwordConfirm = request.getParameter("passwordConfirm");
+        String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
 
-        String gRecaptchaResponse = request
-                .getParameter("g-recaptcha-response");
+        logger.info(request.getContextPath());
 
-        logger.info(gRecaptchaResponse);
+        if(username == null || password == null || passwordConfirm == null){
+            request.setAttribute("missingField",missingValueError );
+            response.sendRedirect( request.getContextPath());
 
-        Boolean bool = !password.equals(passwordConfirm);
-        logger.info(bool);
-
-        if (!password.equals(passwordConfirm)) {
+        } else if (!password.equals(passwordConfirm)) {
+            Boolean bool = !password.equals(passwordConfirm);
+            logger.info(bool);
             request.setAttribute("passwordMismatch", mismatchError);
-            response.sendRedirect("/index.jsp");
+            response.sendRedirect(request.getContextPath());
+
         } else {
             request.setAttribute("username", username);
             request.setAttribute("password", password);

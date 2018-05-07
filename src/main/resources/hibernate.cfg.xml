@@ -21,8 +21,8 @@
 
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.UserRoles"/>
-       <!-- <mapping class="edu.matc.entity.Quiz"/>
+        <mapping class="edu.matc.entity.Quiz"/>
         <mapping class="edu.matc.entity.QuestionChoices"/>
-        <mapping class="edu.matc.entity.QuizQuestions"/>-->
+        <mapping class="edu.matc.entity.QuizQuestions"/>
     </session-factory>
 </hibernate-configuration>

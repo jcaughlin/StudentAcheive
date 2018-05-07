@@ -53,7 +53,7 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
-    @Column(name = "user_name")
+    @Column(name = "user_name, nullable = false, unique = true")
     @Getter @Setter private String userName;
 
     @Column(name = "user_pass")
@@ -73,7 +73,6 @@ public class User {
 
     @Column(name = "user_photo_link")
     @Getter @Setter private String user_photo_link;
-
 
 
 

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -18,11 +19,16 @@ import java.io.*;
 // #TODO Where to Route User
 @WebServlet(name = "PhotoFileUploadServlet", urlPatterns = "/uploadFile")
 @MultipartConfig
-public class PhotoFileUploadServlet extends HttpServlet {
+public class FileUploadServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     private final String theFilePath = "/Users/josephcaughlin/EnterpriseJavaSpring/userimages";
 
+
+    @Override
+    public void init() throws ServletException {
+        ServletContext servletContext = getServletContext();
+    }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -40,40 +46,7 @@ public class PhotoFileUploadServlet extends HttpServlet {
 
         OutputStream outputStream = null;
         InputStream fileContent = null;
-        final PrintWriter writer = response.getWriter();
 
-        try {
-            outputStream = new FileOutputStream(new File(filePath + File.separator
-                    + fileName));
-            fileContent = filePart.getInputStream();
-
-            int read = 0;
-            final byte[] bytes = new byte[2048];
-
-            while ((read = fileContent.read(bytes)) != -1) {
-
-                logger.info(read);
-            }
-
-            logger.info("New file " + fileName + " created at " + filePath);
-
-            request.setAttribute("uploadSuccessMessage", uploadSuccess);
-
-
-        } catch (FileNotFoundException fileNotFoundException) {
-
-            logger.info("File Not Found" + fileNotFoundException);
-            request.setAttribute("uploadFailedMessage", uploadFailed);
-            response.sendRedirect("user-added-confirmation.jsp");
-
-        } finally {
-            if (outputStream != null) {
-                outputStream.close();
-            }
-            if (fileContent != null) {
-                fileContent.close();
-            }
-        }
 
         String url = "/user-file-update-success.jsp";
 
@@ -84,28 +57,22 @@ public class PhotoFileUploadServlet extends HttpServlet {
 
 
     /**
-     * FROM fileupload Example Application JAVA EE Tutorial
-     * Method returns a fileName string if a valid file was found.
      *
-     * @param part the filePathPart
-     * @return filename
+     * @param part
+     *
+     * @return
      */
     private String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
-        logger.info("Part Header = {0}", partHeader);
-        for (String content : part.getHeader("content-disposition").split(";")) {
+        String[] items = partHeader.split(";");
+        for (String content : items) {
             if (content.trim().startsWith("filename")) {
-                return content.substring(
-                        content.indexOf('=') + 1).trim().replace("\"", "");
+                return content.substring(content.indexOf("=") + 1, content.length() - 1);
             }
         }
         return null;
     }
-
-    private void uploadImage() {
-        logger.info("Not Testable Method!");
-    }
-}
+} // End Servlet
     
     
     

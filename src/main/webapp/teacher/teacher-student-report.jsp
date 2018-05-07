@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="title" scope="session" value="Student Reports"/>
 <c:set var="heading" scope="session" value="Click Record to View or Edit"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>

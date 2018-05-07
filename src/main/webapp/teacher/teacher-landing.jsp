@@ -37,6 +37,7 @@
                         <option value="">Choose Portal</option>
                         <option value="showStudentReports">Class List</option>
                         <option value="createQuiz">Create A New Quiz</option>
+                        <option value="upload-quiz">Upload A Quiz</option>
                         <option value="viewOrEditClassPage">My Classroom</option>
                         <option value="complain">Complain About Students</option>
                     </select>

@@ -11,7 +11,8 @@
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!--#TODO Improve Validation Now behaves different by browser-->
+<!--TODO Improve Validation Now behaves different by browser-->
+<!--TODO birthday input sucks-->
 
 <jsp:include page="head.jsp"/>
 <div class="container py-2">
@@ -23,11 +24,10 @@
             <jsp:include page="sidebar-menu.jsp"/>
         </div>
         <div class="col-md-9 offset-md-1">
-            <span class="anchor" id="formComplex"></span>
             <h3>Welcome ${username}! Let's Finish Getting You Registered</h3>
 
             <!--Start of form-->
-            <form class="border p-4" method="post" action="signup">
+            <form class="border p-4" method="post" id="needs-validation" action="signup" novalidate>
                 <!-- form complex example -->
                 <div class="row mt-4">
 
@@ -38,13 +38,19 @@
                     <div class="col-sm-6 pb-3">
                         <label class="sr-only" for="firstName">First Name</label>
                         <input id="firstName" type="text" class="form-control" name="firstName"
-                               placeholder="First Name">
+                               placeholder="First Name" required>
+                        <div class="invalid-feedback">
+                            Yes we really want to know your name
+                        </div>
                     </div>
 
                     <!--User Last Name-->
                     <div class="col-sm-6 pb-3">
                         <label class="sr-only" for="lastName">Last Name</label>
-                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                        <div class="invalid-feedback">
+                            Again, We want to know who you are!
+                        </div>
                     </div>
 
                     <!--User Address-->
@@ -79,7 +85,10 @@
                     <div class="col-sm-6 pb-3">
                         <label class="sr-only" for="email">Email</label>
                         <input id="email" type="email" class="form-control" name="email"
-                               placeholder="Enter Email Address">
+                               placeholder="Enter Email Address" aria-describedby="email-required" required>
+                        <div class="invalid-feedback">
+                            An Email Address is Required.
+                        </div>
                     </div>
 
                     <!--User Phone Area Code-->
@@ -94,13 +103,16 @@
                         <input id="phone" type="text" class="form-control" name="phone"
                                placeholder="Enter Phone Number">
                     </div>
-                    <!--User Phone-->
-                    <div class="col-sm-4 pb-3">
-                        <label class="sr-only" for="birthday">Enter your birtday</label>
-                        <input id="birthday" type="date" class="form-control" name="birthday"
-                               placeholder="Enter Phone Number">
+                    <!--User Birthday-->
+                    <div class="col-sm-6 pb-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="birthday">Enter your birthday</label>
+                            <input id="birthday" type="date" class="form-control" name="birthday">
+                            <!-- <i class="fas fa-calendar"></i>-->
+                        </div>
                     </div>
 
+                    <!--Submit Button-->
                     <div class="col-sm-12 pb-3">
                         <button class="btn btn-success">Submit</button>
                     </div>
@@ -113,6 +125,21 @@
     <!--/row-->
     <jsp:include page="footer.jsp"/>
 </div>
+<script>
+    (function () {
+        "use strict";
+        window.addEventListener("load", function () {
+            var form = document.getElementById("form-validation");
+            form.addEventListener("submit", function (event) {
+                if (form.checkValidity() == false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add("was-validated");
+            }, false);
+        }, false);
+    }());
+</script>
 </body>
 </html>
 

@@ -27,7 +27,7 @@ public class UserRoles {
     @Getter @Setter private int id;
 
     @Enumerated(EnumType.STRING)
-    @Column(name="role_name")
+    @Column(name="role_name", nullable = false, columnDefinition = "ENUM PENDING")
     @Getter @Setter private RoleName roleName;
 
     @Getter @Setter private String userName;

@@ -1,6 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<c:set var="title" value="Welcome-Student Achieve!"/>
+<c:set var="title" scope="request" value="Welcome-Student Achieve!"/>
 <c:set var="author" value="JS Caughlin"/>
 <c:set var="heading" scope="request" value="Welcome to Student Achieve!!"/>
 <c:set var="pageType" scope="session" value="index-page"/>
@@ -32,9 +32,8 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border p-4" id="signup" action="signUpNewUser" method="post">
-
-                <h2 class="col-sm-6 py-3">Please Join The Fun</h2>
+            <form class="border p-4" action="signUpNewUser" method="post">
+                <h2 class="col-sm-6 py-3">Please Join The Fun</h2><!--User Name-->
 
                 <!--User Name-->
                 <div class="col-sm-6 pb-3">
@@ -59,17 +58,13 @@
                     <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
                            placeholder="Password" required>
                 </div>
-                <div class="col-sm-6">
-                    <small id="passwordFeedback">
-
-                    </small>
-                </div>
 
                 <!--Remember Me-->
-                <div class="col-sm-9 pb-3">
-                    <label for="rememberLogin" class="form-check-label">
-                        <input type="checkbox" id="rememberLogin" name="rememberLogin">
-                        Keep Me Logged In!</label>
+                <div class="col-sm-6 pb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberLogin" name="rememberLogin">
+                        <label for="rememberLogin" class="form-check-label">Keep Me Logged In!</label>
+                    </div>
                 </div>
 
                 <!--Deployed AWS RECAPTCHA-->
@@ -79,7 +74,7 @@
                 </div>-->
 
                 <!--Localhost Recaptcha-->
-           <div class="col-sm-9 pb-3">
+                <div class="col-sm-9 pb-3">
                     <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
                 </div>
                 <!--Button Group-->
@@ -89,11 +84,16 @@
                         Existing User?
                     </button>
                 </div>
+
+                <!--Forgot Password-->
                 <div class="col-sm-9 pb-3">
                     <a href="forgotPassword" data-target="#forgottenPassword" data-toggle="modal">Forgot Password</a>
                 </div>
+
+                <!--Server Side Validation Error Message-->
                 <div class="invalid-feedback">
-                    ${passwordmismatch}
+                    <span>${missingField}</span>
+                    <span>${passwordmismatch}</span>
                 </div>
             </form>
         </div>
@@ -129,29 +129,38 @@
                     </div>
                     <div class="modal-body">
                         <form class="border px-4 py-4" action="routeUser" method="get">
-                            <h4 class="text-center">Select User Type:</h4>
-
+                            <div class="col-xs-12">
+                                <h4 class="text-center">Select User Type:</h4>
+                            </div>
                             <!--User Type Teacher-->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="userType" value="teacher"
-                                       id="teacher">
-                                <label class="form-check-label" for="teacher">Teacher</label>
+                            <div class="col-xs-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="userType" value="teacher"
+                                           id="teacher">
+                                    <label class="form-check-label" for="teacher">Teacher</label>
+                                </div>
                             </div>
 
-                            <!--User Type Teacher-->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="userType" value="student"
-                                       id="student">
-                                <label class="form-check-label" for="student">Student</label>
+                            <!--User Type Student-->
+                            <div class="col-xs-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="userType" value="student"
+                                           id="student">
+                                    <label class="form-check-label" for="student">Student</label>
+                                </div>
                             </div>
 
                             <!--User Type admin-->
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="userType" value="admin" id="admin">
-                                <label class="form-check-label" for="admin">Admin</label>
+                            <div class="col-xs-12">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="userType" value="admin"
+                                           id="admin">
+                                    <label class="form-check-label" for="admin">Admin</label>
+                                </div>
                             </div>
-
-                            <button class="btn btn-info">GO!</button>
+                            <div class="col-xs-12 p-2">
+                                <button class="btn btn-info">GO!</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -160,7 +169,7 @@
     </div><!--End Row-->
 
 
-    <jsp:include page="footer2.jsp"/>
+    <jsp:include page="footer.jsp"/>
 </div><!--End Container-->
 
 </body>

@@ -33,7 +33,6 @@
     <div class="row">
         <div class="col-lg-12">
             <table class="table table-striped table-bordered">
-                <caption>User Signup Confirmation</caption>
                 <thead>
                 <tr scope="row">
                     <th scope="col">First Name</th>
@@ -61,19 +60,22 @@
         </div>
     </div><!--End Row-->
 
+
     <div class="row">
         <div class="col-lg-12">
-            <form class="py-3" action="uploadPhoto" method="post" enctype="multipart/form-data">
-                <h1 class="text-center">Would You Like to Upload a Profile Photo</h1>
+            <form class="py-3" action="uploadFile" method="post" enctype="multipart/form-data">
+                <h3 class="text-center">Would You Like to Upload a Profile Photo</h3>
 
-                <div class="pb-2 col-sm-6">
+                <!--Upload Photo-->
+                <div class="pb-4 col-sm-6 mx-auto">
                     <div class="custom-file">
-                        <input type="file" name="image-file" class="custom-file-input" id="customFile">
+                        <input type="file" class="custom-file-input" id="customFile">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
                 </div>
 
-                <div class="pb-2 col-sm-6">
+                <!--Buttons-->
+                <div class="pb-2 col-sm-6 offset-3">
                     <button type="submit" class="btn btn-success">GO!</button>
                     <button type="button" class="btn btn-warning" id="no-image-selected">NO!</button>
                 </div>
