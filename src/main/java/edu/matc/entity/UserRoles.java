@@ -33,12 +33,13 @@ public class UserRoles {
     @Column(name = "user_name", nullable = false)
     @Getter @Setter private String userName;
 
-    @Getter @Setter private User user;
 
-    public UserRoles(String userName, RoleName roleName, User user){
+
+
+    public UserRoles(String userName, RoleName roleName){
         this.userName = userName;
         this.roleName = roleName;
-        this.user = user;
+
 
     }
 }

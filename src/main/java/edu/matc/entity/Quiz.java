@@ -32,7 +32,6 @@ public class Quiz {
     @Getter @Setter private String quizName;
 
     @ManyToOne
-    @Column(name="quiz_author")
     @Getter @Setter private User quizAuthor;
 
     @OneToMany

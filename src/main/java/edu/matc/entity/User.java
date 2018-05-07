@@ -56,9 +56,7 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
-    @OneToOne
-    @JoinColumn(name="user_name")
-    @Column(name = "user_name, nullable = false, unique = true")
+    @Column(name = "user_name", nullable = false,unique = true)
     @Getter @Setter private String userName;
 
     @Column(name = "user_pass", nullable = false)
@@ -79,8 +77,12 @@ public class User {
     @Column(name = "user_photo_link")
     @Getter @Setter private String user_photo_link;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @PrimaryKeyJoinColumn
+    @Getter @Setter private UserRoles userRole;
 
 
 
