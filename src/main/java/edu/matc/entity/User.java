@@ -5,12 +5,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
+import edu.matc.entity.Quiz;
+
 
 
 import javax.persistence.*;
 
 import java.time.LocalDate;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 /*
@@ -53,13 +56,15 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
+    @OneToOne
+    @JoinColumn(name="user_name")
     @Column(name = "user_name, nullable = false, unique = true")
     @Getter @Setter private String userName;
 
-    @Column(name = "user_pass")
+    @Column(name = "user_pass", nullable = false)
     @Getter @Setter private String userPassword;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     @Getter @Setter private String userEmail;
 
     @Column(name = "birthday")
@@ -74,6 +79,11 @@ public class User {
     @Column(name = "user_photo_link")
     @Getter @Setter private String user_photo_link;
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @Getter @Setter private Set<Quiz> quiz = new HashSet<>();
+
+
+
 
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
@@ -82,6 +92,7 @@ public class User {
         this.userName = userName;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
+
     }
 
 

@@ -15,8 +15,6 @@ import java.util.*;
 @Entity(name = "QuizQuestions")
 public class QuizQuestions {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")

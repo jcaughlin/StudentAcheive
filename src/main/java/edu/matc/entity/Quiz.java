@@ -31,8 +31,12 @@ public class Quiz {
     @Column(name="quiz_name", unique = true, nullable = false)
     @Getter @Setter private String quizName;
 
+    @ManyToOne
     @Column(name="quiz_author")
-    @Getter @Setter private String quizAuthor;
+    @Getter @Setter private User quizAuthor;
+
+    @OneToMany
+    @Getter @Setter private Set<QuizQuestions> questions = new HashSet<>();
 
     @Column(name="quiz_created_date")
     @Getter @Setter private LocalDate quizCreatedDate;
@@ -40,7 +44,7 @@ public class Quiz {
     @Column(name="quiz_last_updated")
     @Getter @Setter private LocalDate quizLastUpDated;
 
-   public Quiz(String quizName,String quizAuthor,QuizQuestions questions) {
+   public Quiz(String quizName,User quizAuthor) {
        this.quizName = quizName;
        this.quizAuthor = quizAuthor;
 
