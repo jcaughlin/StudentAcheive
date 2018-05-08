@@ -14,7 +14,7 @@ import javax.servlet.http.*;
 
 //#TODO SHOW TEACHERS AND SHOW STUDENTS
 
-@WebServlet(name = "AdminReports", urlPatterns = "/adminReports")
+@WebServlet(name = "AdminReportsController", urlPatterns = "/admin/Reports")
 public class AdminReportsController extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -50,9 +50,10 @@ public class AdminReportsController extends HttpServlet {
             dispatcher.forward(request, response);
 
         } else if(reportRequested.equals("")) {
+
             String errorMessage = "Please Make a Selection";
             request.setAttribute("/errorMessage",errorMessage);
-            response.sendRedirect("/admin/admin-landing.jsp");
+            response.sendRedirect("/admin/admin-portal.jsp");
         }
     }
 }

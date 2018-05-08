@@ -2,6 +2,7 @@ package edu.matc.utility;
 
 /**
  * Utility Class to assist Servlets in routing links and menus.
+ *
  * @author josephcaughlin
  */
 public class RouteUserHelper {
@@ -21,10 +22,10 @@ public class RouteUserHelper {
             case "student": urlRequested = "/student/student-portal.jsp";
             break;
 
-            case "teacher": urlRequested = "/teacher/teacher-landing.jsp";
+            case "teacher": urlRequested = "/teacher/teacher-portal.jsp";
             break;
 
-            case "admin": urlRequested = "/admin/admin-landing.jsp";
+            case "admin": urlRequested = "/admin/admin-portal.jsp";
             break;
 
             default: urlRequested = "/error-pages/error-page/500.jsp";
@@ -48,6 +49,12 @@ public class RouteUserHelper {
 
     }
 
+    /**
+     * Footer link router string.
+     *
+     * @param pageRequested the page requested
+     * @return the string
+     */
     public String footerLinkRouter(String pageRequested) {
         String jspSuffix = ".jsp";
 
@@ -60,9 +67,10 @@ public class RouteUserHelper {
     }
 
     /**
-     * Method Takes the String value of the url requested from the teacher-landing.jsp
+     * Method Takes the String value of the url requested from the teacher-portal.jsp
      *
-     * @param portalChosen
+     * @param portalChosen the portal chosen by the user
+     *
      * @return urlRequested The String url for the site that the user has chosen.
      */
     public String routeTeacher(String portalChosen) {

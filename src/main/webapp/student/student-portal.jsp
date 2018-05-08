@@ -28,8 +28,22 @@
 
         <!--Center Column-->
         <div class="col-lg-10">
-            <a href="takeQuiz" class="btn btn-primary">Take Quiz</a>
+            <form class="form border py-4" method="post" action="Router">
 
+                <div class="col-sm-6">
+                    <label for="studentSelect" class="sr-only">Choose Teacher Portal</label>
+                    <select id="studentSelect" class="form-control" name="studentSelect">
+                        <option value="">Choose Portal</option>
+                        <option value="viewGrades">View Grades</option>
+                        <option value="takeQuiz">Take a Quiz</option>
+                        <option value="complainAboutTeacher">File a teacher complaint</option>
+                    </select>
+                </div>
+                <div class="col-sm-12 py-3">
+                    <button class="btn btn-dark ">GO!</button>
+                </div>
+            </form>
+            <a href="takeQuiz" class="btn btn-primary">Take Quiz</a>
         </div><!--Center Column End-->
     </div> <!--End Row-->
 

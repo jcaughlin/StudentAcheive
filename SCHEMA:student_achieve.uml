@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>a6a5e78e-cd56-4c89-b6d1-22f051443890.SCHEMA:student_achieve</OriginalElement>
+  <nodes>
+    <node x="173.5" y="0.0">a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.user</node>
+    <node x="7.0" y="768.0">a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.question_choices</node>
+    <node x="-170.37428023032624" y="620.2610364683302">a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz_questions</node>
+    <node x="465.9366602687139" y="540.9481765834933">a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.user_roles</node>
+    <node x="-233.021113243762" y="371.1362763915547">a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.user_roles" target="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.user">
+      <point x="0.0" y="-48.0" />
+      <point x="457.5" y="407.0" />
+      <point x="346.0" y="407.0" />
+      <point x="57.5" y="191.0" />
+    </edge>
+    <edge source="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz" target="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.user">
+      <point x="0.0" y="-70.0" />
+      <point x="119.5" y="407.0" />
+      <point x="231.0" y="407.0" />
+      <point x="-57.5" y="191.0" />
+    </edge>
+    <edge source="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz_questions" target="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.question_choices" target="a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz_questions">
+      <point x="0.0" y="-59.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5750551876379691" x="328.0" y="442.99999999999994" />
+  <SelectedNodes>
+    <node>a6a5e78e-cd56-4c89-b6d1-22f051443890.TABLE:student_achieve.quiz_questions</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+  </Categories>
+</Diagram>
+

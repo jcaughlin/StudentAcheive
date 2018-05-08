@@ -29,7 +29,7 @@
 
         <!--Center Div-->
         <div class="col-lg-10">
-            <form class="form border py-4" method="post" action="teacherRouter">
+            <form class="form border p-4" method="post" action="teacherRouter">
 
                 <div class="col-sm-6">
                     <label for="teacherSelect" class="sr-only">Choose Teacher Portal</label>

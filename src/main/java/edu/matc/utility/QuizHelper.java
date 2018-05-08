@@ -10,8 +10,9 @@ import org.apache.logging.log4j.Logger;
 
 
 /**
- * Helper Class that for now will work with Servlet to administer a quiz and store  questions and results & results.
+ * Helper Class that for now will work with Servlet to administer a quiz and store questions and results.
  *
+ * @author josephcaughlin
  */
 public class QuizHelper {
 

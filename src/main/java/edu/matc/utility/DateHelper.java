@@ -7,11 +7,21 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 
-
+/**
+ * Utility Class that Determines number of days from today
+ *
+ * @author josephcaughlin
+ */
 public class DateHelper {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
 
+    /**
+     * Days from today int.
+     *
+     * @param dateToCompare the date to compare
+     * @return the days
+     */
     public int daysFromToday(LocalDate dateToCompare){
 
         LocalDate today = LocalDate.now();

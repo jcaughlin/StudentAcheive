@@ -10,7 +10,7 @@ import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
 
-/*
+/**
  * This Class represents the Security Access Roles for the Users.
  *
  *@author jscaughlin

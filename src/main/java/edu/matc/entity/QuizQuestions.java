@@ -9,6 +9,9 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.*;
 
+/**
+ *
+ */
 @NoArgsConstructor
 @ToString
 @Table(name ="quiz_questions")

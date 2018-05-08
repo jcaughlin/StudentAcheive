@@ -12,6 +12,7 @@ import java.util.List;
 
 /**
  * The type User dao.
+ * 
  */
 
 public class UserDao {

@@ -5,26 +5,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
-import edu.matc.entity.Quiz;
-
-
 
 import javax.persistence.*;
-
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
 
-/*
+/**
  * This Class Represents a User.
  *
- *@author JS Caughlin
+ * @author JS Caughlin
  */
 @ToString
 @NoArgsConstructor
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -56,7 +52,7 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
-    @Column(name = "user_name", nullable = false,unique = true)
+    @Column(name = "user_name", nullable = false, unique = true)
     @Getter @Setter private String userName;
 
     @Column(name = "user_pass", nullable = false)
@@ -75,7 +71,7 @@ public class User {
     @Getter @Setter private LocalDate userLastUpdated;
 
     @Column(name = "user_photo_link")
-    @Getter @Setter private String user_photo_link;
+    @Getter @Setter private String userPhotoLink;
 
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();
@@ -83,10 +79,6 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn
     @Getter @Setter private UserRoles userRole;
-
-
-
-
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
         this.firstName = firstName;
@@ -97,7 +89,7 @@ public class User {
 
     }
 
-
-
 }
+
+
 

@@ -16,8 +16,8 @@ class RouteUserHelperTest {
     RouteUserHelper helper;
 
     String studentUrl = "/student/student-portal.jsp";
-    String teacherurl =  "/teacher/teacher-landing.jsp";
-    String adminurl =  "/admin/admin-landing.jsp";
+    String teacherurl =  "/teacher/teacher-portal.jsp";
+    String adminurl =  "/admin/admin-portal.jsp";
     String errorurl = "/error-pages/error-page/500.jsp";
 
     @BeforeEach

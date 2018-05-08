@@ -1,0 +1,125 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: SideMenuRouter</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">edu.matc.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: SideMenuRouter (edu.matc.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SideMenuRouter</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/ 10)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package edu.matc.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.io.IOException;
+<i>4</i>&nbsp;import java.util.*;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import edu.matc.utility.RouteUserHelper;
+<i>7</i>&nbsp;import org.apache.logging.log4j.LogManager;
+<i>8</i>&nbsp;import org.apache.logging.log4j.Logger;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import javax.servlet.ServletException;
+<i>11</i>&nbsp;import javax.servlet.RequestDispatcher;
+<i>12</i>&nbsp;import javax.servlet.annotation.*;
+<i>13</i>&nbsp;import javax.servlet.http.*;
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;@WebServlet(name = &quot;LinkRouterServlet&quot;, urlPatterns = &quot;/link&quot;)
+<b class="fc"><i>17</i>&nbsp;public class SideMenuRouter extends HttpServlet {</b>
+<i>18</i>&nbsp;
+<b class="fc"><i>19</i>&nbsp;    private final Logger logger = LogManager.getLogger(this.getClass());</b>
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;    @Override
+<i>22</i>&nbsp;    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+<i>23</i>&nbsp;            throws ServletException, IOException {
+<i>24</i>&nbsp;
+<b class="fc"><i>25</i>&nbsp;        RouteUserHelper routeUser = new RouteUserHelper();</b>
+<i>26</i>&nbsp;
+<b class="fc"><i>27</i>&nbsp;        String pageRequested = request.getParameter(&quot;pageRequested&quot;);</b>
+<i>28</i>&nbsp;
+<b class="fc"><i>29</i>&nbsp;        String url = routeUser.pageRouter(pageRequested);</b>
+<b class="fc"><i>30</i>&nbsp;        logger.info(url);</b>
+<i>31</i>&nbsp;
+<b class="fc"><i>32</i>&nbsp;        RequestDispatcher dispatcher =</b>
+<b class="fc"><i>33</i>&nbsp;                getServletContext().getRequestDispatcher(url);</b>
+<b class="fc"><i>34</i>&nbsp;        dispatcher.forward(request, response);</b>
+<b class="fc"><i>35</i>&nbsp;    }</b>
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;}
+<i>38</i>&nbsp;    
+<i>39</i>&nbsp;    
+<i>40</i>&nbsp;    
+<i>41</i>&nbsp;    
+<i>42</i>&nbsp;    
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-08 14:18</div>
+</div>
+</body>
+</html>

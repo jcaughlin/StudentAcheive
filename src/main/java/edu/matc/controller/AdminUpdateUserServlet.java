@@ -1,8 +1,11 @@
 package edu.matc.controller;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.*;
 
+import edu.matc.entity.User;
+import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,7 +24,91 @@ public class AdminUpdateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "";
+
+        // #TODO TRY ${user} or fix this as it will create another user
+        UserDao userDao = new UserDao();
+        User user = new User();
+        user = userDao.getById(Integer.parseInt(request.getParameter("id")));
+
+        String firstName = request.getParameter("firstName");
+        logger.info("User First Name: " + firstName);
+        if(firstName != null) {
+            user.setFirstName(firstName);
+        }
+        
+     
+        String lastName = request.getParameter("lastName");
+        logger.info("User Last Name: " + lastName);
+        if(lastName != null) {
+            user.setLastName(lastName);
+        }
+        
+     
+        String userName = request.getParameter("username");
+        logger.info("User's user name: " + userName);
+        if(userName != null) {
+            user.setUserName(userName);
+        }
+
+        String password = request.getParameter("password");
+        logger.info("User's Password: " + password);
+        if(password != null) {
+            user.setUserPassword(password);
+        }
+
+        String address = request.getParameter("address");
+        logger.info("User's Street Address: " + address);
+        if(address != null) {
+            user.setStreetAddress(address);
+        }
+
+        String cityName = request.getParameter("city");
+        logger.info("User's City: " + cityName);
+        if(cityName != null) {
+            user.setCityName(cityName);
+        }
+
+        String state = request.getParameter("state");
+        logger.info("User's State: " + state);
+            if(state != null) {
+                user.setStateName(state);
+            }
+
+        String zipcode = request.getParameter("zipCode");
+        logger.info("User Zip Code: " + zipcode);
+        if(zipcode != null) {
+            user.setZipCode(zipcode);
+        }
+
+        String email = request.getParameter("email");
+        logger.info("User's Email: " + email);
+        if(email != null) {
+            user.setUserEmail(email);
+        }
+
+        String areaCode = request.getParameter("areacode");
+        logger.info("User's Area Code: " + areaCode);
+        if(areaCode != null) {
+            user.setAreaCode(areaCode);
+        }
+
+        String phone = request.getParameter("phone");
+        logger.info("User's Phone: " + phone);
+        if(phone != null) {
+            user.setUserPhoneNumber(phone);
+        }
+
+        String userBirthday = request.getParameter("birthday");
+        LocalDate birthday = LocalDate.parse(userBirthday);
+        if(birthday != null) {
+            user.setUserBirthDate(birthday);
+
+        }
+
+        userDao.saveOrUpdate(user);
+
+
+        String url = "/admin/admin-deleteuser-success.jsp";
 
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);

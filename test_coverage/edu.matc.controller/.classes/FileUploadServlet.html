@@ -1,0 +1,163 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: FileUploadServlet</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">edu.matc.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: FileUploadServlet (edu.matc.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">FileUploadServlet</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    75%
+  </span>
+  <span class="absValue">
+    (3/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    36%
+  </span>
+  <span class="absValue">
+    (9/ 25)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package edu.matc.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import org.apache.logging.log4j.LogManager;
+<i>4</i>&nbsp;import org.apache.logging.log4j.Logger;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import javax.servlet.RequestDispatcher;
+<i>7</i>&nbsp;import javax.servlet.ServletContext;
+<i>8</i>&nbsp;import javax.servlet.ServletException;
+<i>9</i>&nbsp;import javax.servlet.annotation.MultipartConfig;
+<i>10</i>&nbsp;import javax.servlet.annotation.WebServlet;
+<i>11</i>&nbsp;import javax.servlet.http.HttpServlet;
+<i>12</i>&nbsp;import javax.servlet.http.HttpServletRequest;
+<i>13</i>&nbsp;import javax.servlet.http.HttpServletResponse;
+<i>14</i>&nbsp;import javax.servlet.http.Part;
+<i>15</i>&nbsp;import java.io.*;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;// #TODO Where to store images
+<i>18</i>&nbsp;// #TODO Add Google API to validate image
+<i>19</i>&nbsp;// #TODO Where to Route User
+<i>20</i>&nbsp;@WebServlet(name = &quot;PhotoFileUploadServlet&quot;, urlPatterns = &quot;/uploadFile&quot;)
+<i>21</i>&nbsp;@MultipartConfig
+<b class="fc"><i>22</i>&nbsp;public class FileUploadServlet extends HttpServlet {</b>
+<i>23</i>&nbsp;
+<b class="fc"><i>24</i>&nbsp;    private final Logger logger = LogManager.getLogger(this.getClass());</b>
+<b class="fc"><i>25</i>&nbsp;    private final String theFilePath = &quot;/Users/josephcaughlin/EnterpriseJavaSpring/userimages&quot;;</b>
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    @Override
+<i>29</i>&nbsp;    public void init() throws ServletException {
+<b class="fc"><i>30</i>&nbsp;        ServletContext servletContext = getServletContext();</b>
+<b class="fc"><i>31</i>&nbsp;    }</b>
+<i>32</i>&nbsp;
+<i>33</i>&nbsp;    @Override
+<i>34</i>&nbsp;    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+<i>35</i>&nbsp;            throws ServletException, IOException {
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;
+<b class="fc"><i>38</i>&nbsp;        final String filePath = theFilePath ;</b>
+<b class="fc"><i>39</i>&nbsp;        logger.info(&quot;File Path: &quot; + filePath);</b>
+<b class="fc"><i>40</i>&nbsp;        final Part filePart = request.getPart(&quot;image-file&quot;);</b>
+<b class="fc"><i>41</i>&nbsp;        logger.info(&quot;FilePart: &quot; + filePart.toString());</b>
+<b class="nc"><i>42</i>&nbsp;        final String fileName = getFileName(filePart);</b>
+<i>43</i>&nbsp;
+<b class="nc"><i>44</i>&nbsp;        String uploadSuccess = &quot;Your image was successfully uploaded and you are ugly...Just Kidding&quot;;</b>
+<b class="nc"><i>45</i>&nbsp;        String uploadFailed = &quot;Your image was not uploaded. Please Try again&quot;;</b>
+<i>46</i>&nbsp;
+<b class="nc"><i>47</i>&nbsp;        OutputStream outputStream = null;</b>
+<b class="nc"><i>48</i>&nbsp;        InputStream fileContent = null;</b>
+<i>49</i>&nbsp;
+<i>50</i>&nbsp;
+<b class="nc"><i>51</i>&nbsp;        String url = &quot;/user-file-update-success.jsp&quot;;</b>
+<i>52</i>&nbsp;
+<b class="nc"><i>53</i>&nbsp;        RequestDispatcher dispatcher =</b>
+<b class="nc"><i>54</i>&nbsp;                getServletContext().getRequestDispatcher(url);</b>
+<b class="nc"><i>55</i>&nbsp;        dispatcher.forward(request, response);</b>
+<b class="nc"><i>56</i>&nbsp;    }</b>
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;
+<i>59</i>&nbsp;    /**
+<i>60</i>&nbsp;     *
+<i>61</i>&nbsp;     * @param part
+<i>62</i>&nbsp;     *
+<i>63</i>&nbsp;     * @return
+<i>64</i>&nbsp;     */
+<i>65</i>&nbsp;    private String getFileName(final Part part) {
+<b class="nc"><i>66</i>&nbsp;        final String partHeader = part.getHeader(&quot;content-disposition&quot;);</b>
+<b class="nc"><i>67</i>&nbsp;        String[] items = partHeader.split(&quot;;&quot;);</b>
+<b class="nc"><i>68</i>&nbsp;        for (String content : items) {</b>
+<b class="nc"><i>69</i>&nbsp;            if (content.trim().startsWith(&quot;filename&quot;)) {</b>
+<b class="nc"><i>70</i>&nbsp;                return content.substring(content.indexOf(&quot;=&quot;) + 1, content.length() - 1);</b>
+<i>71</i>&nbsp;            }
+<i>72</i>&nbsp;        }
+<b class="nc"><i>73</i>&nbsp;        return null;</b>
+<i>74</i>&nbsp;    }
+<i>75</i>&nbsp;} // End Servlet
+<i>76</i>&nbsp;    
+<i>77</i>&nbsp;    
+<i>78</i>&nbsp;    
+<i>79</i>&nbsp;    
+<i>80</i>&nbsp;    
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-05-08 14:18</div>
+</div>
+</body>
+</html>
