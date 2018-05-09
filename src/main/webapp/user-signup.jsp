@@ -27,7 +27,7 @@
             <h3>Welcome ${username}! Let's Finish Getting You Registered</h3>
 
             <!--Start of form-->
-            <form class="border p-4" method="post" id="needs-validation" action="signup" novalidate>
+            <form class="border p-4" method="post" id="needs-validation" action="signup">
                 <!-- form complex example -->
                 <div class="row mt-4">
 

@@ -28,15 +28,15 @@ public class AdminAdministration extends HttpServlet {
 
         String userId = request.getParameter("id");
         int userIdToBeModified = Integer.parseInt(userId);
-        String actionToPerform = request.getParameter("actionToPerform");
+        String actionChosen = request.getParameter("actionChosen");
 
-
-        user = userDao.getById(userIdToBeModified );
+        logger.info("Action Requested: " + actionChosen);
+        user = userDao.getById(userIdToBeModified);
 
         logger.info(userId);
-        logger.info(actionToPerform);
 
-        if(actionToPerform.equals("updateUser")) {
+
+        if(actionChosen.equals("updateUser")) {
             request.setAttribute("user", user);
             String url = "/admin/admin-update-user.jsp";
 
@@ -44,18 +44,20 @@ public class AdminAdministration extends HttpServlet {
                     getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);
 
-        } else if(actionToPerform.equals("deleteUser")) {
+        } else if(actionChosen.equals("deleteUser")) {
 
             String deleteSuccess = "User has been deleted";
             userDao.delete(user);
 
+
+            logger.info("Delete");
             request.setAttribute("deleteSuccess", deleteSuccess);
-            response.sendRedirect("/admin/adminReports");
+            response.sendRedirect("/admin/admin-reports.jsp");
 
         } else {
             String noChoiceRecorded = "Your selection was not recorded. Please try again.";
             request.setAttribute("actionFailed", noChoiceRecorded);
-            response.sendRedirect("/admin/adminReports");
+            response.sendRedirect("/admin/admin-reports.jsp");
         }
 
 

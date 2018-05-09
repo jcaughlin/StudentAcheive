@@ -43,7 +43,7 @@
                         <label for="firstName">First Name: ${user.firstName}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="firstName" id="firstName">
+                        <input type="text" class="form-control" name="firstName" value="${user.firstName}"id="firstName">
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                         <label for="lastName">Last Name ${user.lastName}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="lastName" id="lastName">
+                        <input type="text" class="form-control" name="lastName" value=${user.lastName}id="lastName">
                     </div>
                 </div>
 
@@ -63,7 +63,7 @@
                         <label for="address">Street Address ${user.streetAddress}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="address" id="address">
+                        <input type="text" class="form-control" name="address" value="${user.streetAddress}" id="address">
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                         <label for="city">City ${user.cityName}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="city" id="city">
+                        <input type="text" class="form-control" name="city" value=${user.cityName}"id="city">
                     </div>
                 </div>
 
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="state" id="state">
+                        <input type="text" class="form-control" name="state" id="state" value="${user.stateName}">
                     </div>
                 </div>
 
@@ -94,7 +94,7 @@
                         <label for="state">zipCode ${user.zipCode}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="zipCode" id="zipCode">
+                        <input type="text" class="form-control" name="zipCode" id="zipCode" value="${user.zipCode}:">
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@
                         <label for="areaCode">zipCode ${user.areaCode}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input id="areaCode" type="text" name="areacode" class="form-control">
+                        <input id="areaCode" type="text" name="areacode" value=${user.areaCode} class="form-control">
                     </div>
                 </div>
 
@@ -114,7 +114,7 @@
                         <label for="phone">Phone ${user.userPhoneNumber}:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="phone" id="phone">
+                        <input type="text" class="form-control" name="phone" value= "${user.userPhoneNumber}" id="phone">
                     </div>
                 </div>
 

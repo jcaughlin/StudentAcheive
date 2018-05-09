@@ -14,7 +14,7 @@ import javax.servlet.http.*;
 
 //#TODO SHOW TEACHERS AND SHOW STUDENTS
 
-@WebServlet(name = "AdminReportsController", urlPatterns = "/admin/Reports")
+@WebServlet(name = "AdminReportsController", urlPatterns = "/adminReports")
 public class AdminReportsController extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -33,7 +33,7 @@ public class AdminReportsController extends HttpServlet {
 
         if(reportRequested.equals("addUser")) {
             url = "/admin/admin-add-user.jsp";
-
+            logger.info("Here");
             RequestDispatcher dispatcher =
                     getServletContext().getRequestDispatcher(url);
             dispatcher.forward(request, response);

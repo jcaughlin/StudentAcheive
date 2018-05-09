@@ -73,11 +73,11 @@
                     <div class="g-recaptcha" data-sitekey="6Ldki1YUAAAAAPCVpZy6okQPZoQKsdlVa6mgIO_J"></div>
                 </div>
 
-                <!--Localhost Recaptcha
+             <!--
                 <div class="col-sm-9 pb-3">
                     <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
                 </div>-->
-                <!--Button Group-->
+
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>
                     <button type="button" class="btn btn-info btn-lg" data-target="#userType" data-toggle="modal">

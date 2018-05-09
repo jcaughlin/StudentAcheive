@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 import edu.matc.entity.User;
+import edu.matc.entity.UserRoles;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +27,7 @@ public class CreateNewUserServlet extends HttpServlet {
             throws ServletException, IOException {
 
         User user = new User();
+        UserRoles role = new UserRoles();
         UserDao userDao = new UserDao();
 
         String firstName = request.getParameter("firstName");
@@ -59,6 +61,7 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setUserName(userName);
+        role.setUserName(userName);
         user.setUserPassword(password);
         user.setStreetAddress(address);
         user.setCityName(cityName);
@@ -68,6 +71,7 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setAreaCode(areaCode);
         user.setUserPhoneNumber(phone);
         user.setUserBirthDate(birthday);
+        // user.setUserRole(role);
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);

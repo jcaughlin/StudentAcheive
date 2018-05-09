@@ -21,7 +21,6 @@ public class CreateUserNameServlet extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -37,13 +36,12 @@ public class CreateUserNameServlet extends HttpServlet {
 
         logger.info(request.getContextPath());
 
-        if(username == null || password == null || passwordConfirm == null){
-            request.setAttribute("missingField",missingValueError );
-            response.sendRedirect( request.getContextPath());
+        if (username == null || password == null || passwordConfirm == null) {
+            request.setAttribute("missingField", missingValueError);
+            response.sendRedirect(request.getContextPath());
 
         } else if (!password.equals(passwordConfirm)) {
-            Boolean bool = !password.equals(passwordConfirm);
-            logger.info(bool);
+
             request.setAttribute("passwordMismatch", mismatchError);
             response.sendRedirect(request.getContextPath());
 
@@ -59,6 +57,7 @@ public class CreateUserNameServlet extends HttpServlet {
         }
     }
 }
+
 
     
     
