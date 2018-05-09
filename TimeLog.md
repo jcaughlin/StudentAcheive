@@ -38,3 +38,10 @@
 |14|4/25/18|Working on Database and Dao's|4|
 |14|4/28/18|Creating Teacher Portal for no Reason|5|
 |15|4/29/18|Working on FlashCard Component|9|
+|15|5/1/18| Attempting to get Forgot Password to work|3|
+|15|5/2/18| Database needed work|4|
+|15|5/3/18| Time spent on UI better spent elsewhere|5|
+|15|5/6/18| Trying to work on quiz module|3|
+|16|5/7/18|
+|16|5/8/18| More Hibernate work. One to One and One to Many.|5|
+|16|

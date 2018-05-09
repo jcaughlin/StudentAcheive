@@ -47,8 +47,8 @@ public class AdminAdministration extends HttpServlet {
         } else if(actionChosen.equals("deleteUser")) {
 
             String deleteSuccess = "User has been deleted";
-            userDao.delete(user);
 
+            userDao.delete(user);
 
             logger.info("Delete");
             request.setAttribute("deleteSuccess", deleteSuccess);
