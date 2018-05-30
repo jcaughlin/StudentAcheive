@@ -24,5 +24,6 @@
         <mapping class="edu.matc.entity.Quiz"/>
         <mapping class="edu.matc.entity.QuestionChoices"/>
         <mapping class="edu.matc.entity.QuizQuestions"/>
+        <mapping class="edu.matc.entity.School"/>
     </session-factory>
 </hibernate-configuration>

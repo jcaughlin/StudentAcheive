@@ -1,6 +1,8 @@
 package edu.matc.controller;
 
 
+import edu.matc.entity.User;
+import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,13 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
+
 @WebServlet(name = "CreateUserNameServlet", urlPatterns = "/signUpNewUser")
 public class CreateUserNameServlet extends HttpServlet {
 
     // TODO DAO user getUserByUser to check if exists so no duplicates
     // TODO Break up server side validation into separate method
     private final Logger logger = LogManager.getLogger(this.getClass());
-
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -33,6 +35,8 @@ public class CreateUserNameServlet extends HttpServlet {
         String password = request.getParameter("password");
         String passwordConfirm = request.getParameter("passwordConfirm");
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
+
+
 
         logger.info(request.getContextPath());
 

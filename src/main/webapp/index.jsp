@@ -32,11 +32,14 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border p-4" action="signUpNewUser" method="post">
-                <h2 class="col-sm-6 py-3">Please Join The Fun</h2><!--User Name-->
+            <form class="border ant-white-bgrd mx-auto" action="signUpNewUser" method="post" style="width: 600px;">
 
+                <div class="col-sm-12 py-3">
+                    <h2 class="text-center">Please Join The Fun</h2>
+
+                </div>
                 <!--User Name-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-12 pb-3">
                     <label for="username" class="sr-only">Enter User Name</label>
                     <input type="text" class="form-control" name="username" id="username"
                            placeholder="Enter User Name" required>
@@ -46,21 +49,21 @@
                 </div>
 
                 <!--User Password-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-12 pb-3">
                     <label for="password" class="sr-only">Enter Password</label>
                     <input type="password" class="form-control" name="password" id="password"
                            placeholder="Password" required>
                 </div>
 
                 <!--Password Confirm-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-12 pb-3">
                     <label for="passwordConfirm" class="sr-only">Confirm Password</label>
                     <input type="password" class="form-control" name="passwordConfirm" id="passwordConfirm"
                            placeholder="Password" required>
                 </div>
 
                 <!--Remember Me-->
-                <div class="col-sm-6 pb-3">
+                <div class="col-sm-12 pb-3">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="rememberLogin" name="rememberLogin">
                         <label for="rememberLogin" class="form-check-label">Keep Me Logged In!</label>
@@ -68,15 +71,16 @@
                 </div>
 
                 <!--Deployed AWS RECAPTCHA-->
-<!--
-                <div class="col-sm-9 pb-3">
-                    <div class="g-recaptcha" data-sitekey="6Ldki1YUAAAAAPCVpZy6okQPZoQKsdlVa6mgIO_J"></div>
-                </div>-->
+                <!--
+                                <div class="col-sm-9 pb-3">
+                                    <div class="g-recaptcha" data-sitekey="6Ldki1YUAAAAAPCVpZy6okQPZoQKsdlVa6mgIO_J"></div>
+                                </div>-->
 
 
                 <div class="col-sm-9 pb-3">
                     <div class="g-recaptcha" data-sitekey="6LcoVTMUAAAAALS8qu7IVM0NiSeXfFddonZJi8Z1"></div>
-                </div>-
+                </div>
+                -
 
                 <div class="col-sm-9 pb-3">
                     <button class="btn btn-primary btn-lg" aria-pressed="false">Sign Up!</button>

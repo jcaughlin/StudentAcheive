@@ -112,6 +112,16 @@
                         </div>
                     </div>
 
+                    <!--School Name-->
+                    <div class="col-sm-6 pb-3">
+                        <label class="sr-only" for="school">Select School</label>
+                        <select class="form-control" id="school" name="school">
+                            <option value="">Choose School/option>
+                            <option value="prairie">Prairie Elementary</option>
+                            <option value="main">Main High School</option>
+                        </select>
+                    </div>
+
                     <!--Submit Button-->
                     <div class="col-sm-12 pb-3">
                         <button class="btn btn-success">Submit</button>
