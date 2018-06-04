@@ -33,38 +33,6 @@ public class RouteUserHelper {
             return urlRequested;
     }
 
-    /**
-     * Page router string.
-     *
-     * @param pageRequested the page requested
-     * @return the string
-     */
-    public String pageRouter(String pageRequested) {
-        String jspSuffix = ".jsp";
-        String filePath = "/menu-content/";
-
-        String url = filePath + pageRequested + jspSuffix;
-
-        return url;
-
-    }
-
-    /**
-     * Footer link router string.
-     *
-     * @param pageRequested the page requested
-     * @return the string
-     */
-    public String footerLinkRouter(String pageRequested) {
-        String jspSuffix = ".jsp";
-
-        String filePath = "/footer-content/";
-
-        String url = filePath + pageRequested + jspSuffix;
-
-        return url;
-
-    }
 
     /**
      * Method Takes the String value of the url requested from the teacher-portal.jsp

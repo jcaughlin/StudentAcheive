@@ -28,13 +28,13 @@
                         <h6 class="text-uppercase font-weight-bold d-none"> Business Solutions</h6>
                         <ul class="navbar-nav flex-column list-group">
                             <li>
-                                <a href="/">Contact Sales</a>
+                                <a href="linkRouter?origin=footer&pageRequested=contact-sales">Contact Sales</a>
                             </li>
                             <li>
-                                <a href="/">Success Stories</a>
+                                <a href="linkRouter?origin=footer&pageRequested=success-stories">Success Stories</a>
                             </li>
                             <li>
-                                <a href="footerLink?pageRequested=executive-team">Executive Team</a>
+                                <a href="linkRouter?origin=footer&pageRequested=executive-team">Executive Team</a>
                             </li>
                             <li>
                                 <a href="https://www.scholastic.com/teachers/books/dog-man-by-dav-pilkey/" target="_blank">The Greatest Story of ever!!!</a>
@@ -81,16 +81,16 @@
                         <h6 class="text-uppercase font-weight-bold d-none">Developers</h6>
                         <ul class="navbar-nav flex-column list-group">
                             <li>
-                                <a href="/">GitHub</a>
+                                <a href="linkRouter?origin=footer&pageRequested=github">GitHub</a>
                             </li>
                             <li>
-                                <a href="/">Affiliate Program</a>
+                                <a href="linkRouter?origin=footer&pageRequested=affiliates">Affiliate Program</a>
                             </li>
                             <li>
-                                <a href="footerLink?pageRequested=dark-web">Dark Web</a>
+                                <a href="linkRouter?origin=footer&pageRequested=dark-web">Dark Web</a>
                             </li>
                             <li>
-                                <a href="footerLink?pageRequested=darkest-web">Darkest Web</a>
+                                <a href="linkRouter?origin=footer&pageRequested=darkest-web">Darkest Web</a>
                             </li>
                             <li>
                                 <a href="https://www.nhl.com/penguins" target="_blank">Liam's Favorite Hockey Team</a>
