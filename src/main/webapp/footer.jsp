@@ -1,4 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="log" uri="http://logging.apache.org/log4j/tld/log" %>
+
 <c:set var="title" scope="session" value="title"/>
 <c:set var="heading" scope="session" value="header"/>
 <c:set var="author" scope="session" value="JS Caughlin"/>

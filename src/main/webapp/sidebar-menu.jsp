@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="log" uri="http://logging.apache.org/log4j/tld/log" %>
 <%--
   Created by IntelliJ IDEA.
   User: josephcaughlin
@@ -7,8 +6,6 @@
   Time: 6:32 PM
   To change this template use Preferences | File and Code Templates--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<log:info message="Log this message." />
-
 
 <!--##TODO PRIORITY 2:DETERMINE WHERE TO CHECK FOR SESSION AND IF EXISTS EXCLUDE LOGOUT BUTTON-->
 <nav class="navbar navbar-expand-sm">

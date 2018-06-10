@@ -80,9 +80,6 @@ public class User {
     @PrimaryKeyJoinColumn
     @Getter @Setter private UserRoles userRole;
 
-    @ManyToOne
-    @JoinColumn(name = "id")
-    @Getter @Setter private School school;
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
         this.firstName = firstName;

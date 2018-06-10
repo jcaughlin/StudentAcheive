@@ -25,8 +25,6 @@ public class School {
     @Column(name = "school_name")
     @Getter @Setter private String schoolName;
 
-    @OneToMany(mappedBy = "school")
-    private Set<User> users = new HashSet<>();
 
 
 }
