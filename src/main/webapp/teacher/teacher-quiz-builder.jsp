@@ -84,30 +84,29 @@
 
                 <div class="col-sm-9 pb-3">
                     <label for="correctAnswer" class="sr-only">Enter the Correct Answer</label>
-                    <input type="text" class="form-control" id="correctAnswer" name="correctAnswer"
+                    <input type="text" class="form-control" id="correctAnswer" name="isTrue"
                            placeholder="Enter the Correct Answer">
                 </div>
 
                 <div class="col-sm-9 pb-3">
                     <label for="wrongAnswerA" class="sr-only">Enter a Wrong Answer</label>
-                    <input type="text" class="form-control" id="wrongAnswerA" name="wrongAnswerA"
+                    <input type="text" class="form-control" id="wrongAnswerA" name="isFalse"
                            placeholder="Enter Wrong Answer">
                 </div>
 
                 <div class="col-sm-9 pb-3">
                     <label for="wrongAnswerB" class="sr-only">Enter Another Wrong Answer</label>
-                    <input type="text" class="form-control" id="wrongAnswerB" name="wrongAnswerB"
+                    <input type="text" class="form-control" id="wrongAnswerB" name="isFalse"
                            placeholder="Enter Wrong Answer">
                 </div>
 
                 <div class="col-sm-9 pb-3">
                     <label for="wrongAnswerC" class="sr-only">Enter One Last Wrong Answer</label>
-                    <input type="text" class="form-control" id="wrongAnswerC" name="wrongAnswerC"
+                    <input type="text" class="form-control" id="wrongAnswerC" name="isFalse"
                            placeholder="Enter Wrong Answer">
                 </div>
                 <div class="col-sm-6 pb-3">
                     <button class="btn btn-info">Submit!</button>
-                    <button class="btn btn-success">I'm Done</button>
                 </div>
 
             </form>

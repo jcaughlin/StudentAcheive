@@ -22,7 +22,10 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <h1 class="text-center">Error 400</h1>
+            <h1 class="text-center">Bad Request</h1>
+        </div>
+        <div class="col-sm-12">
+            ${requestScope['javax.servlet.error.message']}
         </div>
     </div>
 </div>

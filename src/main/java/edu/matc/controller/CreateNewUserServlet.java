@@ -3,8 +3,10 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.time.LocalDate;
 
+import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
 import edu.matc.entity.UserRoles;
+import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,16 +21,14 @@ import javax.servlet.http.*;
 public class CreateNewUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-
-
-
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         User user = new User();
-        UserRoles role = new UserRoles();
-        UserDao userDao = new UserDao();
+        UserRoles userRole = new UserRoles();
+        GenericDao userDao = new GenericDao(User.class);
 
         String firstName = request.getParameter("firstName");
         logger.debug("User First Name: " + firstName);
@@ -58,10 +58,11 @@ public class CreateNewUserServlet extends HttpServlet {
         logger.debug("User's LocalDate Birthday: " + birthday);
 
 
+
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setUserName(userName);
-        role.setUserName(userName);
+        userRole.setUserName(userName);
         user.setUserPassword(password);
         user.setStreetAddress(address);
         user.setCityName(cityName);
@@ -71,7 +72,10 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setAreaCode(areaCode);
         user.setUserPhoneNumber(phone);
         user.setUserBirthDate(birthday);
-        // user.setUserRole(role);
+
+        userRole.setUserName(userName);
+        userRole.setRoleName(RoleName.PENDING);
+        user.setUserRole(userRole);
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);

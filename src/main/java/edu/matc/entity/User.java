@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -64,17 +65,21 @@ public class User {
     @Column(name = "birthday")
     @Getter @Setter private LocalDate userBirthDate;
 
+    @Exclude
     @Column(name = "registered_date")
     @Getter @Setter private LocalDate userCreatedDate;
 
+    @Exclude
     @Column(name = "last_updated")
     @Getter @Setter private LocalDate userLastUpdated;
 
+    @Exclude
     @Column(name = "user_photo_link")
     @Getter @Setter private String userPhotoLink;
 
+    /*
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
-    @Getter @Setter private Set<Quiz> quiz = new HashSet<>();
+    @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @PrimaryKeyJoinColumn
@@ -87,7 +92,15 @@ public class User {
         this.userName = userName;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
+    }
 
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userRole = userRole;
     }
 
 }

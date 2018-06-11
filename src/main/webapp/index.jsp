@@ -32,7 +32,7 @@
         <!--Center Column-->
         <div class="col-lg-10">
             <!--FORM-->
-            <form class="border ant-white-bgrd mx-auto" action="signUpNewUser" method="post" style="width: 600px;">
+            <form class="border px-2 mx-auto" action="signUpNewUser" method="post" style="width: 600px;">
 
                 <div class="col-sm-12 py-3">
                     <h2 class="text-center">Please Join The Fun</h2>

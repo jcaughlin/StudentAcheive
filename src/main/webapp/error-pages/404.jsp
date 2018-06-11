@@ -24,6 +24,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1 class="text-center">File Not Found. Call the Admin</h1>
+            <div>${requestScope['javax.servlet.error.message']}</div>
         </div>
     </div>
 </div>

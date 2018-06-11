@@ -23,6 +23,10 @@
 <div class="row">
     <div class="col-sm-12">
     <h1 class="text-center">You are a naughty baby and don't belong here!</h1>
+
+    </div>
+    <div class="col-sm-12">
+        ${requestScope['javax.servlet.error.message']}
     </div>
 </div>
 
