@@ -54,11 +54,16 @@
                     </div>
 
                     <!--User Address-->
-                    <div class="col-sm-12 pb-3">
+                    <div class="col-sm-10 pb-3">
                         <label class="sr-only" for="address">Enter User Address</label>
                         <input type="text" class="form-control" id="address" name="address"
                                placeholder="Street Address">
                     </div>
+                    <div class="col-sm-10 pb-3">
+                        <label class="sr-only" for="unit">APT/UNIT</label>
+                        <input type="text" class="form-control" id="unit" name="unit">
+                    </div>
+
 
                     <!--User City-->
                     <div class="col-sm-6 pb-3">

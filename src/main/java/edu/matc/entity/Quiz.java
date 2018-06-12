@@ -1,5 +1,8 @@
 package edu.matc.entity;
 
+import edu.matc.entity.QuizQuestions;
+import edu.matc.entity.User;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,10 +10,9 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
+
 
 /**
  * This Class Represents a Quiz.
@@ -34,8 +36,8 @@ public class Quiz {
     @ManyToOne
     @Getter @Setter private User quizAuthor;
 
-    @OneToMany
-    @Getter @Setter private Set<QuizQuestions> questions = new HashSet<>();
+    @OneToMany(mappedBy = "quiz")
+    @Getter @Setter private List<QuizQuestions> quizQuestions;
 
     @Column(name="quiz_created_date")
     @Getter @Setter private LocalDate quizCreatedDate;
@@ -43,10 +45,15 @@ public class Quiz {
     @Column(name="quiz_last_updated")
     @Getter @Setter private LocalDate quizLastUpDated;
 
-   public Quiz(String quizName,User quizAuthor) {
+   public Quiz(String quizName,User quizAuthor, List<QuizQuestions> quizQuestions) {
        this.quizName = quizName;
        this.quizAuthor = quizAuthor;
+       this.quizQuestions = quizQuestions;
 
+   }
+
+   public Quiz(String quizName){
+       this.quizName = quizName;
    }
 
 

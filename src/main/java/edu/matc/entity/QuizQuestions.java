@@ -30,7 +30,14 @@ public class QuizQuestions {
     @Getter @Setter private Quiz quiz;
 
     @OneToMany(mappedBy = "question")
-    @Getter @Setter private Set<QuestionChoices> choices = new TreeSet<>();
+    @Getter @Setter private List<QuestionChoices> choices = new ArrayList<>();
+
+    public QuizQuestions(String question, Quiz quiz, List<QuestionChoices> choices){
+            this.question = question;
+            this.quiz = quiz;
+            this.choices = choices;
+
+    }
 
 
 

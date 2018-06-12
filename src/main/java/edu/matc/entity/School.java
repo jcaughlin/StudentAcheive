@@ -7,8 +7,8 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.HashSet;
-import java.util.Set;
+
+
 
 
 @NoArgsConstructor
@@ -25,6 +25,9 @@ public class School {
     @Column(name = "school_name")
     @Getter @Setter private String schoolName;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @PrimaryKeyJoinColumn
+    @Getter @Setter private Address address;
 
 
 }
