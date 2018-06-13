@@ -3,6 +3,7 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.time.LocalDate;
 
+import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
 import edu.matc.entity.UserRoles;
@@ -28,7 +29,9 @@ public class CreateNewUserServlet extends HttpServlet {
 
         User user = new User();
         UserRoles userRole = new UserRoles();
+        Address address = new Address();
         GenericDao userDao = new GenericDao(User.class);
+
 
         String firstName = request.getParameter("firstName");
         logger.debug("User First Name: " + firstName);
@@ -38,7 +41,7 @@ public class CreateNewUserServlet extends HttpServlet {
         logger.debug("User's user name: " + userName);
         String password = request.getParameter("password");
         logger.debug("User's Password: " + password);
-        String address = request.getParameter("address");
+        String streetAddress = request.getParameter("address");
         logger.debug("User's Street Address: " + address);
         String cityName = request.getParameter("city");
         logger.debug("User's City: " + cityName);
@@ -64,14 +67,14 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setUserName(userName);
         userRole.setUserName(userName);
         user.setUserPassword(password);
-        user.setStreetAddress(address);
-        user.setCityName(cityName);
-        user.setStateName(state);
-        user.setZipCode(zipcode);
-        user.setUserEmail(email);
-        user.setAreaCode(areaCode);
-        user.setUserPhoneNumber(phone);
-        user.setUserBirthDate(birthday);
+        /*address.setStreetAddress(streetAddress);
+        address.setCityName(cityName);
+        address.setStateName(state);
+        address.setZipCode(zipcode);
+        address.setUserEmail(email);
+        address.setAreaCode(areaCode);
+        address.setUserPhoneNumber(phone);
+        address.setUserBirthDate(birthday);*/
 
         userRole.setUserName(userName);
         userRole.setRoleName(RoleName.PENDING);

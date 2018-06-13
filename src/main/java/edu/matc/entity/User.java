@@ -33,7 +33,7 @@ public class User {
 
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
-
+/*
     @Column(name = "address")
     @Getter @Setter private String streetAddress;
 
@@ -50,7 +50,7 @@ public class User {
     @Getter @Setter private String areaCode;
 
     @Column(name = "phone")
-    @Getter @Setter private String userPhoneNumber;
+    @Getter @Setter private String userPhoneNumber;*/
 
     @Column(name = "user_name", nullable = false, unique = true)
     @Getter @Setter private String userName;
@@ -84,6 +84,10 @@ public class User {
     @PrimaryKeyJoinColumn
     @Getter @Setter private UserRoles userRole;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @PrimaryKeyJoinColumn
+    @Getter @Setter private Address address;
+
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
         this.firstName = firstName;
@@ -100,6 +104,16 @@ public class User {
         this.userPassword = userPassword;
         this.userEmail = userEmail;
         this.userRole = userRole;
+    }
+
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole, Address address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userRole = userRole;
+        this.address = address;
     }
 
 }

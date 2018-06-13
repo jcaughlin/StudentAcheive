@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 
+import edu.matc.entity.Address;
 import edu.matc.entity.User;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
@@ -27,6 +28,7 @@ public class AdminUpdateUserServlet extends HttpServlet {
 
         // #TODO TRY ${user} or fix this as it will create another user
         UserDao userDao = new UserDao();
+        Address address = new Address();
         User user = new User();
         user = userDao.getById(Integer.parseInt(request.getParameter("id")));
 
@@ -56,28 +58,28 @@ public class AdminUpdateUserServlet extends HttpServlet {
             user.setUserPassword(password);
         }
 
-        String address = request.getParameter("address");
-        logger.info("User's Street Address: " + address);
+        String streetAddress = request.getParameter("address");
+        logger.info("User's Street Address: " + streetAddress);
         if(address != null) {
-            user.setStreetAddress(address);
+            address.setStreetAddress(streetAddress);
         }
 
         String cityName = request.getParameter("city");
         logger.info("User's City: " + cityName);
         if(cityName != null) {
-            user.setCityName(cityName);
+            address.setCityName(cityName);
         }
 
         String state = request.getParameter("state");
         logger.info("User's State: " + state);
             if(state != null) {
-                user.setStateName(state);
+                address.setStateName(state);
             }
 
         String zipcode = request.getParameter("zipCode");
         logger.info("User Zip Code: " + zipcode);
         if(zipcode != null) {
-            user.setZipCode(zipcode);
+            address.setZipCode(zipcode);
         }
 
         String email = request.getParameter("email");
@@ -89,13 +91,13 @@ public class AdminUpdateUserServlet extends HttpServlet {
         String areaCode = request.getParameter("areacode");
         logger.info("User's Area Code: " + areaCode);
         if(areaCode != null) {
-            user.setAreaCode(areaCode);
+            address.setAreaCode(areaCode);
         }
 
         String phone = request.getParameter("phone");
         logger.info("User's Phone: " + phone);
         if(phone != null) {
-            user.setUserPhoneNumber(phone);
+            address.setUserPhoneNumber(phone);
         }
 
         String userBirthday = request.getParameter("birthday");
