@@ -27,10 +27,11 @@ class GenericDaoTest {
     }
 
     @Test
-    void insertUser() {
+    void insertUserTest() {
         role = new UserRoles("username",RoleName.PENDING);
         User user = new User("Joe","Smith","username", "password", "joe@email.com",role);
-        userDao.insert(user);
+        int number = userDao.insert(user);
+        logger.info(number);
 
         List<User> allUsersList = userDao.getAll();
         logger.info(allUsersList.size());
