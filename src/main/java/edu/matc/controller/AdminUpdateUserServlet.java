@@ -59,7 +59,6 @@ public class AdminUpdateUserServlet extends HttpServlet {
         }
 
         if(address != null) {
-            user.setStreetAddress(address);
             address.setStreetAddress(streetAddress);
         }
 
