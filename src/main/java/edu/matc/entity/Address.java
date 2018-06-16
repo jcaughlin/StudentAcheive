@@ -4,11 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.beans.ConstructorProperties;
 
 
 /**
@@ -27,7 +26,7 @@ public class Address {
     @GenericGenerator(name = "native", strategy = "native")
     @Getter @Setter private int id;
 
-    @Column(name = "address")
+    @Column(name = "street_address")
     @Getter @Setter private String streetAddress;
 
     @Column(name = "unit")
@@ -45,10 +44,20 @@ public class Address {
     @Column(name = "areacode")
     @Getter @Setter private String areaCode;
 
-    @Column(name = "phone")
+    @Column(name = "phone_number")
     @Getter @Setter private String userPhoneNumber;
 
+    @ManyToOne
     @Getter @Setter private User user;
+
+
+    public Address(String streetAddress, String cityName, String stateName, String zipCode){
+        this.streetAddress = streetAddress;
+        this.cityName = cityName;
+        this.stateName = stateName;
+        this.zipCode = zipCode;
+
+    };
 
 }
 

@@ -1,5 +1,6 @@
 package edu.matc.persistence;
 
+import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
 import edu.matc.entity.UserRoles;
@@ -15,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GenericDaoTest {
     private final Logger logger = LogManager.getLogger(this.getClass());
-    GenericDao userDao;
 
+    GenericDao userDao;
     UserRoles role;
 
     @BeforeEach
@@ -39,6 +40,18 @@ class GenericDaoTest {
     }
 
     @Test
+    void insertUserWithAddress(){
+        role = new UserRoles("newusername", RoleName.PENDING);
+        Address userAddress = new Address("555 Antwhere","Madison", "WI", "53502");
+        User user = new User("John", "Adams","newusername","password","johnadams@gmail.com",role);
+        userDao.insert(user);
+        List<User> allUsersList = userDao.getAll();
+        logger.info("Size of User List after user with address added", userDao.getAll());
+        assertEquals(9, allUsersList.size());
+
+    }
+
+    @Test
     void getById() {
     }   
 
@@ -51,6 +64,11 @@ class GenericDaoTest {
 
     @Test
     void getByPropertyEqual() {
+    }
+
+    @Test
+    void insertUserRoles() {
+        role = new UserRoles("freduser", RoleName.PENDING);
     }
 
     @Test

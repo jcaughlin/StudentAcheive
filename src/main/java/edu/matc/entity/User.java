@@ -10,7 +10,8 @@ import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -35,6 +36,7 @@ public class User {
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
 
+<<<<<<< HEAD
     @Column(name = "address")
     @Getter @Setter private String streetAddress;
 
@@ -54,6 +56,8 @@ public class User {
     @Getter @Setter private String userPhoneNumber;
 
     @NaturalId
+=======
+>>>>>>> AddressEntityRefactor
     @Column(name = "user_name")
     @Getter @Setter private String userName;
 
@@ -82,8 +86,16 @@ public class User {
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
+<<<<<<< HEAD
     @OneToOne(mappedBy="userName",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+=======
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_name", unique = true)
+>>>>>>> AddressEntityRefactor
     @Getter @Setter private UserRoles userRole;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @Getter @Setter private List<Address> address = new ArrayList<>();
 
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
@@ -101,6 +113,16 @@ public class User {
         this.userPassword = userPassword;
         this.userEmail = userEmail;
         this.userRole = userRole;
+    }
+
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole, List<Address> address) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userRole = userRole;
+        this.address = address;
     }
 
 }

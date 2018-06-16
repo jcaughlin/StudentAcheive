@@ -18,9 +18,12 @@
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
 
+        <property name="show_sql">true</property>
+
 
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.UserRoles"/>
+        <mapping class="edu.matc.entity.Address"
         <mapping class="edu.matc.entity.Quiz"/>
         <mapping class="edu.matc.entity.QuestionChoices"/>
         <mapping class="edu.matc.entity.QuizQuestions"/>

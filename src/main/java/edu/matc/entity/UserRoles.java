@@ -40,12 +40,16 @@ public class UserRoles {
     @Getter @Setter private User user;
 
 
+=======
+    @Column(name="user_name")
+    @Getter @Setter private String userName;
+
+>>>>>>> AddressEntityRefactor
     public UserRoles(String userName, RoleName roleName){
         this.userName = userName;
         this.roleName = roleName;
-
-
     }
+
 }
 
 
