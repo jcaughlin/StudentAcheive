@@ -31,6 +31,7 @@ public class UserRoles {
     @Column(name="role_name", nullable = false, columnDefinition = "ENUM PENDING")
     @Getter @Setter private RoleName roleName;
 
+<<<<<<< HEAD
     @NaturalId
     @Column(name = "user_name")
     @Getter @Setter private String userName;
