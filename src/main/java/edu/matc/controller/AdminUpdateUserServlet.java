@@ -60,6 +60,7 @@ public class AdminUpdateUserServlet extends HttpServlet {
 
         if(address != null) {
             user.setStreetAddress(address);
+            address.setStreetAddress(streetAddress);
         }
 
         String cityName = request.getParameter("city");
@@ -70,7 +71,6 @@ public class AdminUpdateUserServlet extends HttpServlet {
         String state = request.getParameter("state");
         logger.info("User's State: " + state);
             if(state != null) {
-                user.setStateName(state);
             }
 
         String zipcode = request.getParameter("zipCode");
