@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.NaturalId;
 
 /**
  * This Class represents the Security Access Roles for the Users.
@@ -30,9 +31,13 @@ public class UserRoles {
     @Column(name="role_name", nullable = false, columnDefinition = "ENUM PENDING")
     @Getter @Setter private RoleName roleName;
 
-
-    @Column(name = "user_name", nullable = false)
+    @NaturalId
+    @Column(name = "user_name")
     @Getter @Setter private String userName;
+
+    @OneToOne
+    @JoinColumn(name="user_name")
+    @Getter @Setter private User user;
 
 
     public UserRoles(String userName, RoleName roleName){

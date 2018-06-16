@@ -19,7 +19,7 @@ import java.time.LocalDate;
 @ToString
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "address")
 public class Address {
 
     @Id

@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -52,13 +53,14 @@ public class User {
     @Column(name = "phone")
     @Getter @Setter private String userPhoneNumber;
 
-    @Column(name = "user_name", nullable = false, unique = true)
+    @NaturalId
+    @Column(name = "user_name")
     @Getter @Setter private String userName;
 
-    @Column(name = "user_pass", nullable = false)
+    @Column(name = "user_pass")
     @Getter @Setter private String userPassword;
 
-    @Column(name = "email", nullable = false)
+    @Column(name = "email")
     @Getter @Setter private String userEmail;
 
     @Column(name = "birthday")
@@ -80,8 +82,7 @@ public class User {
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @PrimaryKeyJoinColumn
+    @OneToOne(mappedBy="userName",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @Getter @Setter private UserRoles userRole;
 
 
