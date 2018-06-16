@@ -58,6 +58,8 @@ public class AdminUpdateUserServlet extends HttpServlet {
             user.setUserPassword(password);
         }
 
+        String streetAddress = request.getParameter("address");
+        logger.info("User's Street Address: " + streetAddress);
         if(address != null) {
             address.setStreetAddress(streetAddress);
         }
@@ -65,16 +67,19 @@ public class AdminUpdateUserServlet extends HttpServlet {
         String cityName = request.getParameter("city");
         logger.info("User's City: " + cityName);
         if(cityName != null) {
+            address.setCityName(cityName);
         }
 
         String state = request.getParameter("state");
         logger.info("User's State: " + state);
             if(state != null) {
+                address.setStateName(state);
             }
 
         String zipcode = request.getParameter("zipCode");
         logger.info("User Zip Code: " + zipcode);
         if(zipcode != null) {
+            address.setZipCode(zipcode);
         }
 
         String email = request.getParameter("email");
@@ -86,29 +91,37 @@ public class AdminUpdateUserServlet extends HttpServlet {
         String areaCode = request.getParameter("areacode");
         logger.info("User's Area Code: " + areaCode);
         if(areaCode != null) {
+            address.setAreaCode(areaCode);
         }
 
         String phone = request.getParameter("phone");
         logger.info("User's Phone: " + phone);
         if(phone != null) {
+            address.setUserPhoneNumber(phone);
         }
 
         String userBirthday = request.getParameter("birthday");
         LocalDate birthday = LocalDate.parse(userBirthday);
         if(birthday != null) {
             user.setUserBirthDate(birthday);
-
         }
 
         userDao.saveOrUpdate(user);
 
-
         String url = "/admin/admin-deleteuser-success.jsp";
 
-        RequestDispatcher dispatcher =
-                getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        try {
+            RequestDispatcher dispatcher =
+                    getServletContext().getRequestDispatcher(url);
+            dispatcher.forward(request, response);
+        } catch (IOException exception) {
+
+            response.sendRedirect("/admin/admin-update-user.jsp");
+        } catch (ServletException exception) {
+
+        }
     }
+
 }
     
     
