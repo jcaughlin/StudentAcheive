@@ -65,16 +65,16 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setUserName(userName);
-        userRole.setUserName(userName);
         user.setUserPassword(password);
-        /*address.setStreetAddress(streetAddress);
+        user.setUserEmail(email);
+        user.setUserBirthDate(birthday);
+
+        address.setStreetAddress(streetAddress);
         address.setCityName(cityName);
         address.setStateName(state);
         address.setZipCode(zipcode);
-        address.setUserEmail(email);
         address.setAreaCode(areaCode);
         address.setUserPhoneNumber(phone);
-        address.setUserBirthDate(birthday);*/
 
         userRole.setUserName(userName);
         userRole.setRoleName(RoleName.PENDING);

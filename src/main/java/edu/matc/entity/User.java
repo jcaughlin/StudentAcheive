@@ -36,28 +36,7 @@ public class User {
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
 
-<<<<<<< HEAD
-    @Column(name = "address")
-    @Getter @Setter private String streetAddress;
-
-    @Column(name = "city")
-    @Getter @Setter private String cityName;
-
-    @Column(name = "state")
-    @Getter @Setter private String stateName;
-
-    @Column(name = "zipcode")
-    @Getter @Setter private String zipCode;
-
-    @Column(name = "areacode")
-    @Getter @Setter private String areaCode;
-
-    @Column(name = "phone")
-    @Getter @Setter private String userPhoneNumber;
-
     @NaturalId
-=======
->>>>>>> AddressEntityRefactor
     @Column(name = "user_name")
     @Getter @Setter private String userName;
 
@@ -86,12 +65,6 @@ public class User {
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
-<<<<<<< HEAD
-    @OneToOne(mappedBy="userName",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-=======
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_name", unique = true)
->>>>>>> AddressEntityRefactor
     @Getter @Setter private UserRoles userRole;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
