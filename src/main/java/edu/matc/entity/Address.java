@@ -7,7 +7,7 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-
+import java.beans.ConstructorProperties;
 
 
 /**
@@ -46,6 +46,9 @@ public class Address {
 
     @Column(name = "phone_number")
     @Getter @Setter private String userPhoneNumber;
+
+    @ManyToOne
+    @Getter @Setter private User user;
 
 
     public Address(String streetAddress, String cityName, String stateName, String zipCode){

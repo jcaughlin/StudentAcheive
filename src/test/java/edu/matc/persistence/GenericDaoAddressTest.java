@@ -2,7 +2,9 @@ package edu.matc.persistence;
 
 import edu.matc.entity.Address;
 
+import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
+import edu.matc.entity.UserRoles;
 import edu.matc.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,13 +26,15 @@ public class GenericDaoAddressTest {
         Database database = Database.getInstance();
     }
 
-    @Test
+ /*   @Test
     void insertAddressTest(){
         address = new Address("259 N Worth Av", "Elgin", "IL", "60123");
+        UserRoles role = new UserRoles("johnsmith", RoleName.PENDING);
+        user = new User("John", "Smith", "johnsmith","mypassword", "john@email.com",role, address);
         int newUserPrimaryKey = addressDao.insert(address);
         logger.info("New Address Primary Key" + newUserPrimaryKey);
         assertNotEquals(0,newUserPrimaryKey);
 
 
-    }
+    }*/
 }

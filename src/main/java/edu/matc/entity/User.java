@@ -9,7 +9,8 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -33,26 +34,8 @@ public class User {
 
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
-/*
-    @Column(name = "address")
-    @Getter @Setter private String streetAddress;
 
-    @Column(name = "city")
-    @Getter @Setter private String cityName;
-
-    @Column(name = "state")
-    @Getter @Setter private String stateName;
-
-    @Column(name = "zipcode")
-    @Getter @Setter private String zipCode;
-
-    @Column(name = "areacode")
-    @Getter @Setter private String areaCode;
-
-    @Column(name = "phone")
-    @Getter @Setter private String userPhoneNumber;*/
-
-    @Column(name = "user_name", nullable = false, unique = true)
+    @Column(name = "user_name")
     @Getter @Setter private String userName;
 
     @Column(name = "user_pass", nullable = false)
@@ -80,13 +63,12 @@ public class User {
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @PrimaryKeyJoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_name", unique = true)
     @Getter @Setter private UserRoles userRole;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @PrimaryKeyJoinColumn
-    @Getter @Setter private Address address;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @Getter @Setter private List<Address> address = new ArrayList<>();
 
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
@@ -106,7 +88,7 @@ public class User {
         this.userRole = userRole;
     }
 
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole, Address address) {
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole, List<Address> address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;

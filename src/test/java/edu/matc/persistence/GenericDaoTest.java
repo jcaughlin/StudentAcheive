@@ -42,7 +42,7 @@ class GenericDaoTest {
     void insertUserWithAddress(){
         role = new UserRoles("newusername", RoleName.PENDING);
         Address userAddress = new Address("555 Antwhere","Madison", "WI", "53502");
-        User user = new User("John", "Adams","newusername","password","johnadams@gmail.com",role,userAddress);
+        User user = new User("John", "Adams","newusername","password","johnadams@gmail.com",role);
         userDao.insert(user);
         List<User> allUsersList = userDao.getAll();
         logger.info("Size of User List after user with address added", userDao.getAll());
@@ -63,6 +63,11 @@ class GenericDaoTest {
 
     @Test
     void getByPropertyEqual() {
+    }
+
+    @Test
+    void insertUserRoles() {
+        role = new UserRoles("freduser", RoleName.PENDING);
     }
 
     @Test

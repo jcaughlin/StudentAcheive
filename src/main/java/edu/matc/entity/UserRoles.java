@@ -30,17 +30,14 @@ public class UserRoles {
     @Column(name="role_name", nullable = false, columnDefinition = "ENUM PENDING")
     @Getter @Setter private RoleName roleName;
 
-
-    @Column(name = "user_name", nullable = false)
+    @Column(name="user_name")
     @Getter @Setter private String userName;
-
 
     public UserRoles(String userName, RoleName roleName){
         this.userName = userName;
         this.roleName = roleName;
-
-
     }
+
 }
 
 
