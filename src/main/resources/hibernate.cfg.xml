@@ -20,7 +20,6 @@
 
         <property name="show_sql">true</property>
 
-
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.UserRoles"/>
         <mapping class="edu.matc.entity.Address"

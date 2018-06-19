@@ -3,7 +3,7 @@ package edu.matc.persistence;
 import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
-import edu.matc.entity.UserRoles;
+import edu.matc.entity.UserRole;
 import edu.matc.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,7 @@ class GenericDaoTest {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     GenericDao userDao;
-    UserRoles role;
+    UserRole role;
 
     @BeforeEach
     void setUp() {
@@ -29,7 +29,7 @@ class GenericDaoTest {
 
     @Test
     void insertUserTest() {
-        role = new UserRoles("username",RoleName.PENDING);
+        role = new UserRole("username",RoleName.PENDING);
         User user = new User("Joe","Smith","username", "password", "joe@email.com",role);
         int number = userDao.insert(user);
         logger.info(number);
@@ -41,7 +41,7 @@ class GenericDaoTest {
 
     @Test
     void insertUserWithAddress(){
-        role = new UserRoles("newusername", RoleName.PENDING);
+        role = new UserRole("newusername", RoleName.PENDING);
         Address userAddress = new Address("555 Antwhere","Madison", "WI", "53502");
         User user = new User("John", "Adams","newusername","password","johnadams@gmail.com",role);
         userDao.insert(user);
@@ -68,7 +68,7 @@ class GenericDaoTest {
 
     @Test
     void insertUserRoles() {
-        role = new UserRoles("freduser", RoleName.PENDING);
+        role = new UserRole("freduser", RoleName.PENDING);
     }
 
     @Test

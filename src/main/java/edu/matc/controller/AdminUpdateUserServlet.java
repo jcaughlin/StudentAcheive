@@ -45,7 +45,6 @@ public class AdminUpdateUserServlet extends HttpServlet {
             user.setLastName(lastName);
         }
         
-     
         String userName = request.getParameter("username");
         logger.info("User's user name: " + userName);
         if(userName != null) {

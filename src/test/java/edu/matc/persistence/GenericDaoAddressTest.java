@@ -4,7 +4,7 @@ import edu.matc.entity.Address;
 
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
-import edu.matc.entity.UserRoles;
+import edu.matc.entity.UserRole;
 import edu.matc.test.util.Database;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

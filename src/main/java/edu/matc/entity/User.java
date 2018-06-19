@@ -6,7 +6,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.NaturalId;
+
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -36,7 +36,8 @@ public class User {
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
 
-    @NaturalId
+    // @NaturalId
+
     @Column(name = "user_name")
     @Getter @Setter private String userName;
 
@@ -61,15 +62,31 @@ public class User {
     @Column(name = "user_photo_link")
     @Getter @Setter private String userPhotoLink;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_name",insertable = false, updatable = false)
+    @Getter @Setter private UserRole userRole;
+
     /*
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
+/*
+    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @Getter @Setter private UserRoles userRole = new UserRoles();
 
-    @Getter @Setter private UserRoles userRole;
+    */
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @Getter @Setter private List<Address> address = new ArrayList<>();
 
+
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userRole = userRole;
+    }
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
         this.firstName = firstName;
@@ -79,22 +96,13 @@ public class User {
         this.userEmail = userEmail;
     }
 
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.userEmail = userEmail;
-        this.userRole = userRole;
-    }
 
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRoles userRole, List<Address> address) {
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, List<Address> address) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
-        this.userRole = userRole;
         this.address = address;
     }
 

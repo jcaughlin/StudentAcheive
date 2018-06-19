@@ -1,7 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.User;
-import edu.matc.entity.UserRoles;
+import edu.matc.entity.UserRole;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;

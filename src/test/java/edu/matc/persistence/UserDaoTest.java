@@ -2,7 +2,7 @@ package edu.matc.persistence;
 
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
-import edu.matc.entity.UserRoles;
+import edu.matc.entity.UserRole;
 import edu.matc.test.util.Database;
 
 
@@ -36,8 +36,10 @@ public class UserDaoTest {
     @Test
     void insertTest() {
 
-        UserRoles userRole = new UserRoles("tomsmith",RoleName.PENDING);
-        user = new User("Tom","Smith","tomsmith","password6","tomsmith@gmail.com", userRole);
+        UserRole userRole = new UserRole("fernando smith",RoleName.PENDING);
+        log.info("User Role: " + userRole.toString());
+        user = new User("Tom","Smith","jeryysmith","password6","tomsmith@gmail.com", userRole);
+        log.info("User: " + user.toString());
         int id = userDao.insert(user);
         assertNotEquals(0,id);
         User user2 = userDao.getById(id);

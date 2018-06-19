@@ -6,7 +6,7 @@ import java.time.LocalDate;
 import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
-import edu.matc.entity.UserRoles;
+import edu.matc.entity.UserRole;
 import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
@@ -28,7 +28,7 @@ public class CreateNewUserServlet extends HttpServlet {
             throws ServletException, IOException {
 
         User user = new User();
-        UserRoles userRole = new UserRoles();
+        UserRole userRole = new UserRole();
         Address address = new Address();
         GenericDao userDao = new GenericDao(User.class);
 
