@@ -62,7 +62,7 @@ public class User {
     @Column(name = "user_photo_link")
     @Getter @Setter private String userPhotoLink;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade=CascadeType.ALL, orphanRemoval=true, fetch=FetchType.LAZY)
     @JoinColumn(name = "user_name",insertable = false, updatable = false)
     @Getter @Setter private UserRole userRole;
 

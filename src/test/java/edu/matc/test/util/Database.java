@@ -92,15 +92,16 @@ public class Database {
         Statement stmt = null;
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         InputStream inputStream = classloader.getResourceAsStream(sqlFile);
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
 
             Class.forName("com.mysql.jdbc.Driver");
             connect();
             stmt = connection.createStatement();
 
 
-            while (true) {
-                String sql = br.readLine();
+            while (reader.ready()) {
+                String sql = reader.readLine();
+                log.info("hey");
                 if (sql == null) {
                     break;
                 }
