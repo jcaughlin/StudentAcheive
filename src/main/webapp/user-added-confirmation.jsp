@@ -35,6 +35,7 @@
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr scope="row">
+                    <th scope="col">User Name</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Address</th>
@@ -47,6 +48,7 @@
                 </thead>
 
                 <tr scope="row">
+                    <td>${user.userName}</td>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
                     <td>${user.streetAddress}</td>

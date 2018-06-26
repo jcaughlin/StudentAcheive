@@ -69,15 +69,14 @@ public class User {
     /*
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
-/*
-    @OneToOne(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @Getter @Setter private UserRoles userRole = new UserRoles();
 
-    */
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @Getter @Setter private List<Address> address = new ArrayList<>();
 
+     /*
+    @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
+    @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole) {
         this.firstName = firstName;
@@ -105,6 +104,7 @@ public class User {
         this.userEmail = userEmail;
         this.address = address;
     }
+
 
 }
 

@@ -2,6 +2,8 @@ package edu.matc.controller;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
@@ -30,7 +32,9 @@ public class CreateNewUserServlet extends HttpServlet {
         User user = new User();
         UserRole userRole = new UserRole();
         Address address = new Address();
+        List userAddress = new ArrayList<Address>();
         GenericDao userDao = new GenericDao(User.class);
+        GenericDao addressDao = new GenericDao(Address.class);
 
 
         String firstName = request.getParameter("firstName");
@@ -41,8 +45,19 @@ public class CreateNewUserServlet extends HttpServlet {
         logger.debug("User's user name: " + userName);
         String password = request.getParameter("password");
         logger.debug("User's Password: " + password);
+
+        String userBirthday = request.getParameter("birthday");
+        logger.debug("User's String Birthday: "+ userBirthday);
+        LocalDate birthday = LocalDate.parse(userBirthday);
+        logger.debug("User's LocalDate Birthday: " + userBirthday);
+
+
+
+
         String streetAddress = request.getParameter("address");
         logger.debug("User's Street Address: " + address);
+        String unitNumber = request.getParameter("unit");
+        logger.debug("Unit #: " + unitNumber);
         String cityName = request.getParameter("city");
         logger.debug("User's City: " + cityName);
         String state = request.getParameter("state");
@@ -55,10 +70,7 @@ public class CreateNewUserServlet extends HttpServlet {
         logger.debug("User's Area Code: " + areaCode);
         String phone = request.getParameter("phone");
         logger.debug("User's Phone: " + phone);
-        String userBirthday = request.getParameter("birthday");
-        logger.debug("User's String Birthday: "+ userBirthday);
-        LocalDate birthday = LocalDate.parse(userBirthday);
-        logger.debug("User's LocalDate Birthday: " + birthday);
+
 
 
 
@@ -70,15 +82,20 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setUserBirthDate(birthday);
 
         address.setStreetAddress(streetAddress);
+        address.setUnitNumber(unitNumber);
         address.setCityName(cityName);
         address.setStateName(state);
         address.setZipCode(zipcode);
         address.setAreaCode(areaCode);
         address.setUserPhoneNumber(phone);
+        // userAddress.add(address);
+
+        logger.info("Address Object: " + address);
 
         userRole.setUserName(userName);
         userRole.setRoleName(RoleName.PENDING);
         user.setUserRole(userRole);
+        user.setAddress(userAddress);
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);

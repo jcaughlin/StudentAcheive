@@ -121,7 +121,7 @@
                     <div class="col-sm-6 pb-3">
                         <label class="sr-only" for="school">Select School</label>
                         <select class="form-control" id="school" name="school">
-                            <option value="">Choose School/option>
+                            <option value="">Choose School</option>
                             <option value="prairie">Prairie Elementary</option>
                             <option value="main">Main High School</option>
                         </select>
