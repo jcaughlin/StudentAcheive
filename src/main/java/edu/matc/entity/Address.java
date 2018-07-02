@@ -1,5 +1,6 @@
 package edu.matc.entity;
 
+import edu.matc.entity.User;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,6 +8,9 @@ import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 
 /**
@@ -46,8 +50,12 @@ public class Address {
     @Column(name = "phone_number")
     @Getter @Setter private String userPhoneNumber;
 
-    @ManyToOne
-    @Getter @Setter private User user;
+    @ManyToMany
+    @JoinTable(name = "user_address",
+            joinColumns = {@JoinColumn(name = "fk_address")},
+            inverseJoinColumns = {@JoinColumn(name = "fk_author")})
+    @Getter @Setter private List<User> user = new ArrayList<User>();
+
 
 
     public Address(String streetAddress, String cityName, String stateName, String zipCode){
@@ -57,6 +65,7 @@ public class Address {
         this.zipCode = zipCode;
 
     };
+
 
 }
 

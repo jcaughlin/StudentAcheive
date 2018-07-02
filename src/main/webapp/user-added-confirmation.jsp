@@ -30,7 +30,7 @@
     </div><!--End Row-->
 
 
-    <div class="row">
+    <div class="row"><th scope="col">Address</th>
         <div class="col-lg-12">
             <table class="table table-striped table-bordered">
                 <thead>
@@ -38,25 +38,19 @@
                     <th scope="col">User Name</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
-                    <th scope="col">Address</th>
-                    <th scope="col">City</th>
-                    <th scope="col">State</th>
-                    <th scope="col">Zip Code</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone Number</th>
+                    <th scope="col">User Status</th>
+                    <th scope="col">User Name</th>
+
+
                 </tr>
                 </thead>
-
                 <tr scope="row">
                     <td>${user.userName}</td>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
-                    <td>${user.streetAddress}</td>
-                    <td>${user.cityName}</td>
-                    <td>${user.stateName}</td>
-                    <td>${user.zipCode}</td>
-                    <td>${user.userEmail}</td>
-                    <td>(${user.areaCode}) ${user.userPhoneNumber}</td>
+                    <td>${user.userRole.roleName}</td>
+                    <td>${user.userRole.userName}</td>
+
                 </tr>
             </table>
         </div>
@@ -92,6 +86,7 @@
     </div>
 
     <jsp:include page="footer.jsp"/>
+    <jsp:include page="javascript-links.jsp"/>
 </div><!--End of Container-->
 </body>
 </html>

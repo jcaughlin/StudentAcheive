@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 /**
  * This Class Represents a User.
  *
@@ -35,8 +36,6 @@ public class User {
 
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
-
-    // @NaturalId
 
     @Column(name = "user_name")
     @Getter @Setter private String userName;
@@ -66,17 +65,38 @@ public class User {
     @JoinColumn(name = "user_name",insertable = false, updatable = false)
     @Getter @Setter private UserRole userRole;
 
-    /*
-    @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
-    @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
-
-
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @Getter @Setter private List<Address> address = new ArrayList<>();
+    @ManyToMany(mappedBy = "user")
+    @Getter @Setter private List<Address> addresses = new ArrayList<Address>();
 
      /*
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
+
+
+    /**
+     * Helper Method that removes a User Instance from an Address entity.
+     * @param address
+     */
+     public void removeAddress(Address address) {
+         this.addresses.remove(address);
+         address.getUser().remove(this);
+     }
+
+     public void addAddress(Address address) {
+         this.addresses.add(address);
+         address.getUser().add(this);
+     }
+
+
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole, List<Address> addresses) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
+        this.userRole = userRole;
+        this.addresses = addresses;
+    }
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole) {
         this.firstName = firstName;
@@ -93,16 +113,6 @@ public class User {
         this.userName = userName;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
-    }
-
-
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, List<Address> address) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.userEmail = userEmail;
-        this.address = address;
     }
 
 

@@ -5,12 +5,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
 import edu.matc.entity.UserRole;
 import edu.matc.persistence.GenericDao;
-import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -32,9 +32,10 @@ public class CreateNewUserServlet extends HttpServlet {
         User user = new User();
         UserRole userRole = new UserRole();
         Address address = new Address();
-        List userAddress = new ArrayList<Address>();
+        List userAdresses = new ArrayList<Address>();
         GenericDao userDao = new GenericDao(User.class);
         GenericDao addressDao = new GenericDao(Address.class);
+
 
 
         String firstName = request.getParameter("firstName");
@@ -55,23 +56,13 @@ public class CreateNewUserServlet extends HttpServlet {
 
 
         String streetAddress = request.getParameter("address");
-        logger.debug("User's Street Address: " + address);
         String unitNumber = request.getParameter("unit");
-        logger.debug("Unit #: " + unitNumber);
         String cityName = request.getParameter("city");
-        logger.debug("User's City: " + cityName);
         String state = request.getParameter("state");
-        logger.debug("User's State: " + state);
         String zipcode = request.getParameter("zipCode");
-        logger.debug("User Zip Code: " + zipcode);
         String email = request.getParameter("email");
-        logger.debug("User's Email: " + email);
         String areaCode = request.getParameter("areacode");
-        logger.debug("User's Area Code: " + areaCode);
         String phone = request.getParameter("phone");
-        logger.debug("User's Phone: " + phone);
-
-
 
 
         user.setFirstName(firstName);
@@ -88,14 +79,16 @@ public class CreateNewUserServlet extends HttpServlet {
         address.setZipCode(zipcode);
         address.setAreaCode(areaCode);
         address.setUserPhoneNumber(phone);
-        // userAddress.add(address);
 
-        logger.info("Address Object: " + address);
+        userAdresses.add(address);
 
         userRole.setUserName(userName);
         userRole.setRoleName(RoleName.PENDING);
+
         user.setUserRole(userRole);
-        user.setAddress(userAddress);
+        user.setAddresses(userAdresses);
+        address.getUser().add(user);
+
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);

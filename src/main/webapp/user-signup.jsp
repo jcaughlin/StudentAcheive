@@ -140,6 +140,7 @@
     <!--/row-->
     <jsp:include page="footer.jsp"/>
 </div>
+<jsp:include page="javascript-links.jsp"/>
 <script>
     (function () {
         "use strict";

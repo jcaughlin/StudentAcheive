@@ -19,16 +19,16 @@ import java.util.List;
  */
 public class GenericDao<T> {
 
-    private Class<T> classType;
+    private Class<T> type;
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     /**
      * Instantiates a new Generic dao.
      *
-     * @param classType the class type
+     * @param type the class type
      */
-    public GenericDao(Class<T> classType) {
-        this.classType = classType;
+    public GenericDao(Class<T> type) {
+        this.type = type;
     }
 
     /**
@@ -59,7 +59,7 @@ public class GenericDao<T> {
 
         Session session = getSession();
 
-        T entity = (T) session.get(classType, id);
+        T entity = (T) session.get(type, id);
         session.close();
         return entity;
     }
@@ -73,8 +73,8 @@ public class GenericDao<T> {
 
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(classType);
-        Root<T> root = query.from(classType);
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
         List<T> resultList = session.createQuery(query).getResultList();
         session.close();
 
@@ -93,8 +93,8 @@ public class GenericDao<T> {
         Session session = getSession();
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(classType);
-        Root<T> root = query.from(classType);
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
         query.select(root).where(builder.equal(root.get(propertyName), object));
         List<T> list = session.createQuery( query ).getResultList();
 
@@ -116,8 +116,8 @@ public class GenericDao<T> {
         logger.debug("Searching for entity with {} = {}",  propertyName, value);
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
-        CriteriaQuery<T> query = builder.createQuery(classType);
-        Root<T> root = query.from(classType);
+        CriteriaQuery<T> query = builder.createQuery(type);
+        Root<T> root = query.from(type);
         Expression<String> propertyPath = root.get(propertyName);
 
         query.where(builder.like(propertyPath, "%" + value + "%"));

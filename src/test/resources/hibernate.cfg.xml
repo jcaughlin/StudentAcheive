@@ -20,6 +20,9 @@
 
         <property name="show_sql">true</property>
 
+        <!--Drop and Recreate Database Schema when Session Factory is closed-->
+        <property name="hbm2ddl.auto">create-drop</property>
+
         <mapping class="edu.matc.entity.User"/>
         <mapping class="edu.matc.entity.UserRole"/>
         <mapping class="edu.matc.entity.Address"/>
