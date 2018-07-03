@@ -1,5 +1,6 @@
 package edu.matc.persistence;
 
+import com.sun.imageio.plugins.common.LZWCompressor;
 import edu.matc.entity.Address;
 
 import edu.matc.entity.RoleName;
@@ -11,30 +12,36 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
 public class GenericDaoAddressTest {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    GenericDao addressDao = new GenericDao(Address.class);
+    GenericDao userDao = new GenericDao(User.class);
     private Address address;
     private User user;
+    private UserRole userRole;
+    private List<Address> addressList = new ArrayList<Address>();
 
-    @BeforeEach
-    void setUp(){
-        Database database = Database.getInstance();
+
+    @Test
+    void insertAddressSuccess() {
+
+        address = new Address("259 N Worth Av", "Elgin", "IL", "60123");
+        addressList.add(address);
+        // userRole = new UserRole("johnsmith", RoleName.PENDING);
+        user = new User("John", "Smith", "johnsmith", "mypassword", "john@email.com");
+        // user.setUserRole(userRole);
+        user.setAddresses(addressList);
+
+        int newUserPrimaryKey = userDao.insert(user);
+        logger.info("New Address Primary Key" + newUserPrimaryKey);
+        assertNotEquals(0, newUserPrimaryKey);
     }
 
- /*   @Test
-    void insertAddressTest(){
-        address = new Address("259 N Worth Av", "Elgin", "IL", "60123");
-        UserRoles role = new UserRoles("johnsmith", RoleName.PENDING);
-        user = new User("John", "Smith", "johnsmith","mypassword", "john@email.com",role, address);
-        int newUserPrimaryKey = addressDao.insert(address);
-        logger.info("New Address Primary Key" + newUserPrimaryKey);
-        assertNotEquals(0,newUserPrimaryKey);
 
-
-    }*/
 }

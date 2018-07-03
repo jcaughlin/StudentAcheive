@@ -48,9 +48,16 @@ public class CreateNewUserServlet extends HttpServlet {
         logger.debug("User's Password: " + password);
 
         String userBirthday = request.getParameter("birthday");
-        logger.debug("User's String Birthday: "+ userBirthday);
-        LocalDate birthday = LocalDate.parse(userBirthday);
-        logger.debug("User's LocalDate Birthday: " + userBirthday);
+
+        // LocalDate birthday = LocalDate.parse(userBirthday);
+
+
+            if(!(userBirthday).equals("")){
+                LocalDate birthday = LocalDate.parse(userBirthday);
+                user.setUserBirthDate(birthday);
+            } else {
+                logger.info(userBirthday + "was null and empty");
+            }
 
 
 
@@ -70,7 +77,7 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setUserName(userName);
         user.setUserPassword(password);
         user.setUserEmail(email);
-        user.setUserBirthDate(birthday);
+        // user.setUserBirthDate(birthday);
 
         address.setStreetAddress(streetAddress);
         address.setUnitNumber(unitNumber);

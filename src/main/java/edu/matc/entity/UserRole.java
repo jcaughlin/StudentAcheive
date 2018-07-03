@@ -15,6 +15,7 @@ import org.hibernate.annotations.GenericGenerator;
  *
  *@author jscaughlin
 */
+
 @ToString
 @NoArgsConstructor
 @Entity
@@ -32,6 +33,7 @@ public class UserRole {
 
     @Column(name = "user_name")
     @Getter @Setter private String userName;
+
 
     public UserRole(String userName, RoleName roleName){
         this.userName = userName;

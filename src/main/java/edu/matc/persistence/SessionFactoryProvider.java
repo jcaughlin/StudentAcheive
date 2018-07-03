@@ -36,6 +36,7 @@ public class SessionFactoryProvider {
         sessionFactory = metaData.getSessionFactoryBuilder().build();
     }
 
+
     /**
      * Gets session factory.
      *
@@ -48,4 +49,5 @@ public class SessionFactoryProvider {
         return sessionFactory;
 
     }
+
 }

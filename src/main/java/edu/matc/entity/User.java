@@ -43,7 +43,7 @@ public class User {
     @Column(name = "user_pass")
     @Getter @Setter private String userPassword;
 
-    @Column(name = "email")
+    @Column(name = "user_email")
     @Getter @Setter private String userEmail;
 
     @Column(name = "birthday")
@@ -73,20 +73,6 @@ public class User {
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
 
-    /**
-     * Helper Method that removes a User Instance from an Address entity.
-     * @param address
-     */
-     public void removeAddress(Address address) {
-         this.addresses.remove(address);
-         address.getUser().remove(this);
-     }
-
-     public void addAddress(Address address) {
-         this.addresses.add(address);
-         address.getUser().add(this);
-     }
-
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole, List<Address> addresses) {
         this.firstName = firstName;
@@ -95,6 +81,15 @@ public class User {
         this.userPassword = userPassword;
         this.userEmail = userEmail;
         this.userRole = userRole;
+        this.addresses = addresses;
+    }
+
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, List<Address> addresses) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.userEmail = userEmail;
         this.addresses = addresses;
     }
 

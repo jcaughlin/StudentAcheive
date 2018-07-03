@@ -1,5 +1,6 @@
 package edu.matc.persistence;
 
+import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
 import edu.matc.entity.UserRole;
@@ -14,43 +15,43 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class UserDaoTest {
 
     private final Logger log = LogManager.getLogger(this.getClass());
-    UserDao userDao;
+
     User user;
-    private int counter = 0;
+    UserDao userDao;
+    Address address;
 
 
     @BeforeEach
     public void setUp() {
+        address = new Address();
 
-        user = new User();
         userDao = new UserDao();
-        log.info("Counter value is: " + counter);
 
-        Database database = Database.getInstance();
-        database.runSQL( "cleandb.sql");
-        ++ counter;
+
+        /*Database database = Database.getInstance();
+        database.runSQL( "cleandb.sql");*/
     }
 
     @Test
     void insertTest() {
-
-        UserRole userRole = new UserRole("fernando smith",RoleName.PENDING);
+        List<Address> addressList = new ArrayList<Address>();
+        address = new Address("259 N Worth Av", "Elgin", "IL", "60123");
+        addressList.add(address);
+        UserRole userRole = new UserRole("freddiesmith",RoleName.PENDING);
         log.info("User Role: " + userRole.toString());
-        user = new User("Tom","Smith","jeryysmith","password6","tomsmith@gmail.com", userRole);
+        user = new User("Tom","Smith","freddiesmith","password6","tomsmith@gmail.com", userRole);
+        user.setAddresses(addressList);
         log.info("User: " + user.toString());
         int id = userDao.insert(user);
         log.info("User's id is " + id);
         assertNotEquals(0,id);
-        // User user2 = userDao.getById(id);
-        // log.info("The retrieve Users last name: " + user2.getLastName());
-        // assertEquals(user2.getLastName(),"Smith");
-
 
     }
 
