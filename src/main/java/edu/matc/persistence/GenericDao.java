@@ -40,6 +40,7 @@ public class GenericDao<T> {
     public int insert(T entity) {
         int id = 0;
         Session session = getSession();
+        logger.info("Session is Created");
         Transaction transaction = session.beginTransaction();
         id = (int) session.save(entity);
         transaction.commit();
