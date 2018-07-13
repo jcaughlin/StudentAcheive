@@ -21,7 +21,6 @@ import java.util.List;
  * @author JS Caughlin
  */
 @ToString
-@NoArgsConstructor
 @Entity
 @Table(name = "user")
 public class User {
@@ -72,7 +71,9 @@ public class User {
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
+    public User() {
 
+    }
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole, List<Address> addresses) {
         this.firstName = firstName;

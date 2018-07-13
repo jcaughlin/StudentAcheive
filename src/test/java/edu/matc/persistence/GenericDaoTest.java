@@ -38,7 +38,7 @@ class GenericDaoTest {
 
         List<User> allUsersList = userDao.getAll();
         logger.info(allUsersList.size());
-        assertEquals(9, allUsersList.size());
+        assertEquals(1, allUsersList.size());
     }
 
     @Test

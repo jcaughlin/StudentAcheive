@@ -1,11 +1,5 @@
 package edu.matc.controller;
 
-import java.io.IOException;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-
 import edu.matc.entity.Address;
 import edu.matc.entity.RoleName;
 import edu.matc.entity.User;
@@ -14,17 +8,23 @@ import edu.matc.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.annotation.*;
-import javax.servlet.http.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @WebServlet(name = "CreateNewUserServlet", urlPatterns = "/signup")
 public class CreateNewUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,7 +35,6 @@ public class CreateNewUserServlet extends HttpServlet {
         List userAdresses = new ArrayList<Address>();
         GenericDao userDao = new GenericDao(User.class);
         GenericDao addressDao = new GenericDao(Address.class);
-
 
 
         String firstName = request.getParameter("firstName");
@@ -52,14 +51,12 @@ public class CreateNewUserServlet extends HttpServlet {
         // LocalDate birthday = LocalDate.parse(userBirthday);
 
 
-            if(!(userBirthday).equals("")){
-                LocalDate birthday = LocalDate.parse(userBirthday);
-                user.setUserBirthDate(birthday);
-            } else {
-                logger.info(userBirthday + "was null and empty");
-            }
-
-
+        if (!(userBirthday).equals("")) {
+            LocalDate birthday = LocalDate.parse(userBirthday);
+            user.setUserBirthDate(birthday);
+        } else {
+            logger.info(userBirthday + "was null and empty");
+        }
 
 
         String streetAddress = request.getParameter("address");
@@ -68,6 +65,7 @@ public class CreateNewUserServlet extends HttpServlet {
         String state = request.getParameter("state");
         String zipcode = request.getParameter("zipCode");
         String email = request.getParameter("email");
+        logger.info("THe email is " + email);
         String areaCode = request.getParameter("areacode");
         String phone = request.getParameter("phone");
 

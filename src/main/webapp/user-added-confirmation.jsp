@@ -38,6 +38,7 @@
                     <th scope="col">User Name</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
+                    <th scope="col">Email Address</th>
                     <th scope="col">User Status</th>
                     <th scope="col">User Name</th>
 
@@ -48,6 +49,7 @@
                     <td>${user.userName}</td>
                     <td>${user.firstName}</td>
                     <td>${user.lastName}</td>
+                    <td>${user.userEmail}</td>
                     <td>${user.userRole.roleName}</td>
                     <td>${user.userRole.userName}</td>
 

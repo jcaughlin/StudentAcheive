@@ -51,7 +51,7 @@ public class Address {
     @Getter @Setter private String userPhoneNumber;
 
     @ManyToMany
-    @JoinTable(name = "user_address",
+    @JoinTable(name = "address",
             joinColumns = {@JoinColumn(name = "fk_address")},
             inverseJoinColumns = {@JoinColumn(name = "fk_author")})
     @Getter @Setter private List<User> user = new ArrayList<User>();

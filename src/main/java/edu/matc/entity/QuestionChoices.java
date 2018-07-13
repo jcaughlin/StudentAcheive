@@ -17,7 +17,7 @@ import javax.persistence.*;
 @ToString
 @NoArgsConstructor
 @Entity
-@Table(name="quiz_choices")
+@Table(name="question_choices")
 public class QuestionChoices {
 
     @Id
