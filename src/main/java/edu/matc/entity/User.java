@@ -3,16 +3,13 @@ package edu.matc.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
-import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
 
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -20,8 +17,8 @@ import java.util.List;
  *
  * @author JS Caughlin
  */
-@ToString
 @Entity
+@NoArgsConstructor
 @Table(name = "user")
 public class User {
 
@@ -48,15 +45,14 @@ public class User {
     @Column(name = "birthday")
     @Getter @Setter private LocalDate userBirthDate;
 
-    @Exclude
+
     @Column(name = "registered_date")
     @Getter @Setter private LocalDate userCreatedDate;
 
-    @Exclude
+
     @Column(name = "last_updated")
     @Getter @Setter private LocalDate userLastUpdated;
 
-    @Exclude
     @Column(name = "user_photo_link")
     @Getter @Setter private String userPhotoLink;
 
@@ -64,18 +60,24 @@ public class User {
     @JoinColumn(name = "user_name",insertable = false, updatable = false)
     @Getter @Setter private UserRole userRole;
 
-    @ManyToMany(mappedBy = "user")
-    @Getter @Setter private List<Address> addresses = new ArrayList<Address>();
+    @ManyToMany(cascade = CascadeType.ALL)
+    @Getter @Setter private Set<Address> addresses = new HashSet<Address>();
 
      /*
     @OneToMany(mappedBy = "quizAuthor", fetch = FetchType.LAZY)
     @Getter @Setter private Set<Quiz> quiz = new HashSet<>();*/
 
-    public User() {
+     public void addAddress(Address address) {
+         this.addresses.add(address);
+         address.getUsers().add(this);
+     }
 
-    }
+     public void removeAddress(Address address) {
+         this.addresses.remove(address);
+         address.getUsers().remove(this);
+     }
 
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole, List<Address> addresses) {
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, UserRole userRole, Set<Address> addresses) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -83,9 +85,10 @@ public class User {
         this.userEmail = userEmail;
         this.userRole = userRole;
         this.addresses = addresses;
+
     }
 
-    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, List<Address> addresses) {
+    public User(String firstName, String lastName, String userName, String userPassword, String userEmail, Set<Address> addresses) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
@@ -101,6 +104,7 @@ public class User {
         this.userPassword = userPassword;
         this.userEmail = userEmail;
         this.userRole = userRole;
+
     }
 
     public User(String firstName, String lastName, String userName, String userPassword, String userEmail) {
@@ -109,6 +113,7 @@ public class User {
         this.userName = userName;
         this.userPassword = userPassword;
         this.userEmail = userEmail;
+
     }
 
 

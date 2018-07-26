@@ -16,57 +16,54 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @WebServlet(name = "CreateNewUserServlet", urlPatterns = "/signup")
 public class CreateNewUserServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
+    private User user ;
+    private UserRole userRole;
+    private Address address;
+    private GenericDao userDao ;
+    private GenericDao addressDao;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        User user = new User();
-        UserRole userRole = new UserRole();
-        Address address = new Address();
-        List userAdresses = new ArrayList<Address>();
-        GenericDao userDao = new GenericDao(User.class);
-        GenericDao addressDao = new GenericDao(Address.class);
-
+        user = new User();
+        userRole = new UserRole();
+        address = new Address();
+        userDao = new GenericDao(User.class);
+        addressDao = new GenericDao(Address.class);
 
         String firstName = request.getParameter("firstName");
-        logger.debug("User First Name: " + firstName);
+
         String lastName = request.getParameter("lastName");
-        logger.debug("User Last Name: " + lastName);
+
         String userName = request.getParameter("username");
-        logger.debug("User's user name: " + userName);
+
         String password = request.getParameter("password");
-        logger.debug("User's Password: " + password);
+
+        String email = request.getParameter("email");
 
         String userBirthday = request.getParameter("birthday");
+        validateAndSetUserBirthday(userBirthday);
 
-        // LocalDate birthday = LocalDate.parse(userBirthday);
-
-
-        if (!(userBirthday).equals("")) {
-            LocalDate birthday = LocalDate.parse(userBirthday);
-            user.setUserBirthDate(birthday);
-        } else {
-            logger.info(userBirthday + "was null and empty");
-        }
-
-
+        // Binding  Data to the Address Entity
         String streetAddress = request.getParameter("address");
+
         String unitNumber = request.getParameter("unit");
+
         String cityName = request.getParameter("city");
+
         String state = request.getParameter("state");
+
         String zipcode = request.getParameter("zipCode");
-        String email = request.getParameter("email");
-        logger.info("THe email is " + email);
+
         String areaCode = request.getParameter("areacode");
+
         String phone = request.getParameter("phone");
 
 
@@ -75,7 +72,6 @@ public class CreateNewUserServlet extends HttpServlet {
         user.setUserName(userName);
         user.setUserPassword(password);
         user.setUserEmail(email);
-        // user.setUserBirthDate(birthday);
 
         address.setStreetAddress(streetAddress);
         address.setUnitNumber(unitNumber);
@@ -85,15 +81,15 @@ public class CreateNewUserServlet extends HttpServlet {
         address.setAreaCode(areaCode);
         address.setUserPhoneNumber(phone);
 
-        userAdresses.add(address);
+        logger.info(address);
+
+        user.addAddress(address);
+
 
         userRole.setUserName(userName);
         userRole.setRoleName(RoleName.PENDING);
 
         user.setUserRole(userRole);
-        user.setAddresses(userAdresses);
-        address.getUser().add(user);
-
 
         int userId = userDao.insert(user);
         logger.debug("My new user has an ID of " + userId);
@@ -105,6 +101,17 @@ public class CreateNewUserServlet extends HttpServlet {
         RequestDispatcher dispatcher =
                 getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
+        logger.info(user.toString());
+    }
+
+    private void validateAndSetUserBirthday(String userBirthday) {
+        if (!(userBirthday).equals("")) {
+            LocalDate birthday = LocalDate.parse(userBirthday);
+            logger.info("Birthday?" + birthday);
+            user.setUserBirthDate(birthday);
+        } else {
+            logger.info(userBirthday + "was null and empty");
+        }
     }
 }
     

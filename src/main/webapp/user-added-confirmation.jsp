@@ -30,7 +30,7 @@
     </div><!--End Row-->
 
 
-    <div class="row"><th scope="col">Address</th>
+    <div class="row">
         <div class="col-lg-12">
             <table class="table table-striped table-bordered">
                 <thead>
@@ -40,7 +40,9 @@
                     <th scope="col">Last Name</th>
                     <th scope="col">Email Address</th>
                     <th scope="col">User Status</th>
-                    <th scope="col">User Name</th>
+                    <th scope="col">D.O.B.</th>
+                 <!--   <th scope="col">Addresses</th>-->
+
 
 
                 </tr>
@@ -51,39 +53,55 @@
                     <td>${user.lastName}</td>
                     <td>${user.userEmail}</td>
                     <td>${user.userRole.roleName}</td>
-                    <td>${user.userRole.userName}</td>
-
+                    <td>${user.userBirthDate}</td>
+                    <!--<td>${user.addresses}</td> -->
                 </tr>
             </table>
         </div>
     </div><!--End Row-->
-
+<div class="row">
+    <div class="col-sm-9 pb-3">
+        <button class="btn btn-primary btn-lg" aria-pressed="false">No</button>
+        <button type="button" class="btn btn-info btn-lg" data-target="#uploadPhoto" data-toggle="modal">
+            Upload Photo?!
+        </button>
+    </div>
+</div>
 
     <div class="row">
-        <div class="col-lg-12">
-            <form class="py-3" action="uploadFile" method="post" enctype="multipart/form-data">
-                <h3 class="text-center">Would You Like to Upload a Profile Photo</h3>
+        <div class="modal fade" id="uploadPhoto" role="dialog" aria-labelby="uploadPhoto" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content py-4">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Let's Upload A Photo!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="py-3" action="uploadFile" method="post" enctype="multipart/form-data">
 
-                <!--Upload Photo-->
-                <div class="pb-4 col-sm-6 mx-auto">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Choose file</label>
+                            <!--Upload Photo-->
+                            <div class="pb-4 col-sm-6 mx-auto">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
+
+                            <!--Buttons-->
+                            <div class="pb-2 col-sm-6 offset-3">
+                                <button type="submit" class="btn btn-success" data-target="#uploadPhoto" data-toggle="modal">GO!</button>
+                                <button type="button" class="btn btn-warning" id="no-image-selected">NO!</button>
+                            </div>
+                            <div class="pb-2 col-sm-6">
+                                <small class="form-text text-muted">${uploadFailedMessage}</small>
+                            </div>
+                            <div id="confirmMessage">
+
+                            </div>
+                        </form>
+
                     </div>
                 </div>
-
-                <!--Buttons-->
-                <div class="pb-2 col-sm-6 offset-3">
-                    <button type="submit" class="btn btn-success">GO!</button>
-                    <button type="button" class="btn btn-warning" id="no-image-selected">NO!</button>
-                </div>
-                <div class="pb-2 col-sm-6">
-                    <small class="form-text text-muted">${uploadFailedMessage}</small>
-                </div>
-                <div id="confirmMessage">
-
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 

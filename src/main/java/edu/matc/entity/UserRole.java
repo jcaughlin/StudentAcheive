@@ -16,6 +16,7 @@ import org.hibernate.annotations.GenericGenerator;
  *@author jscaughlin
 */
 
+
 @ToString
 @NoArgsConstructor
 @Entity

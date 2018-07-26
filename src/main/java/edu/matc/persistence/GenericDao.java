@@ -38,16 +38,26 @@ public class GenericDao<T> {
      * @return the int id
      */
     public int insert(T entity) {
-        int id = 0;
         Session session = getSession();
-        logger.info("Session is Created");
-        Transaction transaction = session.beginTransaction();
-        id = (int) session.save(entity);
-        transaction.commit();
-        session.close();
+        Transaction transaction = null;
+        int id = 0;
+        try {
 
+            transaction = session.beginTransaction();
+            id = (int) session.save(entity);
+            transaction.commit();
+
+
+        } catch (Exception exception) {
+            if (transaction != null) transaction.rollback();
+            logger.info("There was an exception persisting" + exception);
+
+        } finally {
+            session.close();
+        }
         return id;
     }
+
 
     /**
      * Returns an entitu with the id provided as an argument.
@@ -97,7 +107,7 @@ public class GenericDao<T> {
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type);
         query.select(root).where(builder.equal(root.get(propertyName), object));
-        List<T> list = session.createQuery( query ).getResultList();
+        List<T> list = session.createQuery(query).getResultList();
 
         session.close();
         return list;
@@ -114,7 +124,7 @@ public class GenericDao<T> {
     public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
 
-        logger.debug("Searching for entity with {} = {}",  propertyName, value);
+        logger.debug("Searching for entity with {} = {}", propertyName, value);
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);
@@ -123,7 +133,7 @@ public class GenericDao<T> {
 
         query.where(builder.like(propertyPath, "%" + value + "%"));
 
-        List<T> list = session.createQuery( query ).getResultList();
+        List<T> list = session.createQuery(query).getResultList();
         session.close();
         return list;
     }

@@ -90,7 +90,7 @@
 
                 <!--Forgot Password-->
                 <div class="col-sm-9 pb-3">
-                    <a href="forgotPassword" data-target="#forgottenPassword" data-toggle="modal">Forgot Password</a>
+                    <button type="button" class="btn btn-warning" data-target="#forgottenPassword" data-toggle="modal">Forgot Password</button>
                 </div>
 
                 <!--Server Side Validation Error Message-->
@@ -176,9 +176,9 @@
 </div><!--End Container-->
 
 <jsp:include page="javascript-links.jsp"/>
-<script type="text/javascript" >
-    $(document).ready(function(){
-        $("#username").change(function(){
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#username").change(function () {
             console.log("The text has been changed.");
         });
     });

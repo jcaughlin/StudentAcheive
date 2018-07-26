@@ -22,7 +22,6 @@ import java.io.*;
 public class FileUploadServlet extends HttpServlet {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
-    private final String theFilePath = "/Users/josephcaughlin/EnterpriseJavaSpring/userimages";
 
 
     @Override
@@ -34,12 +33,14 @@ public class FileUploadServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        logger.info("Made it to the photo upload servlet");
 
-        final String filePath = theFilePath ;
+        String theFilePath = "/Users/josephcaughlin/Documents/EnterpriseJava/images";
+        String filePath = theFilePath;
         logger.info("File Path: " + filePath);
-        final Part filePart = request.getPart("image-file");
+        Part filePart = request.getPart("image-file");
         logger.info("FilePart: " + filePart.toString());
-        final String fileName = getFileName(filePart);
+        String fileName = getFileName(filePart);
 
         String uploadSuccess = "Your image was successfully uploaded and you are ugly...Just Kidding";
         String uploadFailed = "Your image was not uploaded. Please Try again";

@@ -12,9 +12,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
-
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
 
@@ -44,44 +41,8 @@
     <!--User Style Sheet"-->
     <link rel="stylesheet" href="css/styles.css">
     <title>${title}</title>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!--  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>-->
-
-    <!--Font Awesome--><!--
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js"
-            integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
-            crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js"
-            integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
-            crossorigin="anonymous"></script>-->
-
-
-    <!--Google Recaptcha-->
- <!--   <script src='https://www.google.com/recaptcha/api.js'></script>-->
-
-
-    <!-- Bootstrap Supported jQuery datatables. Learn more about datatables here:https://datatables.net -->
- <!--   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
-    <script src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>-->
-
-    <!--Local Javascript Directory-->
- <!--   <script src="js/scripts.js"></script>-->
-
-    <!--Button Handler Script-->
-   <!-- <script src="js/button-events.js"></script> -->
-
-    <!--Bootstrap Javascript Validation-->
-    <!--<script src="js/validate.js"></script>-->->
 </head>
-<!--<body>-->
+
 
 
 

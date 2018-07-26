@@ -1,24 +1,24 @@
 package edu.matc.entity;
 
-import edu.matc.entity.User;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
+
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-
+import java.util.Set;
 
 
 /**
- * This Class Represents a User.
+ * This Class Represents an Address.
  *
  * @author JS Caughlin
  */
-@ToString
 @NoArgsConstructor
 @Entity
 @Table(name = "address")
@@ -41,20 +41,17 @@ public class Address {
     @Column(name = "state")
     @Getter @Setter private String stateName;
 
-    @Column(name = "zipcode")
+    @Column(name = "zip_code")
     @Getter @Setter private String zipCode;
 
-    @Column(name = "areacode")
+    @Column(name = "area_code")
     @Getter @Setter private String areaCode;
 
     @Column(name = "phone_number")
     @Getter @Setter private String userPhoneNumber;
 
-    @ManyToMany
-    @JoinTable(name = "address",
-            joinColumns = {@JoinColumn(name = "fk_address")},
-            inverseJoinColumns = {@JoinColumn(name = "fk_author")})
-    @Getter @Setter private List<User> user = new ArrayList<User>();
+    @ManyToMany(mappedBy = "addresses")
+    @Getter @Setter private List<User> users = new ArrayList<User>();
 
 
 
