@@ -3,6 +3,8 @@ package edu.matc.controller;
 import java.io.IOException;
 import java.util.*;
 
+import edu.matc.entity.User;
+import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.UserDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,7 +27,7 @@ public class AdminReportsController extends HttpServlet {
             throws ServletException, IOException {
 
         String url;
-        UserDao userDao;
+        GenericDao userDao;
         List users;
 
         String reportRequested = request.getParameter("reportRequested");
@@ -39,11 +41,11 @@ public class AdminReportsController extends HttpServlet {
             dispatcher.forward(request, response);
 
         } else if(reportRequested.equals("showAll")) {
-            userDao = new UserDao();
+            userDao = new GenericDao(User.class);
             logger.info("Made It");
             url = "/admin/admin-reports.jsp";
 
-            request.setAttribute("users", userDao.getAllUsers());
+            request.setAttribute("users", userDao.getAll());
 
             RequestDispatcher dispatcher =
                     getServletContext().getRequestDispatcher(url);

@@ -3,7 +3,10 @@ package edu.matc.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import lombok.ToString.Exclude;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.NaturalId;
 
 
 import javax.persistence.*;
@@ -19,8 +22,9 @@ import java.util.Set;
  */
 @Entity
 @NoArgsConstructor
+@ToString
 @Table(name = "user")
-public class User {
+public class User implements java.io.Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
@@ -33,6 +37,7 @@ public class User {
     @Column(name = "first_name")
     @Getter @Setter private String firstName;
 
+    @NaturalId
     @Column(name = "user_name")
     @Getter @Setter private String userName;
 
@@ -45,19 +50,18 @@ public class User {
     @Column(name = "birthday")
     @Getter @Setter private LocalDate userBirthDate;
 
-
+    @Exclude
     @Column(name = "registered_date")
     @Getter @Setter private LocalDate userCreatedDate;
 
-
+    @Exclude
     @Column(name = "last_updated")
     @Getter @Setter private LocalDate userLastUpdated;
 
     @Column(name = "user_photo_link")
     @Getter @Setter private String userPhotoLink;
 
-    @OneToOne(cascade=CascadeType.ALL, orphanRemoval=true, fetch=FetchType.LAZY)
-    @JoinColumn(name = "user_name",insertable = false, updatable = false)
+    @OneToOne(mappedBy = "user",cascade=CascadeType.ALL, orphanRemoval=true, fetch=FetchType.LAZY)
     @Getter @Setter private UserRole userRole;
 
     @ManyToMany(cascade = CascadeType.ALL)

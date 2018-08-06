@@ -92,7 +92,6 @@ public class GenericDao<T> {
         return resultList;
     }
 
-
     /**
      * Returns a List of Entities with properties that are equal to the parameters provided.
      *

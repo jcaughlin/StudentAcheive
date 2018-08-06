@@ -24,15 +24,15 @@ class GenericDaoTest {
     @BeforeEach
     void setUp() {
         userDao = new GenericDao(User.class);
-        Database database = Database.getInstance();
-        database.runSQL( "cleandb.sql");
     }
 
     @Test
     @DisplayName("Insert User Test")
     void insertUserTest() {
-        role = new UserRole("username",RoleName.PENDING);
-        User user = new User("Joe","Smith","username", "password", "joe@email.com",role);
+        role = new UserRole("Hadoop",RoleName.PENDING);
+        User user = new User("Joe","Smith","Hadoop", "password", "joe@email.com");
+        role = new UserRole("Hadoop",RoleName.PENDING);
+        user.setUserRole(role);
         int number = userDao.insert(user);
         logger.info(number);
 
@@ -55,6 +55,8 @@ class GenericDaoTest {
 
     @Test
     void getById() {
+
+
     }   
 
     @Test

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import lombok.ToString;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ import java.util.Set;
  */
 @NoArgsConstructor
 @Entity
+@ToString
 @Table(name = "address")
 public class Address {
 
